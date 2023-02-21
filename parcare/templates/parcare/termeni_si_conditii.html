@@ -1,0 +1,77 @@
+<html>
+<head>
+    <title>Termeni si Conditii PDF</title>
+    <style>
+        @page {
+            size: a4;
+            margin: 2cm;
+            @frame footer_frame {           /* Another static Frame */
+                -pdf-frame-content: footer_content;
+                left: 50pt; width: 512pt; top: 772pt; height: 20pt;
+            }
+        }
+        #header {
+            width: 400px;
+            height: 100px;
+        }
+        #logo {
+            text-align: left;
+            width: 70px;
+            height 70px;
+        }
+        #titlu {
+            text-align: center;
+            font-size: 20px;
+            font-weight: 100;
+            color: darkslategray;
+            font-weight: bold;
+        }
+        #titlu span {
+            color: teal;
+            text-decoration-line: underline;
+        }
+        h3 {
+            margin-left: 10px;
+        }
+        #subtitlu {
+            width: 100%;
+            height: 10px;
+            background: rgb(176, 204, 195);
+            margin-right: 15px;
+            padding-top: 10px;
+            font-size: 15px;
+            font-weight: bold;
+            color: white;
+            text-align: center;
+        }
+
+    </style>
+</head>
+<body>
+    <div id='header'>
+        <img id='logo' src="C:\Users\39327\Django-apps\park-project\parkproject\static\parkproject\images\parcare_icon.png">
+        <h1 id='titlu'> PARCARE ZIMBRU <br> </h1>
+        <h3 id='subtitlu' align='center'> Termeni si Conditii </h3>
+
+    </div>
+    <div id="footer_content">(c) - page <pdf:pagenumber>
+        of <pdf:pagecount>
+    </div>
+
+    <br><br>
+    <ul>
+        <li>Utilizarea acestei parcari subterane este supusa acceptarii acestor Termeni si Conditii.</li>
+        <li>Parcarea este disponibila doar pentru autovehicule si se interzice stocarea oricarui alt tip de echipament sau material.</li>
+        <li>Utilizatorii sunt responsabili pentru securitatea si integritatea autovehiculelor lor, si proprietarul parcarii nu este responsabil pentru orice pierdere sau dauna suferita.</li>
+        <li>Parcarea este monitorizata continuu si proprietarul isi rezerva dreptul de a refuza accesul sau de a evacua orice autovehicul sau utilizator care incalca aceste Termeni si Conditii.</li>
+        <li>Accesul in parcare se face doar pe baza de permis valabil, iar utilizatorii sunt responsabili pentru a pastra acest permis in siguranta si de a-l prezenta la solicitare.</li>
+        <li>Tarifele de parcare sunt stabilite de proprietar si pot fi modificate in orice moment, fara notificare prealabila.</li>
+        <li>Proprietarul nu este responsabil pentru orice daune sau intreruperi ale sistemelor de iluminat, ventilatie sau acces care pot afecta utilizarea parcarii.</li>
+        <li>Utilizatorii sunt responsabili pentru a respecta toate regulile si regulamentele specifice acestei parcari subterane.</li>
+        <li>Orice litigiu rezultat din utilizarea acestei parcari subterane va fi rezolvat in conformitate cu legislatia in vigoare.</li>
+        <li>Prin utilizarea acestei parcari subterane, utilizatorii accepta aceste Termeni si Conditii.</li>
+    </ul>
+
+</body>
+</html>
+

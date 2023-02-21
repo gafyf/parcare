@@ -1,0 +1,71 @@
+{% extends 'parkproject/main.html' %}
+{% load static %}
+{% block title %} Angajat Nou {% endblock %}
+
+{% block mainbody %}
+<link rel="stylesheet" type="text/css" href="{% static 'clienti/css/client_nou.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'staff/css/staff_nou.css' %}">
+<h2 class='titlu'>Introdu un nou angajat.</h2>
+
+<body class='clientibody'>
+    <br>
+    <form id='payment-form' class='form-control' enctype="multipart/form-data" method='POST' novalidate>
+        {% csrf_token %}
+        {% if messages %}
+            {% for message in messages %}
+                <center>
+                    <div{% if message.tags %} id="card-errors" class="alert alert-{{ message.tags }} alert-dismissible fade show alert-sm" role="alert"{% endif %}>
+                        {{ message }}
+                    <button type="button" class="btn-close btn-sm" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+                </center>
+            {% endfor %}
+        {% endif %} 
+
+        <table class='table' align='center'>
+            <thead>
+                <h5 class='h5' style='color:darkslategray;'><b>Date Angajat</b></h5>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Nume: {{staff_form.nume}}</td>
+                    <td>Prenume: {{staff_form.prenume}}</td>
+                </tr>
+                <tr>
+                    <td>Email: {{staff_form.email}}</td>
+                    <td>CNP: {{staff_form.cnp}}</td>
+                </tr>
+                <tr>
+                    <td>Judet: {{staff_form.judet}}</td>
+                    <td>Oras: {{staff_form.oras}}</td>
+                </tr>
+                <tr>
+                    <td>Adresa: {{staff_form.adresa}}</td>
+                    <td>Telefon: {{staff_form.telefon}}</td>
+                </tr>
+            </tbody>
+        </table>
+        <table class='table' align='center'>
+            <thead>
+                <h5 class='h5' style='color:darkslategray;'><b>Masina</b></h5>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Marca: {{staff_form.marca}}</td>
+                    <td>Model: {{staff_form.model}}</td>
+                </tr>
+                <tr>
+                    <td>Numar: {{staff_form.numar}}</td>
+                    <td>Culoare: {{staff_form.culoare}}</td>
+                </tr>
+                <tr>
+                    <td>Combustibil: {{staff_form.combustibil}}</td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+    <div class="btn btn-secondary">{{ staff_form.functie }}</div>
+    <button class="btn btn-secondary" type="submit"  data-toggle="tooltip" data-placement="top" title="Inregistreaza">Adauga Angajat</button>
+</form>
+</body>
+{% endblock mainbody %}

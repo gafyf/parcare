@@ -1,0 +1,22 @@
+{% extends 'parkproject/main.html' %}
+{% load static %}
+{% block title %} Cautare {% endblock %}
+
+{% block mainbody %}
+
+<center>
+<br>
+<p>Lista profilelor cautate:</p>
+<br>
+  {% for p in profil %}
+    <p> 
+      {{ p.nume }} 
+      {{ p.prenume }} 
+      {{ p.email }} 
+    </p>
+  {% endfor %}
+<br>
+</center>
+
+
+{% endblock mainbody %} 

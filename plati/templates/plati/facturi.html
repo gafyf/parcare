@@ -1,0 +1,35 @@
+{% extends 'parkproject/main.html' %}
+{% load static %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'clienti/css/clienti.css' %}">
+
+{% block mainbody %}
+<body class='clientibody'>
+    <br>
+    <table class='table' align='center'>
+        <thead>
+            <tr>
+                <th></th>
+                <th>Numar</th>
+                <th>Data Creare</th>
+                <th>Client</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for factura in facturi %}
+            <tr>
+                <td>
+                    <a class="btn btn-outline-secondary btn-sm" style='margin-top:9px;' href="{{ factura.get_absolute_url }}">
+                        <div style='color:green;'>Factura PDF</div>
+                    </a>
+                </td>
+                <td>{{ factura.numar }}</td>
+                <td>{{ factura.data_creare|date:"d/m/Y" }}</td>
+                <td>{{ factura.profil }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table> 
+</body>
+<br><br>
+{% endblock mainbody %}

@@ -1,0 +1,25 @@
+body {
+    height: 100px;
+    background: none;
+}
+.logo {
+    max-width: 50px;
+    max-height: 50px;
+    border-radius: 25% 25%;
+    margin-left: 20px;
+    transition: transform .2s;
+}
+
+.logo:hover {
+    transform: scale(1.2);
+}
+
+li.nav-item a.nav-link img.account {
+    max-width: 25px;
+    max-height: 25px;
+    border-radius: 25% 25%;
+}
+
+.navbar-nav.me-auto.mb-2.mb-lg-0.login {
+    margin-left: 800px;
+}

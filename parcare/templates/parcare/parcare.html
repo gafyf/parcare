@@ -1,0 +1,108 @@
+{% extends 'parkproject/main.html' %}
+{% load static %}
+{% block title %} Parcare {% endblock %}
+
+{% block mainbody %}
+<link rel="stylesheet" type="text/css" href="{% static 'parcare/css/parcare.css' %}">
+
+<center>
+{% if messages %}
+    {% for message in messages %}
+    <div{% if message.tags %} class="alert alert-{{ message.tags }} alert-dismissible fade show alert-sm" role="alert"{% endif %}>
+      {{ message }}
+      <button type="button" class="btn-close btn-sm" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+    {% endfor %}
+{% endif %}
+</center>
+
+{% if user.is_authenticated %}
+{% if user.is_staff %}
+  <center>
+  <p>
+    <img class='profil-img' alt="img" src="/static/images/{{ user.profil.imagine }}"> Bine ai venit {{ user.get_full_name }}!
+    <form class="d-flex search" action="{% url 'search' %}">
+      <input class="form-control me-2 search" type="search" placeholder="Cauta profile" aria-label="Search" name='search'>
+      <button class="btn btn-outline-success" type="submit" >Cauta</button>
+    </form>
+  </p>
+  {% if user.is_superuser %}
+    <a class="btn btn-outline-info btn-sm" href="{% url 'staff:staff_nou' user.profil.id %}">Adauga Angajat</a>
+  {% endif %}
+  <a class="btn btn-outline-danger btn-sm" href="{% url 'clienti:client_nou' user.profil.id %}">Adauga Abonat</a>
+  <hr>
+  </center>
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col"></th>
+        <th scope="col"></th>
+        <th scope="col">User</th>
+        <th scope="col">Imagine</th>
+        <th scope="col">Nume</th>
+        <th scope="col">Prenume</th>
+        <th scope="col">Email</th>
+        <th scope="col">Statut</th>
+      </tr>
+    </thead>
+    <tbody>
+        {% for i in profil %}
+      <tr>
+        <td>
+          {% if user.is_superuser %}
+          <a class="btn btn-outline-danger btn-sm" href="{% url 'useri:delete_profil' i.id %}">Sterge</a>
+          {% endif %}
+        </td>
+        <td><a class="btn btn-outline-secondary btn-sm" href="{% url 'useri:detalii_profil' i.id %}">Detalii</a></td>
+        <td>{{ i.user|default_if_none:"" }}</td>
+        <td><a href='/static/images/{{ i.imagine }}'><img class='profil-img' alt='!' src="/static/images/{{ i.imagine|default_if_none:"" }}"></a></td>
+        <td>{{ i.nume|default_if_none:"" }}</td>
+        <td>{{ i.prenume|default_if_none:"" }}</td>
+        <td>{{ i.email|default_if_none:"" }}</td>
+        <td>
+          {% if client %}
+            {% for c in contract %}
+              {% if c.profil.id == i.id %}
+                {% if c.platit == True %}
+                  <span style='color:green;'>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="green" class="bi bi-check" viewBox="0 0 16 16">
+                      <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"/>
+                    </svg>
+                    Abonat
+                  </span>
+                {% endif %}
+                {% if c.platit == False %}
+                  <span style='color:red;'>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16">
+                      <path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z"/>
+                    </svg>
+                    Abonat
+                  </span>
+                {% endif %}
+              {% endif %}
+            {% endfor %}
+          {% endif %}
+          {% if staff  %}
+            {% for s in staff %}
+              {% if s.profil.id == i.id %}
+                <span style='color:green;'>{{ s.functie|capfirst|default_if_none:"" }}</span>
+              {% endif %}
+            {% endfor %}
+          {% else %}
+          {% endif %}
+        </td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+  <hr>
+{% endif %}
+{% else %}
+  <center>
+    <h2 class='no_user'>Nu esti inregistrat.</h2>
+    <a class="btn btn-secondary" href="{% url 'useri:login' %}">Log In</a>
+    <a class="btn btn-secondary" href="{% url 'useri:password_reset' %}">Am uitat parola</a>
+  </center>
+  <br><br>
+{% endif %}
+{% endblock mainbody %}

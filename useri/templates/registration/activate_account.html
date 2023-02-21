@@ -1,0 +1,15 @@
+{% load i18n %}{% autoescape off %}
+
+{% blocktranslate %}Email de la: {{ domain }}.{% endblocktranslate %}
+
+{% translate "Apasa pe linkul de mai jos pentru a activa noul cont:" %}
+{% block reset_link %}
+{{ protocol }}://{{ domain }}{% url 'useri:activate' uidb64=uid token=token %}
+{% endblock %}
+{% translate 'In caz ca ai uitat, userul este:' %} {{ user }}
+
+{% translate "Multumim!" %}
+
+{% blocktranslate %}Echipa site-ului {{ domain }} {% endblocktranslate %}
+
+{% endautoescape %}

@@ -1,0 +1,38 @@
+{% extends 'parkproject/main.html' %}
+{% load static %}
+{% block title %} Masina {% endblock %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'clienti/css/clienti.css' %}">
+
+{% block mainbody %}
+<body class='clientibody'>
+    <br>
+    <table class='table' align='center'>
+        <thead>
+            <tr>
+                <th></th>
+                <th>Profil</th>
+                <th>Marca</th>
+                <th>Model</th>
+                <th>Numar</th>
+                <th>Culoare</th>
+                <th><span style='margin-left:20px;'>Elimina</span></th>
+            </tr>
+        </thead>
+        <tbody>
+            {% if masina %}
+            <tr>
+                <td></td>
+                <td>{% for profil in masina.profil.all %} {{ profil|title }} {% endfor %}</td>
+                <td>{{ masina.marca|title }}</td>
+                <td>{{ masina.model|title }}</td>
+                <td>{{ masina.numar|upper }}</td>
+                <td>{{ masina.culoare|title }}</td>
+                <td><a class="btn btn-outline-danger btn-sm" href="{% url 'clienti:del_masina' masina.id %}">Elimina Masina</a></td>
+            </tr>
+            {% endif %}
+        </tbody>
+    </table> 
+</body>
+<br><br>
+{% endblock mainbody %}

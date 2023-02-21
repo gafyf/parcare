@@ -1,0 +1,219 @@
+{% extends 'parkproject/main.html' %}
+{% load static %}
+{% block title %} Detalii Profil {% endblock %}
+
+{% block mainbody %}
+<link rel="stylesheet" type="text/css" href="{% static 'parcare/css/parcare.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'useri/css/detalii_profil.css' %}">
+
+<center>
+{% if messages %}
+    {% for message in messages %}
+    <div{% if message.tags %} class="alert alert-{{ message.tags }} alert-dismissible fade show alert-sm" role="alert"{% endif %}>
+      {{ message }}
+      <button type="button" class="btn-close btn-sm" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+    {% endfor %}
+{% endif %}
+</center>
+
+{% if user.is_authenticated %}
+  <center>
+  <p>
+    <a class='a-img' href='/static/images/{{ profil.imagine }}'>
+      <img class='profil-img' alt='!' src="/static/images/{{ profil.imagine|default_if_none:"" }}">
+    </a>
+    Bine ai venit {{ user.get_full_name }}!
+  </p>
+  <hr>
+  </center>
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col"></th>
+        <th scope="col"><span style='margin-left:30px;'>User</th>
+        <th scope="col"><span style='margin-left:10px;'>Nume</th>
+        <th scope="col">Prenume</th>
+        <th scope="col"><span style='margin-left:30px;'>CNP</span></th>
+        <th scope="col"><span style='margin-left:30px;'>Email</span></th>
+        <th scope="col">Oras</th>
+        <th scope="col"><span style='margin-left:30px;'>Adresa</th>
+        <th scope="col"><span style='margin-left:10px;'>Telefon</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td scope="row">
+          {% if user.is_superuser or user.profil.id == profil.id %}
+            <a class="btn btn-outline-secondary btn-sm" href="{% url 'useri:profil_edit' profil.id %}">Edit Profil</a>
+          {% endif %}
+        </td>
+        <td>{{ profil.user|default_if_none:"" }}</td>
+        <td>{{ profil.nume|default_if_none:""|title }}</td>
+        <td>{{ profil.prenume|default_if_none:""|title }}</td>
+        <td>{{ profil.cnp|default_if_none:"" }}</td>
+        <td>{{ profil.email|default_if_none:"" }}</td>
+        <td>{{ profil.oras|default_if_none:""|title }}</td>
+        <td>{{ profil.adresa|default_if_none:""|title }}</td>
+        <td>{{ profil.telefon|default_if_none:"" }}</td>
+      </tr>
+    </tbody>
+  </table>
+  <hr><br>
+
+  {% if client %}
+  <table class="table client">
+    <thead>
+      <tr>
+        <th scope="col"></th>
+        <th scope="col">Abonament</th>
+        <th scope="col">Data Expirare</th>
+        <th scope="col"><span style='margin-left:3px;'>Facturi</span></th>
+        {% for c in client %}
+        {% if user.profil.id == c.profil.id %}
+          <th scope="col"><span style='margin-left:3px;'>Plateste</span></th> 
+        {% endif %}
+        {% endfor %}
+        <th scope="col">Numar Permis</th>
+        <th scope="col">Masina</th>
+      </tr>
+    </thead>
+    <tbody>
+    {% for c in client %}
+      <tr>
+        <td scope="row">
+          {% for pdf in contract %}
+            <a class="btn btn-outline-secondary btn-sm" style='max-width:80px;' href="{{ pdf.get_absolute_url }}">Contract PDF</a>
+          {% endfor %}
+        </td>
+        <td>{% for p in contract %}
+            {% if p.profil.id == c.profil.id %}
+              {% if p.platit == False %}
+                <div style='margin-top:10px; margin-left:4px;'>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="green" class="bi bi-check" viewBox="0 0 16 16">
+                    <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"/>
+                  </svg>
+                  Valabil 
+                </div>
+              {% else %}
+                <div style='margin-top:10px; margin-left:7px; color:red;'>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16">
+                    <path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z"/>
+                  </svg>
+                  Expirat
+                </div>
+              {% endif %} 
+            {% endif %}
+           {% endfor %} 
+        </td>
+        <td>
+          {% for p in contract %}
+            {% if p.profil.id == c.profil.id %}
+              {% if p.platit == False %} 
+                <div style='margin-top:10px; margin-left:7px; color:green;'> {{p.data_expirare|date:"d/m/Y"}}</div>
+              {% else %}
+                <div style='margin-top:10px; margin-left:7px; color:red;'> {{p.data_expirare|date:"d/m/Y"}}</div>
+              {% endif %}
+            {% endif %}
+          {% endfor %}
+        </td>
+        <td>
+            <a class="btn btn-outline-secondary btn-sm" style='margin-top:9px;' href="{% url 'plati:facturi' c.profil.id %}">
+              <div style='color:green;'>Facturi</div>
+            </a>
+        </td>
+        {% if user.profil.id == c.profil.id %}
+        <td>
+            <a class="btn btn-outline-secondary btn-sm" style='margin-top:9px;' href="{% url 'plati:plati' c.profil.id %}">
+              <div style='color:green;'>Plateste</div>
+            </a>
+        </td>
+        {% endif %}
+        <td><div style='margin-top:10px; margin-left:2px;'>{{ c.nr_permis|upper }}</div></td>
+        <td>
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <img class="account" src="{% static 'parkproject/images/car_icon_2.png' %}" alt="Account image">
+              </a>
+              <ul class="dropdown-menu" style = "background-color:lightgrey; text-align:center;" aria-labelledby="navbarDropdown">
+                {% for m in masina %}
+                  {% for p in m.profil.all %}
+                    {% if c.profil.id == p.id %}                      
+                        <li><a class="dropdown-item" style="" href="{{ m.get_absolute_url }}">{{ m|upper }}</a></li>
+                    {% endif %}  
+                  {% endfor %}
+                {% endfor %}
+                {% if masina.count <= 2 %}
+                  {% if user.is_superuser or user.profil.id == c.profil.id %}
+                    <li><a class="dropdown-item" style="color:green;" href="{% url 'staff:masina_noua' c.profil.id %}"> Adauga </a></li>
+                  {% endif %}
+                {% endif %}
+              </ul>
+            </li>
+          </ul>
+        </td>
+      </tr>
+    {% endfor %}
+    </tbody>
+  </table>
+
+  {% elif staff %}
+
+  <table class="table staff">
+    <thead>
+      <tr>
+        <th scope="col"></th>
+        <th scope="col">Functie</th>
+        <th scope="col">Data Angajare</th>
+        <th scope="col">Masina</th>
+      </tr>
+    </thead>
+    <tbody>
+    {% for s in staff %}
+      <tr>
+        <td scope="row"><a class="btn btn-outline-secondary btn-sm" href="{{ s.get_contract_url }}">Contract PDF</a></td>
+        <td>{{ s.functie|upper }}</td>
+        <td>{% for data in data_angajarii %} {{ data }} {% endfor %}</td>
+        <td>
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <img class="account" src="{% static 'parkproject/images/car_icon_2.png' %}" alt="Account image">
+              </a>
+              <ul class="dropdown-menu" style = "background-color:lightgrey; text-align:center;" aria-labelledby="navbarDropdown">
+                {% for m in masina %}
+                  {% for p in m.profil.all %}
+                    {% if s.profil.id == p.id %}                      
+                        <li><a class="dropdown-item" style="" href="{{ m.get_absolute_url }}">{{ m|upper }}</a></li>
+                    {% endif %}  
+                  {% endfor %}
+                {% endfor %}
+                {% if masina.count <= 2 %}
+                  {% if user.is_superuser or user.profil.id == s.profil.id %}
+                    <li><a class="dropdown-item" style="color:green;" href="{% url 'staff:masina_noua' s.profil.id %}"> Adauga </a></li>
+                  {% endif %}
+                {% endif %}
+              </ul>
+            </li>
+          </ul>
+        </td>
+      </tr>
+    {% endfor %}
+    </tbody>
+  </table>
+  {% else %}
+  <center>
+  <a class="btn btn-outline-success btn-sm" style='height: 50px; padding-top: 10px;' href="{% url 'clienti:client_nou' user.profil.id %}">
+    <span> Formular Abonament </span>
+  </a>
+  </center>
+  <br>
+  {% endif %}
+
+  <hr>
+  <br>
+  
+{% endif %}
+
+{% endblock mainbody %}

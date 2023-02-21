@@ -1,0 +1,17 @@
+{% extends 'parkproject/main.html' %}
+{% load static %}
+
+{% block title %}Inregistrare{% endblock %}
+
+{% block mainbody %}
+<link rel="stylesheet" type="text/css" href="{% static 'useri/css/signup.css' %}">
+
+  <h2 class='titlu'>Introdu datele pentru inregistrare.</h2>
+
+<form method="POST" class='form-control'>
+  {% csrf_token %}
+  {{ form.as_p }}
+  <button type="submit" class="btn btn-secondary" data-toggle="tooltip" data-placement="top" title="Inregistreaza">Inregistreaza!</button>
+</form>
+
+{% endblock %}

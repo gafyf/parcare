@@ -1,0 +1,37 @@
+{% extends 'parkproject/main.html' %}
+{% load static %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'clienti/css/clienti.css' %}">
+
+{% block mainbody %}
+<body class='clientibody'>
+    <br>
+    {{client}}{{email}}{{domain}}{{protocol}}
+    <table class='table' align='center'>
+        <thead>
+            <tr>
+                <th></th>
+                <th>Client ID</th>
+                <th>Client</th>
+                <th>Client CNP</th>
+                <th>Motiv Plata</th>
+                <th>Suma</th>
+                <th>PDF</th>
+
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td></td>
+                <td>{{ payment.customer }}</td>
+                <td>{{ payment.metadata.client }}</td>
+                <td>{{ payment.metadata.profil_cnp }}</td>
+                <td>{{ payment.description }}</td>
+                <td>{{ payment.amount }} {{ payment.currency }}</td>
+                <td><a class="btn btn-outline-secondary btn-sm" href="{% url 'parcare:render_pdf_view' %}">PDF</a></td>
+            </tr>
+        </tbody>
+    </table> 
+</body>
+<br><br>
+{% endblock mainbody %}

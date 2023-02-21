@@ -1,0 +1,109 @@
+{% load static %}
+<html>
+<head>
+    <title>Contract Munca PDF</title>
+    <style>
+        @page {
+            size: a4;
+            margin: 2cm;
+            @frame footer_frame {           /* Another static Frame */
+                -pdf-frame-content: footer_content;
+                left: 50pt; width: 512pt; top: 772pt; height: 20pt;
+            }
+        }
+        #header {
+            width: 400px;
+            height: 100px;
+        }
+        #logo {
+            text-align: left;
+            width: 70px;
+            height 70px;
+        }
+        #titlu {
+            text-align: center;
+            font-size: 20px;
+            font-weight: 100;
+            color: darkslategray;
+            font-weight: bold;
+        }
+        #titlu span {
+            color: teal;
+            text-decoration-line: underline;
+        }
+        h3 {
+            margin-left: 10px;
+        }
+        #subtitlu {
+            width: 100%;
+            height: 10px;
+            background: rgb(176, 204, 195);
+            margin-right: 15px;
+            padding-top: 10px;
+            font-size: 15px;
+            font-weight: bold;
+            color: white;
+            text-align: center;
+        }
+
+    </style>
+</head>
+<body>
+    {% comment %} <img id='img' src="{{ profil.imagine.path }}"> {% endcomment %}
+    <div id='header'>
+        <img id='logo' src='http://127.0.0.1:8000/static/parkproject/images/parcare_icon.png' alt="Logo image">
+        <h1 id='titlu'> PARCARE ZIMBRU <br> </h1>
+        <h3 id='subtitlu' align='center'> Contract de munca nr: {{staff_contract_dict.numar}}</h3>
+    </div>
+    <div id="footer_content">(c) - page <pdf:pagenumber>
+        of <pdf:pagecount>
+    </div>
+    <br><br>
+    <div align='center'>
+        <h3> Functie : {{ staff_contract_dict.functie|upper }}</h3>
+        <h3> Data Angajarii : {{ staff_contract_dict.data_angajarii|upper }}</h3>
+    </div>
+    <hr>
+<h2 class='h2'>Intre:</h2>
+Parcare Zimbru S.R.L., cu sediul social in  Iasi, Soseaua Nationala 25 (denumit in continuare "Angajator")
+<h2 class='h2'>Si:</h2>
+{{ staff_contract_dict.nume|upper }} {{ staff_contract_dict.prenume|upper }}, CNP: {{ staff_contract_dict.cnp|upper }}, cu domiciliul in {{ staff_contract_dict.oras|upper }}({{ staff_contract_dict.judet|upper }}), {{ staff_contract_dict.adresa|upper }} (denumit in continuare "Angajat")
+<br><br><br>
+<ul>
+    <li>
+        S-a incheiat prezentul Contract de Munca cu respectarea prevederilor legale in vigoare, pentru prestarea unor servicii profesionale, astfel:
+    </li>
+    <li>
+Obiectul Contractului<br>
+    Angajatorul angajeaza Angajatul pentru a presta servicii de supraveghere si management al parcarii, conform instructiunilor si regulamentelor stabilite de Angajator.
+    </li>
+    <li>
+Durata Contractului<br>
+    Prezentul Contract de Munca este incheiat pentru o perioada nedeterminata, cu posibilitatea de a fi reziliat de catre ambele parti, prin notificare in scris cu 30 de zile inainte.
+    </li>
+    <li>
+Program de lucru<br>
+    Angajatul va presta serviciile pentru Angajator in conformitate cu programul stabilit, in functie de necesitatile parcarii. Angajatul va fi disponibil sa lucreze in ture, inclusiv in weekend si sarbatori, daca este necesar.
+    </li>
+    <li>
+Salariu si Beneficii<br>
+    Angajatul va primi un salariu lunar de [suma], platit in fiecare luna pana la data de [data]. De asemenea, Angajatul va fi eligibil pentru alte beneficii, cum ar fi bonuri de masa sau alte beneficii similare, in conformitate cu politica Angajatorului.
+    </li>
+    <li>
+Obligatiile Angajatului<br>
+    Angajatul va presta serviciile cu diligenta si buna credinta si va respecta toate regulile si procedurile Angajatorului. De asemenea, Angajatul va pastra confidentialitatea informatiilor privind activitatea parcarii.
+    </li>
+    <li>
+Obligatiile Angajatorului<br>
+    Angajatorul va furniza Angajatului echipamentul necesar pentru prestarea serviciilor si va respecta obligatiile financiare prevazute in prezentul Contract de Munca.
+    </li>
+    <li>
+Confidentialitate<br>
+    Partile sunt de acord sa nu dezvaluie niciunei terte parti informatii confidentiale legate de activitatea parcarii si sa nu utilizeze aceste informatii in interesul propriu sau al oricarei alte persoane, in afara activitatii legate de prestarea serviciilor.
+    </li>
+    <li>
+Forta majora<br>
+    Niciuna dintre parti nu va fi raspunzatoare pentru orice neindeplinire a obligatiilor sale conform prezentului Contract, daca aceasta neindeplinire rezulta din cauze care sunt dincolo de controlul sau, incluzand, dar fara a se limita la: cutremure, incendii, inundatii, razboi, acte de terorism, greve sau alte conflicte de munca, blocaje comerciale sau orice alte evenimente similare care sunt dincolo de controlul sau.
+    </li>
+</body>
+</html>

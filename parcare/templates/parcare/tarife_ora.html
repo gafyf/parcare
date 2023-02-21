@@ -1,0 +1,122 @@
+{% extends 'parkproject/main.html' %}
+{% load static %}
+{% block title %} Tarife ora {% endblock %}
+
+{% block mainbody %}
+<link rel="stylesheet" type="text/css" href="{% static 'parcare/css/tarife_ora.css' %}">
+
+<div class='container'>
+    <br>
+    <table class='table' align='center'>
+        <thead><h5 class='h5'>Preturi in Lei, TVA inclusa.
+                    <span class='h5' style='margin-left: 500px;'>Taxa pierdere bilet: 90lei</span>
+                </h5><hr>
+            <tr>
+                <th></th>
+                <th>Ore</th>
+                <th>07:00 - 19:00</th>
+                <th>19:00 - 07:00</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td></td>
+                <td>0.5</td>
+                <td>5.00</td>
+                <td>5.00</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>1</td>
+                <td>5.00</td>
+                <td>5.00</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>1.5</td>
+                <td>7.50</td>
+                <td>5.00</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>2</td>
+                <td>10.00</td>
+                <td>7.50</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>2.5</td>
+                <td>12.50</td>
+                <td>7.50</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>3</td>
+                <td>15.00</td>
+                <td>10.00</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>3.5</td>
+                <td>17.50</td>
+                <td>10.00</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>4</td>
+                <td>20.00</td>
+                <td>12.50</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>5</td>
+                <td>25.00</td>
+                <td>15.00</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>6</td>
+                <td>30.00</td>
+                <td>17.50</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>7</td>
+                <td>35.00</td>
+                <td>20.00</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>8</td>
+                <td>40.00</td>
+                <td>22.50</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>9</td>
+                <td>45.00</td>
+                <td>25.00</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>10</td>
+                <td>50.00</td>
+                <td>27.50</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>11</td>
+                <td>55.00</td>
+                <td>30.00</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>12</td>
+                <td>60.00</td>
+                <td>32.50</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<br><br>
+{% endblock mainbody %}

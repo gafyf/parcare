@@ -1,0 +1,78 @@
+{% extends 'parkproject/main.html' %}
+{% load static %}
+{% block title %} Client Nou {% endblock %}
+
+{% block mainbody %}
+<link rel="stylesheet" type="text/css" href="{% static 'clienti/css/client_nou.css' %}">
+
+<body class='clientibody'>
+    <br>
+    <form id='payment-form' class='form-control' enctype="multipart/form-data" method='POST' novalidate>
+        {% csrf_token %}
+        {% if messages %}
+            {% for message in messages %}
+                <center>
+                    <div{% if message.tags %} id="card-errors" class="alert alert-{{ message.tags }} alert-dismissible fade show alert-sm" role="alert"{% endif %}>
+                        {{ message }}
+                    <button type="button" class="btn-close btn-sm" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+                </center>
+            {% endfor %}
+        {% endif %} 
+
+        <table class='table' align='center'>
+            <thead>
+                <h5 class='h5'><b>Client</b></h5>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Nume: {{client_form.nume}}</td>
+                    <td id="custName">Prenume: {{client_form.prenume}}</td>
+                </tr>
+                <tr>
+                    <td id="custEmail">Email: {{client_form.email}}</td>
+                    <td>Cnp: {{client_form.cnp}}</td>
+                </tr>
+                    <td>Judet: {{client_form.judet}}</td>
+                    <td>Oras: {{client_form.oras}}</td>
+                <tr>
+                    <td id="custAdd">Adresa: {{client_form.adresa}}</td>
+                    <td>Telefon: {{client_form.telefon}}</td>
+                </tr>
+            </tbody>
+        </table>
+        <table class='table' align='center'>
+            <thead>
+                <h5 class='h5'><b>Masina</b></h5>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Marca: {{client_form.marca}}</td>
+                    <td>Model: {{client_form.model}}</td>
+                </tr>
+                <tr>
+                    <td id="carNr">Numar: {{client_form.numar}}</td>
+                    <td>Culoare: {{client_form.culoare}}</td>
+                </tr>
+                <tr>
+                    <td>Combustibil: {{client_form.combustibil}}</td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+        <table class='table' align='center'>
+            <thead>
+                <h5 class='h5'><b>Permis</b></h5>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Nr. Permis: {{client_form.nr_permis}}</td>
+                    <td>Ctg. Permis: {{client_form.categ_permis}}</td>
+                </tr>
+            </tbody>
+        </table>
+        <div id="custAbb" class="btn btn-secondary">{{client_form.contract}}</div>
+    <button id='submit' class="btn btn-secondary" type="submit">Adauga Abonament</button>
+</form>
+</body>
+{% endblock mainbody %}

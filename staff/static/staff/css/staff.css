@@ -1,0 +1,21 @@
+
+h2.titlu {
+    color:darkslategray;
+}
+
+a.btn.btn-secondary.btn-sm {
+    margin-right:30px;
+    text-align: center;
+    display: inline;
+    width: 300px;
+}
+
+p {
+    margin: 5px;
+    padding: 5px;
+    font-style: oblique;
+}
+
+table.table {
+    margin-bottom: 50px;
+}

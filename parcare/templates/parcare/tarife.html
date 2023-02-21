@@ -1,0 +1,55 @@
+{% extends 'parkproject/main.html' %}
+{% load static %}
+{% block title %} Tarife {% endblock %}
+
+{% block mainbody %}
+<link rel="stylesheet" type="text/css" href="{% static 'parcare/css/tarife.css' %}">
+
+<div class="container text-center">
+    <br>
+    <h2 style='color:darkslategray;'>Tarife Parcare</h2>
+    <br><br>
+    <div class="row">
+      <div class="col">
+        <img class="account" src="{% static 'parcare/images/ceas_icon.png' %}" alt="image">
+        <p>Tarif pe ora/24h</p>
+        <a class="btn btn-secondary" href="{% url 'parcare:tarife_ora' %}">Informatii</a>
+      </div>
+      <div class="col">
+        <img class="account" src="{% static 'parcare/images/abonament_icon.png' %}" alt="image">
+        <p>Preturi abonamente</p>
+        <a class="btn btn-secondary" href="{% url 'parcare:abonamente' %}">Informatii</a>
+      </div>
+      <div class="col">
+        <img class="account" src="{% static 'parcare/images/card_icon.png' %}" alt="image">
+        <p>Preturi carduri reincarcabile</p>
+        <a class="btn btn-secondary" href="{% url 'parcare:carduri' %}">Informatii</a>
+      </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <img class="account" src="{% static 'parcare/images/eveniment_icon.png' %}" alt="image">
+            <h6>Evenimente</h6>
+            <p>Oferim posibilitatea rezervarii mai multor locuri de parcare pentru evenimente (conferinte, spectacole, nunti...) la tarife speciale.
+                <br><a href="{% url 'parcare:contact' %}">Contacteaza-ne pentru oferte.</a>
+            </p>
+        </div>
+        <div class="col">
+            <img class="account" src="{% static 'parcare/images/hotel_icon.png' %}" alt="image">
+            <h6>Conventii Hoteluri</h6>
+            <p>Locuri de parcare in zona publica, supravegheate video 24h/24h.
+                <br> 70lei/24h
+            </p>
+        </div>
+        <div class="col">
+            <img class="account" src="{% static 'parcare/images/societate_icon.png' %}" alt="image">
+            <h6>Conventii Societati</h6>
+            <p>Carduri valabile Luni - Vineri. 
+                <br>50lei/24h
+            </p>
+        </div>
+    </div>
+</div>
+<br><br><br>
+
+{% endblock %}

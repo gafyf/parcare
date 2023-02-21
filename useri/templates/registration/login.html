@@ -1,0 +1,29 @@
+{% extends 'parkproject/main.html' %}
+{% load static %}
+
+{% block title %}Login{% endblock %}
+
+{% block mainbody %}
+<link rel="stylesheet" type="text/css" href="{% static 'useri/css/login.css' %}">
+
+  
+<h2 class='titlu'>Introdu userul si parola pentru autentificare.</h2>
+<center>
+  {% if messages %}
+      {% for message in messages %}
+      <div{% if message.tags %} class="alert alert-{{ message.tags }} alert-dismissible fade show alert-sm" role="alert"{% endif %}>
+        {{ message }}
+        <button type="button" class="btn-close btn-sm" data-bs-dismiss="alert" aria-label="Close"></button>
+      </div>
+      {% endfor %}
+  {% endif %}
+  </center>
+<form method="POST" class='form-control'>
+  {% csrf_token %}
+  {{ form.as_p }}
+  <button class="btn btn-secondary" type="submit">Log In</button>
+  <p class='user_nou'><a class="btn btn-secondary btn-sm" href="{% url 'useri:password_reset_form' %}">Am uitat parola</a>
+  <a class="btn btn-secondary btn-sm" href="{% url 'useri:signup' %}">Creeaza user nou</a></p>
+</form>
+
+{% endblock %}

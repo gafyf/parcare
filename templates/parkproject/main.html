@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>{% block title %} {{ titlu }} {% endblock %} </title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" href="{% static 'parkproject/css/main.css' %}">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    </head>
+
+    <header>
+        {% block navbar %}
+        {% include 'parkproject/navbar.html' %}
+        {% endblock navbar %}
+    </header>
+
+    
+    <body class='mainbody'>
+        {% block mainbody %}
+
+        <div class='container'>
+        {% block container %}
+        <div class='container-title'>
+            <h5>
+                <b>Parcarea Zimbru - Un inceput usor pentru o zi ocupata.</b>
+            </h5>
+        </div>
+        <hr>
+        <p> - Bine ati venit la Parcarea Zimbru Iasi, un loc de parcare modern si sigur, situat in inima orasului. Deschis in 19 Aprilie 2019, ne-am propus sa oferim soferilor o alternativa convenabila pentru a-si parca masina in conditii de siguranta si comfort. Cu un sistem avansat de plata si monitorizare, precum si personal atent si amabil, va garantam ca aici veti gasi mereu un loc disponibil pentru masina dvs.</p>
+
+
+        <p><b><u> Comod si sigur. </b></u></p>
+        <p> - Situata la cativa metri de primarie, birouri si centre comerciale.</p>
+        <p> - Dispunem de 1000 de locuri, distribuite pe 5 etaje subterane de culori diferite, cu stalpi numerotati pentru o mai buna orientare in gasirea propriului autoturism.</p>
+            
+        <p><b><u> Avantajos si flexibil. </b></u></p>
+        <p> - Organizarea flexibila a parcarii noastre va ofera diverse oferte pentru majoritatea nevoilor, incercand sa mentina cel mai bun raport calitate / pret. </p>
+        <hr>
+        <p><b>Pentru viitor, ne propunem sa oferim utilizatorilor acestui site un serviciu mereu actualizat, comod si sigur.</b></p>
+        <br>
+        {% endblock container %}
+        </div>
+        
+        {% endblock mainbody %}
+    </body>
+
+    <footer class="container-fluid">
+        {% block footer %}
+        <hr>
+        <div class="row pt-4">
+            <div class="col-12 col-md">
+                <small class="d-block mb-3 text-muted">&copy; 2019 - {% now "jS \o\f F Y" %}</small>
+                <img class="logo-footer" src="{% static 'parkproject/images/parcare_icon.png' %}" alt="Logo image">
+            </div>
+            <div class="col-6 col-md fs15">
+                <h5>Birou informatii si abonamente</h5>
+                <ul class="list-unstyled">
+                    <li>Adresa: Strada Tabacului 1A</li>
+                    <li>Orar: luni-duminica 06:00 - 00:00</li>
+                    <li>Tel: +39 332 158 02 38</li>
+                    <li>Cell: +39 327 226 41 55</li>
+                    <li>Email: parcare@yahoo.com</li>
+                </ul>
+            </div>
+            <div class="col-6 col-md fs15">
+                <h5>Birou societate</h5><br>
+                <ul class="list-unstyled">
+                    <li>Adresa: Soseaua Nationala 25</li>
+                    <li>Orar: luni-vineri 09:00 - 17:00</li>
+                    <li>Manager: Gafita Florin</li>
+                    <li>Tel: + 39 327 268 55 10</li>
+                    <li>Email: gafyf@gmail.com</li>
+                </ul>
+            </div>
+            <div class="col-6 col-md fs15">
+                <h5>Parteneri</h5><br>
+                <ul class="list-unstyled">
+                    <li><a class="link-secondary text-decoration-none" href="https://auto-zet.ro">Auto ZET</a></li>
+                    <li><a class="link-secondary text-decoration-none" href="https://www.primaria-iasi.ro">Primaria Iasi</a></li>
+                    <li><a class="link-secondary text-decoration-none" href="https://www.teatrulnationaliasi.ro">Teatrul National</a></li>
+                    <li><a class="link-secondary text-decoration-none" href="https://www.grandhoteltraian.ro">Hotel Traian</a></li>
+                    <li><a class="link-secondary text-decoration-none" href="https://www.hotelunirea.ro">Hotel Unirea</a></li>
+                    {% comment %} <li><a class="link-secondary text-decoration-none" href="http://www.palasmall.ro">Palas Mall</a></li> {% endcomment %}
+                </ul>
+            </div>
+            <div class="col-6 col-md">
+                <h5>Mergi la:</h5><br>
+                <ul class="list-unstyled">
+                    <li><a class="link-secondary text-decoration-none" href="{% url 'parcare:tarife' %}">Tarife</a></li>
+                    <li><a class="link-secondary text-decoration-none" href="{% url 'parcare:galerie' %}">Galerie foto</a></li>
+                    <li><a class="link-secondary text-decoration-none" href="{% url 'parcare:servicii' %}">Servicii</a></li>
+                    <li><a class="link-secondary text-decoration-none" href="{% url 'parcare:contact' %}">Harta</a></li>
+                    <li><a class="link-secondary text-decoration-none" href="{% url 'parcare:termeni_si_conditii' %}">Termeni si conditii</a></li>
+                </ul>
+            </div>
+        </div>
+        {% endblock footer %}
+        <br>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
+</html>

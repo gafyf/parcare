@@ -1,0 +1,12 @@
+{% extends 'parkproject/main.html' %}
+
+{% block title %}Logout{% endblock %}
+
+{% block mainbody %}
+<center>
+<h1>Perfect!</h1>
+<p>Te-ai delogat cu succes! Poti merge la pagina de logare.</p>
+<a class="btn btn-secondary" href="{% url 'useri:login' %}">Login</a>
+</center>
+<br><br><br>
+{% endblock %}

@@ -1,0 +1,45 @@
+{% extends 'parkproject/main.html' %}
+{% load static %}
+{% block title %} Contact {% endblock %} 
+
+{% block mainbody %}
+
+<div class="container text-center">
+    <br>
+    <h2 style='color:darkslategray;'>
+        <img class="account" src="{% static 'parcare/images/contact_icon.png' %}" alt="Account image">
+        Contact
+    </h2>
+    <br><br>
+    <div class="row">
+      <div class="col">
+        <h5 style='color:darkslategray;'>Contact birou parcare</h5>
+        <hr>
+        <p style='color:darkslategray; text-align:left; margin-left:32%;'>
+           Adresa: Strada Tabacului 1A
+           <br>Orar: luni-duminica 06:00 - 00:00
+           <br>Tel: +39 332 158 02 38
+           <br>Cell: +39 327 226 41 55
+           <br>Email: parcare@yahoo.com
+        </p>
+      </div>
+      <div class="col">
+        <h5 style='color:darkslategray;'>Contact birou societate</h5>
+        <hr>
+        <p style='color:darkslategray; text-align:left; margin-left:32%;'>
+           Adresa: Soseaua Nationala 25
+           <br>Orar: luni-vineri 09:00 - 17:00
+           <br>Manager: Gafita Florin
+           <br>Tel: + 39 327 268 55 10
+           <br>Email: gafyf@gmail.com
+        </p>
+      </div>
+    </div>
+  </div>
+  <hr>
+  <center>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d520.8552657147678!2d8.798837649260946!3d45.81058850452903!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47867e6a35fb683b%3A0x431ead852ee1971e!2sParcheggio%20di%20Piazza%20Bossi%2C%20Piazza%20Emilio%20Bossi%2C%2021100%20Varese%20VA!5e0!3m2!1sro!2sit!4v1672749244339!5m2!1sro!2sit" width="90%;" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+  </center>
+    <br><br>
+
+{% endblock %}

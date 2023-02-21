@@ -1,0 +1,30 @@
+{% extends 'parkproject/main.html' %}
+{% load static %}
+{% block title %} Abonamente {% endblock %}
+
+{% block mainbody %}
+<link rel="stylesheet" type="text/css" href="{% static 'parcare/css/abonamente.css' %}">
+
+<div class='container'>
+<br>
+    <h5 style='color:darkslategray;'>Preturi Abonamente, TVA inclusa.</h5>
+    <br>
+    <div class="row">
+      <div class="col-sm-4">
+        <img class="account" src="{% static 'parcare/images/abonament_icon.png' %}" alt="image">
+        <br><br>
+        <h6>Abonament Zona Publica</h6>
+        <h5>500 lei</h5><hr>
+        <a class="btn btn-secondary" href="{% url 'parcare:info_client_contract_pdf' %}">Descarca PDF</a>
+      </div>
+      <div class="col-sm-4">
+        <img class="account" src="{% static 'parcare/images/abonament_icon.png' %}" alt="image">
+        <br><br>
+        <h6>Abonament Zona Privata</h6>
+        <h5>800 lei</h5><hr>
+        <a class="btn btn-secondary" href="{% url 'parcare:info_client_contract_pdf' %}">Descarca PDF</a>
+      </div>
+    </div>
+</div>
+<br><br>
+{% endblock mainbody %}
