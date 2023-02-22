@@ -27,7 +27,7 @@ SECRET_KEY = SECRET_KEY
 DEBUG = False
 
 # ALLOWED_HOSTS =['localhost']
-ALLOWED_HOSTS = ['127.0.0.1', '172.20.10.5']
+ALLOWED_HOSTS = ['127.0.0.1']
 
 # Application definition
 
@@ -139,46 +139,27 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'static/images/')
 MEDIA_ROOT_LOGO = os.path.join(BASE_DIR, 'static/parkproject/')
 MEDIA_URL = 'images/'
 
-# MEDIA_ROOT = os.path.join(BASE_DIR , 'static/parkproject/images/',
-#     'static/useri/images/',
-#     'static/parcare/images/',
-#     'static/staff/images/',
-#     'static/clienti/images/')
-
-
-
-
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-JAZZMIN_SETTINGS =  {
-    'site_title': 'Parcare App',
-    'site_header': 'Parcare admin',
-    'site_icon': 'images/images/parcare.jpg',
-    'site_logo': 'images/images/Flo.jpg',
-}
-
 LOGOUT_REDIRECT_URL = "/useri/login"
 LOGIN_REDIRECT_URL = "/"
 
 
-# EMAIL_BACKEND = 'django.core.mail.backends.filebased.EmailBackend'
-# EMAIL_FILE_PATH = BASE_DIR / 'sent_emails/'
-EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_FROM = 'gafyf19@gmail.com'
-EMAIL_HOST_USER = 'gafyf19@gmail.com'
-EMAIL_HOST_PASSWORD = 'ellscvcyapzrffzf'
-EMAIL_PORT = '587'
-EMAIL_USE_TLS = True
+EMAIL_BACKEND = 'django.core.mail.backends.filebased.EmailBackend'
+EMAIL_FILE_PATH = BASE_DIR / 'sent_emails/'
+# EMAIL_BACKEND = ''
+# EMAIL_HOST = ''
+# EMAIL_FROM = ''
+# EMAIL_HOST_USER = ''
+# EMAIL_HOST_PASSWORD = ''
+# EMAIL_PORT = ''
+# EMAIL_USE_TLS = True
 
 PASSWORD_RESET_TIMEOUT = 300
 
-# parkproject_sendinblue_smtp = 'xsmtpsib-8a41f813cbbd118bb939364e6e1adf5a1a9dcdd147d6bac3a274af5c9083313c-HI6fJ2USxdDh3Ga1'
-# p-env_sendinblue_api = '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'
-
-STRIPE_PUBLISHABLE_KEY = 'pk_test_51MU89FAvOfhHjpZGpnJG1XM3ytRhjvEOQpfdc2KVZcWd3A8TeX0BEbUFTH4AZcZNUEolwROAGrc8OnHlV8Q0Y3dA00miJyzuDp'
-STRIPE_SECRET_KEY = 'sk_test_51MU89FAvOfhHjpZGD1gJq2BapFw7Z2XfXHQ6ryyCDiV7RNawBlOOqiRxvkJRxkEeyDcHDOtilEGaWHBfKmBnFFwm00OK8WD8XD'
+STRIPE_PUBLISHABLE_KEY = ''
+STRIPE_SECRET_KEY = ''
