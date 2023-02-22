@@ -33,6 +33,7 @@ pefile==2022.5.30
 Pillow==9.0.1
 pyasn1==0.4.8
 pyasn1-modules==0.2.8
+whitenoise-6.3.0
 pycparser==2.21
 pyHanko==0.16.0
 pyhanko-certvalidator==0.19.8
