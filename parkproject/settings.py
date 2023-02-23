@@ -12,7 +12,8 @@ https://docs.djangoproject.com/en/4.0/ref/settings/
 
 from pathlib import Path
 import os
-from .settings_prod import SECRET_KEY
+from . import settings_prod
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -21,7 +22,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = SECRET_KEY
+SECRET_KEY = settings_prod.SECRET_KEY
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
@@ -149,17 +150,19 @@ LOGOUT_REDIRECT_URL = "/useri/login"
 LOGIN_REDIRECT_URL = "/"
 
 
-EMAIL_BACKEND = 'django.core.mail.backends.filebased.EmailBackend'
-EMAIL_FILE_PATH = BASE_DIR / 'sent_emails/'
-# EMAIL_BACKEND = ''
-# EMAIL_HOST = ''
-# EMAIL_FROM = ''
-# EMAIL_HOST_USER = ''
-# EMAIL_HOST_PASSWORD = ''
-# EMAIL_PORT = ''
-# EMAIL_USE_TLS = True
+# EMAIL_BACKEND = 'django.core.mail.backends.filebased.EmailBackend'
+# EMAIL_FILE_PATH = BASE_DIR / 'sent_emails/'
 
-PASSWORD_RESET_TIMEOUT = 300
+EMAIL_BACKEND = settings_prod.EMAIL_BACKEND
+EMAIL_HOST = settings_prod.EMAIL_HOST
+EMAIL_FROM = settings_prod.EMAIL_FROM
+EMAIL_HOST_USER = settings_prod.EMAIL_HOST_USER
+EMAIL_HOST_PASSWORD = settings_prod.EMAIL_HOST_PASSWORD
+EMAIL_PORT = settings_prod.EMAIL_PORT
+EMAIL_USE_TLS = settings_prod.EMAIL_USE_TLS
 
-STRIPE_PUBLISHABLE_KEY = ''
-STRIPE_SECRET_KEY = ''
+PASSWORD_RESET_TIMEOUT = settings_prod.PASSWORD_RESET_TIMEOUT
+
+
+STRIPE_PUBLISHABLE_KEY = settings_prod.STRIPE_PUBLISHABLE_KEY
+STRIPE_SECRET_KEY = settings_prod.STRIPE_SECRET_KEY
