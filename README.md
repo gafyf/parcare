@@ -23,6 +23,21 @@ Start the development server: python manage.py runserver.
 
 Navigate to http://localhost:8000 in your web browser to view the application.
 
+You need to register to www.stripe.com for test payments and add API KEY in parkproject/settings.py 
+
+    STRIPE_PUBLISHABLE_KEY = ''
+    STRIPE_SECRET_KEY = ''
+
+Also you need to add your own email settings to send emails to activate new accounts or contracts and invoices:
+
+    EMAIL_BACKEND = ''
+    EMAIL_HOST = ''
+    EMAIL_FROM = ''
+    EMAIL_HOST_USER = ''
+    EMAIL_HOST_PASSWORD = ''
+    EMAIL_PORT = ''
+    EMAIL_USE_TLS = True
+
 Usage
 As a superuser, you can add staff and clients, manage their accounts, invoices, and contracts. To add a new staff or client, log in as a superuser, navigate to the "Parcare" page from navbar, and click the "Adauga Angajat" for Add Staff or "Adauga Abonat" for Add Client. When you register a client or a staff, you send them to email an user and password.
 
