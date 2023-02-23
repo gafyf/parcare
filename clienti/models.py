@@ -63,7 +63,7 @@ class Masina(models.Model):
         return str(self.numar)
 
     def get_absolute_url(self):
-        return reverse("clienti:masina", args=[str(self.id)])
+        return reverse("clienti:masina", args=[self.id])
 
     class Meta:
         verbose_name_plural = "Masini"

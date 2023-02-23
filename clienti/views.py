@@ -279,26 +279,24 @@ def client_nou(request, pk):
     context = {'client_form': client_form}
     return render(request, template, context)
 
-def masina(request, pk):
-    masina = Masina.objects.get(id=pk)
+def masina(request, pk, masina_id):
+    profil = get_object_or_404(Profil, pk=pk)
+    masina = get_object_or_404(Masina, pk=masina_id)
     template = 'clienti/masina.html'
-    return render (request, template, {'masina': masina})
+    return render (request, template, {'masina': masina, 'profil': profil})
 
-def del_masina(request, pk):
+def del_masina(request, pk, masina_id):
+    template = 'clienti/del_masina.html'
     user = request.user
-    if user.is_authenticated:
-        masina = Masina.objects.get(id=pk)
-        profile = masina.profil.all()
-        for profil in profile:
-            profil_id = profil.id
-        template = 'clienti/del_masina.html'
-        if user.is_superuser or user.profil in profile:
-            if request.method == 'POST':
-                masina.delete()
-                messages.warning(request, "Masina a fost eliminata cu succes!")
-                return redirect('useri:detalii_profil', profil_id)
-            return render (request, template, {'masina': masina})
-        else:
-            return HttpResponse("Nu esti autorizat pt eliminare masina")
+    profil = get_object_or_404(Profil, pk=pk)
+    masina = get_object_or_404(Masina, pk=masina_id)
+    if user.is_authenticated and (user.is_superuser or str(user.profil.id)==pk):
+        if request.method == 'POST':
+            profil.masini.remove(masina)
+            print('masina', masina, 'eliminata cu succes')
+            return redirect ('useri:detalii_profil', pk=profil.id)
     else:
-        return HttpResponse("Nu esti autorizat pt eliminare masina")
+        return HttpResponse("Nu esti autorizat sa elimini masina.")
+    context = {'masina': masina, 'profil': profil}
+    response = render(request, template, context)
+    return response

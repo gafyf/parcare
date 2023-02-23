@@ -140,7 +140,8 @@
                 {% for m in masina %}
                   {% for p in m.profil.all %}
                     {% if c.profil.id == p.id %}                      
-                        <li><a class="dropdown-item" style="" href="{{ m.get_absolute_url }}">{{ m|upper }}</a></li>
+                        {% comment %} <li><a class="dropdown-item" style="" href="{{ m.get_absolute_url }}">{{ m|upper }}</a></li> {% endcomment %}
+                        <li><a class="dropdown-item" style="" href="{% url 'clienti:masina' c.profil.id m.id %}">{{ m|upper }}</a></li>
                     {% endif %}  
                   {% endfor %}
                 {% endfor %}
@@ -185,7 +186,7 @@
                 {% for m in masina %}
                   {% for p in m.profil.all %}
                     {% if s.profil.id == p.id %}                      
-                        <li><a class="dropdown-item" style="" href="{{ m.get_absolute_url }}">{{ m|upper }}</a></li>
+                        <li><a class="dropdown-item" style="" href="{% url 'clienti:masina' s.profil.id m.id %}">{{ m|upper }}</a></li>
                     {% endif %}  
                   {% endfor %}
                 {% endfor %}

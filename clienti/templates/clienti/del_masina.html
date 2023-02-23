@@ -11,7 +11,7 @@
     {% csrf_token %}
     {{ form.as_p }}
     <button type="submit" class="btn btn-secondary">Elimina Masina</button>
-    <a class="btn btn-secondary" href="{% url 'clienti:masina' masina.id %}">Renunta</a>
+    <a class="btn btn-secondary" href="{% url 'clienti:masina' profil.id masina.id %}">Renunta</a>
     <hr>
   </form>
 </center>

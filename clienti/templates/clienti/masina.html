@@ -23,12 +23,12 @@
             {% if masina %}
             <tr>
                 <td></td>
-                <td>{% for profil in masina.profil.all %} {{ profil|title }} {% endfor %}</td>
+                <td>{{ profil|title }}</td>
                 <td>{{ masina.marca|title }}</td>
                 <td>{{ masina.model|title }}</td>
                 <td>{{ masina.numar|upper }}</td>
                 <td>{{ masina.culoare|title }}</td>
-                <td><a class="btn btn-outline-danger btn-sm" href="{% url 'clienti:del_masina' masina.id %}">Elimina Masina</a></td>
+                <td><a class="btn btn-outline-danger btn-sm" href="{% url 'clienti:del_masina' profil.id masina.id %}">Elimina Masina</a></td>
             </tr>
             {% endif %}
         </tbody>
