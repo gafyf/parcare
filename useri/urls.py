@@ -1,6 +1,6 @@
 from django.urls import path, include
 from . import views
-
+from django.contrib.auth import views as auth_views
 
 app_name = 'useri'
 urlpatterns = [
@@ -13,6 +13,7 @@ urlpatterns = [
     path("password_reset_done/", views.PasswordResetDoneView.as_view(), name="password_reset_done"),
     path("password_reset_complete/", views.PasswordResetCompleteView.as_view(), name="password_reset_complete"),
     path("password_change/", views.PasswordChangeView.as_view(), name="password_change"),
+    path('password/change/done/',  views.password_change_done, name='password_change_done'),
     path('profil_edit/<str:pk>/', views.ProfilUpdateView.as_view(), name='profil_edit'),
     path('user_edit/<str:pk>/', views.UserUpdateView.as_view(), name='user_edit'),
     path('delete_user/<str:pk>/', views.DeleteUser.as_view(), name='delete_user'),

@@ -24,14 +24,17 @@ def tarife_ora(request):
 def abonamente(request):
     template = 'parcare/abonamente.html'
     user = request.user
-    if user.is_authenticated and user.is_staff or user.is_superuser:
+    if user.is_authenticated and (user.is_staff or user.is_superuser):
         return render(request, template)
     else:
         if user.is_authenticated:
-            client = Client.objects.get(profil__id=user.profil.id)
-            if user.is_authenticated and client.profil.id==user.profil.id:
-                contract = Contract.objects.get(profil__id=user.profil.id)
-                return render(request, template, {'client': client, 'contract': contract})
+            if user.profil in Client.objects.all():
+                client = Client.objects.get(profil__id=user.profil.id)
+                if user.is_authenticated and client.profil.id==user.profil.id:
+                    contract = Contract.objects.get(profil__id=user.profil.id)
+                    return render(request, template, {'client': client, 'contract': contract})
+                else:
+                    return render(request, template)
             else:
                 return render(request, template)
         else:
@@ -93,47 +96,15 @@ def galerie(request):
 def parcare(request):
     template = 'parcare/parcare.html'
     masina = Masina.objects.all()
-    # m = list(masina)
-    # print(m[0].id)
     masini = Masina.profil.through.objects.all()
-    # ms = list(masina)
-    # ms = Profil.objects.filter(data_creare__hour__lte=12)
-    # print('profile inainte de 12', ms)
     staff = Staff.objects.all()
     s = Staff.objects.filter(profil__nume__istartswith='t')
     print(s)
     contract = Contract.objects.all()
-    # cnt = contract.filter(client__categ_permis__startswith='AAA')[0]
     profil = Profil.objects.all()
-    # pri = profil.filter(imagine=0)
-    # ultimul = Profil.objects.order_by('data_creare')[0]
-    # prof = profil.filter(prenume__startswith='Cri').exclude(data_creare__gte=datetime.date.today()).filter(data_creare__gte=datetime.date(2022, 10, 19))
-    # client = Profil.objects.filter(id =m[0].clienti['1'])
     client = Client.objects.all()
-    # print(client)
-    # cprofil = []
-    # for c in client:
-    #     cprofil.append(c.data_creare.strftime("%d.%m.%Y, %H:%M:%S"))
-    # print ('data si ora ultimului client creat:', cprofil[0])
-    # cmasina = []
-    # for m in masina:
-    #     for c in m.client.all():
-    #         for x in c.masini.all():
-    #             cmasina.append(x.marca)
-    # print('marca masina ultimului client creat:', cmasina[0])
-    # ore = staff[0].ora_start
-    #ore1 = staff[1].ora_stop - staff[1].ora_start
-    #total = ore + ore1
     fact = Factura.objects.all()
     context = {
-        # 'pri': pri,
-        # 'ms': (w in ms.filter(prenume__icontains = 'o') for w in ms),
-        # 'cnt': cnt,
-        # 'ultimul': ultimul,
-        # 'prof': prof[0],
-        # 'marca': cmasina[0],
-        # 'cprofil': cprofil[0],
-        # 'clist': client.last(),
         'fact': fact,
         'profil': profil,
         'masini': masini,
@@ -141,9 +112,6 @@ def parcare(request):
         'contract': contract,
         'client': client,
         'staff': staff,
-        # 'ore': ore,
-        #'ore1': ore1,
-        #'total': total,
     }
     response = render(request, template, context)
     return response

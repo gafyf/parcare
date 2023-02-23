@@ -47,7 +47,7 @@ def staff_nou(request, pk):
             if staff_form.is_valid():
                 staff_exista = Staff.objects.filter(Q(profil__user__username=staff_form.cleaned_data['nume'] + staff_form.cleaned_data['prenume']) | Q(profil__cnp=staff_form.cleaned_data['cnp']) | Q(profil__email=staff_form.cleaned_data['email']))
                 if staff_exista.exists():
-                    messages.danger(request, "Username, cnp sau email existente in baza de date. Introdu alte date.")
+                    messages.warning(request, "Username, cnp sau email existente in baza de date. Introdu alte date.")
                     print('test username, cnp si email', staff_exista, 'EXISTENT!!!')
                 else:
                     print(staff_form.cleaned_data)
@@ -148,7 +148,7 @@ def masina_noua(request, pk):
             if masina_form.is_valid():
                 masina_exista = Masina.objects.filter(numar=masina_form.cleaned_data['numar'])
                 if masina_exista.exists():
-                    messages.danger(request, 'Masina exista in baza de date')
+                    messages.warning(request, 'Masina exista in baza de date')
                     print('Masina cu numarul',  masina_exista, 'exista in baza de date')
                 else:
                     masina = Masina(

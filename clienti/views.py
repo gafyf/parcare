@@ -55,7 +55,7 @@ def client_nou(request, pk):
                 if client_form.is_valid():
                     client_exista = Client.objects.filter(profil__email=client_form.cleaned_data['email'], profil__cnp=client_form.cleaned_data['cnp'], profil__user__username = client_form.cleaned_data['nume'] + client_form.cleaned_data['cnp'])
                     if client_exista.exists():
-                        messages.danger(request, "Adresa email, user si cnp existente in baza de date. Introdu alte date.")
+                        messages.warning(request, "Adresa email, user si cnp existente in baza de date. Introdu alte date.")
                         print('test email & cnp', client_exista, 'EXISTENT!!!')
                     else:
                         print(client_form.cleaned_data)
@@ -196,7 +196,7 @@ def client_nou(request, pk):
             if client_form.is_valid(): # save form data to variables
                 client_exista = Client.objects.filter(profil__email=client_form.cleaned_data['email'], profil__cnp=client_form.cleaned_data['cnp'])
                 if client_exista.exists():
-                    messages.danger(request, "Adresa email si cnp existente in baza de date. Introdu alte date.")
+                    messages.warning(request, "Adresa email si cnp existente in baza de date. Introdu alte date.")
                     print('test email & cnp', client_exista, 'EXISTENT!!!')
                 else:
                     print(client_form.cleaned_data)
@@ -295,7 +295,7 @@ def del_masina(request, pk):
         if user.is_superuser or user.profil in profile:
             if request.method == 'POST':
                 masina.delete()
-                messages.danger(request, "Masina a fost eliminata cu succes!")
+                messages.warning(request, "Masina a fost eliminata cu succes!")
                 return redirect('useri:detalii_profil', profil_id)
             return render (request, template, {'masina': masina})
         else:

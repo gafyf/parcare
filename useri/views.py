@@ -94,7 +94,11 @@ class PasswordResetCompleteView(views.PasswordResetCompleteView):
 
 class PasswordChangeView(views.PasswordChangeView):
     form_class = PasswordChangeForm
+    success_url = reverse_lazy("useri:password_change_done")
     template_name= "registration/password_change_form.html"
+
+def password_change_done(request):
+    return render(request, 'registration/password_change_done.html')
 
 class ProfilUpdateView(LoginRequiredMixin, SuccessMessageMixin, UpdateView):
     template_name = 'registration/profil_edit.html'
@@ -116,6 +120,9 @@ class UserUpdateView(LoginRequiredMixin, SuccessMessageMixin, UpdateView):
     form_class = UserUpdateForm
     success_url = reverse_lazy("useri:detalii_profil")
     success_message = 'User edit OK!'
+
+    def get_success_url(self):
+        return reverse_lazy('useri:detalii_profil', kwargs={'pk': self.object.profil.pk})
     
     def form_valid(self, form):
         form.instance.profil.user = self.request.user
@@ -128,13 +135,16 @@ class DeleteUser(SuccessMessageMixin, generic.DeleteView):
     success_url = reverse_lazy('useri:login')
 
 def delete_profil(request, pk):
-    profil = Profil.objects.get(pk=pk)
     template = 'registration/delete_profil.html'
     if request.method == 'POST':
+        profil = Profil.objects.get(pk=pk)
         profil.delete()
-        messages.danger(request, "Profilul a fost eliminat cu succes!")
-        return redirect('useri:login')
-    return render (request, template, {'profil': profil})
+        messages.warning(request, "Profilul a fost eliminat cu succes!")
+        if request.user.is_superuser and request.user.id is not profil.user.id:
+            return redirect('parcare:parcare')
+        else:        
+            return redirect('useri:login')
+    return render (request, template)
 
 def detalii_profil(request, pk):
     template = 'useri/detalii_profil.html'

@@ -50,6 +50,6 @@ class ProfilUpdateForm(forms.ModelForm):
                  'judet': forms.TextInput(attrs={'class': 'form-control', 'placeholder':'Judet'}),
                  'oras': forms.TextInput(attrs={'class': 'form-control', 'placeholder':'Oras'}),
                  'adresa': forms.TextInput(attrs={'class': 'form-control', 'placeholder':'Adresa'}),
-                 'telefon': forms.NumberInput(attrs={'class': 'form-control', 'placeholder':'Numar de telefon'}),
+                 'telefon': forms.TextInput(attrs={'class': 'form-control', 'placeholder':'Numar de telefon'}),
                  'imagine': forms.FileInput(attrs={'class': 'form-control'})
              }
