@@ -7,17 +7,9 @@ from django.conf.urls.i18n import i18n_patterns
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    # path("search/", views.search, name="search"),
-    # path('useri/', include('useri.urls')),
-    # path('parcare/', include('parcare.urls')),
-    # path('staff/', include('staff.urls')),
-    # path('clienti/', include('clienti.urls')),
-    # path('plati/', include('plati.urls')),
-    # path('', views.main, name='main'),
 ]
 
 urlpatterns += i18n_patterns (
-    # path('lang/', include('lang.urls', namespace='lang')),
     path('', views.main, name='main'),
     path("search/", views.search, name="search"),
     path('useri/', include('useri.urls')),

@@ -70,7 +70,7 @@ def factura_client_pdf(factura_client_dict):
         str(_(' Adresa: ')) + str(factura_client_dict['adresa']),
         str(_(' Email: ')) + str(factura_client_dict['email']), 
         str(_(' Tel: ')) + str(factura_client_dict['telefon']),
-        str(_(' Contract Nr: ')) + str(factura_client_dict['numar']),
+        str(_(' Contract Nr: ')) + str(factura_client_dict['contract_numar']),
         ]
     for t in text:
         text_client.textLine(t)
@@ -153,7 +153,7 @@ def factura(factura_client_dict):
         str(_(' Adresa: ')) + str(factura_client_dict['adresa']),
         str(_(' Email: ')) + str(factura_client_dict['email']), 
         str(_(' Tel: ')) + str(factura_client_dict['telefon']),
-        str(_(' Contract Nr: ')) + str(factura_client_dict['numar']),
+        str(_(' Contract Nr: ')) + str(factura_client_dict['contract_numar']),
         ]
     for t in text:
         text_client.textLine(t)

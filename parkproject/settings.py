@@ -27,7 +27,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = settings_prod.SECRET_KEY
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 # ALLOWED_HOSTS =['localhost']
 ALLOWED_HOSTS = ['127.0.0.1']
@@ -41,7 +41,6 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'rest_framework',
-    'lang',
     'useri.apps.UseriAppConfig',
     'clienti.apps.ClientiAppConfig',
     'staff.apps.StaffAppConfig',
