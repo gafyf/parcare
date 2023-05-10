@@ -1,12 +1,13 @@
 {% extends 'parkproject/main.html' %}
+{% load i18n %}
 {% load static %}
-{% block title %} Cautare {% endblock %}
+{% block title %} {% translate "Cautare" %} {% endblock %}
 
 {% block mainbody %}
 
 <center>
 <br>
-<p>Lista profilelor cautate:</p>
+<p>{% translate "Lista profilelor cautate" %}:</p>
 <br>
   {% for p in profil %}
     <p> 

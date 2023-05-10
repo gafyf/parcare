@@ -1,0 +1,14 @@
+p {
+    color:darkslategray;
+}
+
+h2.titlu {
+    color:darkslategray;
+}
+
+button.btn.btn-secondary {
+    text-align: center;
+    display: inline;
+    margin-left: 120px;
+    width: 200px;
+}

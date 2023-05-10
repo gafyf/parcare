@@ -5,6 +5,7 @@ from xhtml2pdf import pisa
 
 from django.shortcuts import render
 from django.http import HttpResponse
+from django.utils.translation import gettext_lazy as _
 
 from .models import Imagine
 from useri.models import Profil
@@ -56,7 +57,7 @@ def render_to_pdf(template_path, context_dict={}):
     if not pdf.err:
         return HttpResponse(result.getvalue(), content_type='application/pdf')
     if pdf.err:
-       return HttpResponse('EROARE REDARE DOCUMENT PDF')
+       return HttpResponse(_('EROARE REDARE DOCUMENT PDF'))
     return None
 
 def termeni_si_conditii(request):
@@ -101,6 +102,8 @@ def parcare(request):
     s = Staff.objects.filter(profil__nume__istartswith='t')
     print(s)
     contract = Contract.objects.all()
+    for c in contract:
+        c.has_expired()
     profil = Profil.objects.all()
     client = Client.objects.all()
     fact = Factura.objects.all()

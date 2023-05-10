@@ -12,6 +12,7 @@ from django.utils.http import urlsafe_base64_encode, urlsafe_base64_decode
 from django.contrib.sites.shortcuts import get_current_site
 from .tokens import account_activation_token
 from django.core.mail import EmailMessage
+from django.utils.translation import gettext_lazy as _
 from django.template.loader import render_to_string
 
 from .models import Profil
@@ -32,9 +33,9 @@ def activateEmail(request, user, to_email):
     })
     email = EmailMessage(mail_subject, message, to=[to_email])
     if email.send():
-        messages.success(request, f'{user}, mergi la adresa de email {to_email} si activeaza contul')
+        messages.success(request, _(f'{user}, mergi la adresa de email {to_email} si activeaza contul'))
     else:
-        messages.error(request, f'Nu s-a putut trimite email la adresa {to_email}, verifica daca e scrisa corect.')
+        messages.error(request, _(f'Nu s-a putut trimite email la adresa {to_email}, verifica daca e scrisa corect.'))
 
 def register(request):
     if request.method == 'POST':
@@ -62,10 +63,10 @@ def activate(request, uidb64, token):
     if user is not None and account_activation_token.check_token(user, token):
         user.is_active = True
         user.save()
-        messages.success(request, 'Multumim pentru confirmarea emailului. Acum te poti loga.')
+        messages.success(request, _('Multumim pentru confirmarea emailului. Acum te poti loga.'))
         return redirect('useri:login')
     else:
-        messages.error(request, 'Linkul pentru activare nu e valabil sau a mai fost folosit.')
+        messages.error(request, _('Linkul pentru activare nu e valabil sau a mai fost folosit.'))
     return redirect('useri:login')
 
 class LoginView(views.LoginView):
@@ -105,7 +106,7 @@ class ProfilUpdateView(LoginRequiredMixin, SuccessMessageMixin, UpdateView):
     model = Profil
     form_class = ProfilUpdateForm
     success_url = reverse_lazy("useri:detalii_profil")
-    success_message = 'Profil edit OK!'
+    success_message = _('Profil edit OK!')
 
     def form_valid(self, form):
         form.instance.profil = self.request.user
@@ -119,7 +120,7 @@ class UserUpdateView(LoginRequiredMixin, SuccessMessageMixin, UpdateView):
     model = User
     form_class = UserUpdateForm
     success_url = reverse_lazy("useri:detalii_profil")
-    success_message = 'User edit OK!'
+    success_message = _('User edit OK!')
 
     def get_success_url(self):
         return reverse_lazy('useri:detalii_profil', kwargs={'pk': self.object.profil.pk})
@@ -131,7 +132,7 @@ class UserUpdateView(LoginRequiredMixin, SuccessMessageMixin, UpdateView):
 class DeleteUser(SuccessMessageMixin, generic.DeleteView):
     model = User
     template_name = 'registration/delete_user.html'
-    success_message = 'Userul a fost sters.'
+    success_message = _('Userul a fost sters.')
     success_url = reverse_lazy('useri:login')
 
 def delete_profil(request, pk):
@@ -139,7 +140,7 @@ def delete_profil(request, pk):
     if request.method == 'POST':
         profil = Profil.objects.get(pk=pk)
         profil.delete()
-        messages.warning(request, "Profilul a fost eliminat cu succes!")
+        messages.warning(request, _("Profilul a fost eliminat cu succes!"))
         if request.user.is_superuser and request.user.id is not profil.user.id:
             return redirect('parcare:parcare')
         else:        

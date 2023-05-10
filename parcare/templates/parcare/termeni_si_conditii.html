@@ -1,6 +1,7 @@
+{% load i18n %}
 <html>
 <head>
-    <title>Termeni si Conditii PDF</title>
+    <title>{% translate "Termeni si Conditii PDF" %}</title>
     <style>
         @page {
             size: a4;
@@ -50,8 +51,8 @@
 <body>
     <div id='header'>
         <img id='logo' src="C:\Users\39327\Django-apps\park-project\parkproject\static\parkproject\images\parcare_icon.png">
-        <h1 id='titlu'> PARCARE ZIMBRU <br> </h1>
-        <h3 id='subtitlu' align='center'> Termeni si Conditii </h3>
+        <h1 id='titlu'> {% translate "PARCARE ZIMBRU" %} <br> </h1>
+        <h3 id='subtitlu' align='center'> {% translate "Termeni si Conditii" %} </h3>
 
     </div>
     <div id="footer_content">(c) - page <pdf:pagenumber>
@@ -60,6 +61,7 @@
 
     <br><br>
     <ul>
+        {% blocktranslate %}
         <li>Utilizarea acestei parcari subterane este supusa acceptarii acestor Termeni si Conditii.</li>
         <li>Parcarea este disponibila doar pentru autovehicule si se interzice stocarea oricarui alt tip de echipament sau material.</li>
         <li>Utilizatorii sunt responsabili pentru securitatea si integritatea autovehiculelor lor, si proprietarul parcarii nu este responsabil pentru orice pierdere sau dauna suferita.</li>
@@ -70,6 +72,7 @@
         <li>Utilizatorii sunt responsabili pentru a respecta toate regulile si regulamentele specifice acestei parcari subterane.</li>
         <li>Orice litigiu rezultat din utilizarea acestei parcari subterane va fi rezolvat in conformitate cu legislatia in vigoare.</li>
         <li>Prin utilizarea acestei parcari subterane, utilizatorii accepta aceste Termeni si Conditii.</li>
+        {% endblocktranslate %}
     </ul>
 
 </body>

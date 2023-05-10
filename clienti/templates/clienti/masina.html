@@ -1,6 +1,7 @@
 {% extends 'parkproject/main.html' %}
+{% load i18n %}
 {% load static %}
-{% block title %} Masina {% endblock %}
+{% block title %} {% translate "Masina" %} {% endblock %}
 
 <link rel="stylesheet" type="text/css" href="{% static 'clienti/css/clienti.css' %}">
 
@@ -11,12 +12,12 @@
         <thead>
             <tr>
                 <th></th>
-                <th>Profil</th>
-                <th>Marca</th>
-                <th>Model</th>
-                <th>Numar</th>
-                <th>Culoare</th>
-                <th><span style='margin-left:20px;'>Elimina</span></th>
+                <th>{% translate "Profil" %}</th>
+                <th>{% translate "Marca" %}</th>
+                <th>{% translate "Model" %}</th>
+                <th>{% translate "Numar" %}</th>
+                <th>{% translate "Culoare" %}</th>
+                <th><span style='margin-left:20px;'>{% translate "Elimina" %}</span></th>
             </tr>
         </thead>
         <tbody>
@@ -24,11 +25,15 @@
             <tr>
                 <td></td>
                 <td>{{ profil|title }}</td>
-                <td>{{ masina.marca|title }}</td>
-                <td>{{ masina.model|title }}</td>
-                <td>{{ masina.numar|upper }}</td>
-                <td>{{ masina.culoare|title }}</td>
-                <td><a class="btn btn-outline-danger btn-sm" href="{% url 'clienti:del_masina' profil.id masina.id %}">Elimina Masina</a></td>
+                <td>{{ masina.marca|title  }}</td>
+                <td>{{ masina.model|title  }}</td>
+                <td>{{ masina.numar|title  }}</td>
+                <td>{% trans masina.culoare|title %}</td>
+                <td>
+                    <a class="btn btn-outline-danger btn-sm" href="{% url 'clienti:del_masina' profil.id masina.id %}">
+                        {% translate "Elimina Masina" %}
+                    </a>
+                </td>
             </tr>
             {% endif %}
         </tbody>

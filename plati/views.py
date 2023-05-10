@@ -1,4 +1,5 @@
 from django.conf import settings
+from django.utils.translation import gettext_lazy as _
 
 from django.shortcuts import render, redirect
 import stripe
@@ -98,8 +99,8 @@ def plati(request, pk):
                         factura_client.save()
 
                         file_to_be_sent = contract_pdf(request, contract.pk).getvalue()
-                        subject = 'Documente Abonament Parcare'
-                        body = 'Bună ziua! \n''\n' 'Vă mulțumim pentru achitarea abonamentului dvs. la parcare. Acesta este valabil pentru 30 de zile. \n''\n' 'Vă informăm că în acest email veți găsi atașate contractul și factura aferente acestui abonament. \n''\n' 'Vă dorim o zi frumoasă! \n''\n' 'Echipa de la Parcare.'
+                        subject = _('Documente Abonament Parcare')
+                        body = _('Bună ziua! \n''\n' 'Vă mulțumim pentru achitarea abonamentului dvs. la parcare. Acesta este valabil pentru 30 de zile. \n''\n' 'Vă informăm că în acest email veți găsi atașate contractul și factura aferente acestui abonament. \n''\n' 'Vă dorim o zi frumoasă! \n''\n' 'Echipa de la Parcare.')
                         email = EmailMessage(
                             subject,
                             body,
@@ -113,18 +114,18 @@ def plati(request, pk):
                             email.attach('factura.pdf', factura_pdf, 'application/pdf')
 
                         if email.send():
-                            messages.success(request, f'{client.profil.nume} {customer_user.name}, mergi la adresa de email {client.profil.email} pentru a descarca factura si contractul')
+                            messages.success(request, _(f'{client.profil.nume} {customer_user.name}, mergi la adresa de email {client.profil.email} pentru a descarca factura si contractul'))
                         else:
-                            messages.error(request, f'Nu s-a putut trimite email la adresa {client.profil.email}, verifica daca e scrisa corect.')
+                            messages.error(request, _(f'Nu s-a putut trimite email la adresa {client.profil.email}, verifica daca e scrisa corect.'))
                         
                         return redirect ('useri:detalii_profil', client.profil.id)
                     else:
-                        messages.error(request, 'Eroare de comunicare serviciu plati.')
+                        messages.error(request, _('Eroare de comunicare serviciu plati.'))
                 except stripe.error.CardError as e:
                     return messages.error(request, {'error': str(e)})
                     # return render(request, 'plati_2.html', {'error': str(e)})
             else:
-                messages.warning(request, "Formular incomplet sau incorect.")
+                messages.warning(request, _("Formular incomplet sau incorect."))
         else:
             form = CardForm()
             if cnt.contract == 'public':
@@ -170,7 +171,7 @@ def factura_pdf(request, pk):
         response['Content-Disposition'] = 'filename="{factura.numar} - {factura.profil}.pdf"'
         return response
     else:
-        return HttpResponse("Nu esti autorizat pt factura PDF")
+        return HttpResponse(_("Nu esti autorizat pt factura PDF"))
 
 def email_plata(request):
     template = 'plati/email_plata.html'

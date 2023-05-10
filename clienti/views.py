@@ -1,4 +1,3 @@
-from django.utils.safestring import mark_safe
 from django.contrib import messages
 from django.shortcuts import render, redirect
 from .models import Client, Contract, Masina
@@ -19,6 +18,8 @@ from django.core.mail import EmailMessage
 from plati.pdf import factura
 from django.shortcuts import get_object_or_404
 from parcare.views import render_to_pdf
+from django.utils.translation import gettext_lazy as _
+
 
 def creaza_parola(length=10, characters=string.ascii_letters + string.digits + string.punctuation):
     return ''.join(random.choice(characters) for i in range(length))
@@ -38,7 +39,7 @@ def contract_pdf(request, pk):
         response['Content-Disposition'] = 'filename="{contract.numar} - {contract.profil}.pdf"'
         return response
     else:
-        return HttpResponse("Nu esti autorizat pt contract PDF")
+        return HttpResponse(_("Nu esti autorizat pt contract PDF"))
 
 def client_nou(request, pk):
     template = 'clienti/client_nou.html'
@@ -55,7 +56,7 @@ def client_nou(request, pk):
                 if client_form.is_valid():
                     client_exista = Client.objects.filter(profil__email=client_form.cleaned_data['email'], profil__cnp=client_form.cleaned_data['cnp'], profil__user__username = client_form.cleaned_data['nume'] + client_form.cleaned_data['cnp'])
                     if client_exista.exists():
-                        messages.warning(request, "Adresa email, user si cnp existente in baza de date. Introdu alte date.")
+                        messages.warning(request, _("Adresa email, user si cnp existente in baza de date. Introdu alte date."))
                         print('test email & cnp', client_exista, 'EXISTENT!!!')
                     else:
                         print(client_form.cleaned_data)
@@ -157,8 +158,8 @@ def client_nou(request, pk):
                         factura_client.pdf.save('contract.pdf', pdf_file)
                         factura_client.save()
 
-                        subject = 'Cont Client creat cu succes!'
-                        body = '\n''\n' 'User dumneavoastra este: ' + user_client.username + '\n''\n' 'Parola dumneavoastra este: ' + parola_client + '\n''\n' 'Acum va puteti loga si le puteti schimba din setari user'
+                        subject = _('Cont Client creat cu succes!')
+                        body = _('\n''\n' 'User dumneavoastra este: ' + user_client.username + '\n''\n' 'Parola dumneavoastra este: ' + parola_client + '\n''\n' 'Acum va puteti loga si le puteti schimba din setari user')
                         email = EmailMessage(
                             subject,
                             body,
@@ -168,23 +169,21 @@ def client_nou(request, pk):
                         email.attach('contract.pdf', contract_client_pdf, 'application/pdf')
                         email.attach('factura.pdf', factura_pdf, 'application/pdf')
                         if email.send():
-                            messages.success(request, f'{client.profil.nume} {client.profil.prenume}, mergi la adresa de email {user_client.email} pentru a descarca factura si contractul')
+                            messages.success(request, _(f'{client.profil.nume} {client.profil.prenume}, mergi la adresa de email {user_client.email} pentru a descarca factura si contractul'))
                         else:
-                            messages.error(request, f'Nu s-a putut trimite email la adresa {user_client.email}, verifica daca e scrisa corect.')
-
-                        messages.info(request, mark_safe('<h5> Client nou introdus cu succes!!! </h5>'))
-
+                            messages.error(request, _(f'Nu s-a putut trimite email la adresa {user_client.email}, verifica daca e scrisa corect.'))
+                        messages.info(request, _('Client nou introdus cu succes!!!'))
                         return redirect ('parcare:parcare')
                 else:
-                    messages.warning(request, "Nu ai completat toate campurile obligatorii.")
-                    msg = 'Formularul nu e valid. Campuri necompletate.'
+                    messages.warning(request, _("Nu ai completat toate campurile obligatorii."))
+                    msg = _('Formularul nu e valid. Campuri necompletate.')
                     print(msg)
             
             else:
                 client_form = ClientNouForm()
-                messages.warning(request, "ATENTIE! PLATA LA GHISEU INAINTEA VALIDARII!")
+                messages.warning(request, _("ATENTIE! PLATA LA GHISEU INAINTEA VALIDARII!"))
         else:
-            return HttpResponse("Nu esti conectat de pe serverul local.")
+            return HttpResponse(_("NU ESTI CONECTAT LA SERVERUL LOCAL."))
     else:
         if user.is_authenticated:
             profil = Profil.objects.get(pk=pk)
@@ -196,7 +195,7 @@ def client_nou(request, pk):
             if client_form.is_valid(): # save form data to variables
                 client_exista = Client.objects.filter(profil__email=client_form.cleaned_data['email'], profil__cnp=client_form.cleaned_data['cnp'])
                 if client_exista.exists():
-                    messages.warning(request, "Adresa email si cnp existente in baza de date. Introdu alte date.")
+                    messages.warning(request, _("Adresa email si cnp existente in baza de date. Introdu alte date."))
                     print('test email & cnp', client_exista, 'EXISTENT!!!')
                 else:
                     print(client_form.cleaned_data)
@@ -268,11 +267,11 @@ def client_nou(request, pk):
                     contract_client.save()
                     print('contract test', contract_client)
 
-                    messages.info(request, mark_safe('<h5> Contract creat cu succes!</h5>'))
+                    messages.info(request, _('Contract creat cu succes!'))
                     return redirect ('plati:plati', pk=profil.id)
             else:
-                messages.warning(request, "Nu ai completat toate campurile obligatorii.")
-                msg = 'Formularul nu e valid. Campuri necompletate.'
+                messages.warning(request, _("Nu ai completat toate campurile obligatorii."))
+                msg = _('Formularul nu e valid. Campuri necompletate.')
                 print(msg)
         else:
             client_form = ClientNouForm(initial={'nume': profil.nume, 'prenume': profil.prenume, 'email': profil.email, 'cnp': profil.cnp, 'judet': profil.judet, 'oras': profil.oras, 'adresa': profil.adresa, 'telefon': profil.telefon})
@@ -296,7 +295,7 @@ def del_masina(request, pk, masina_id):
             print('masina', masina, 'eliminata cu succes')
             return redirect ('useri:detalii_profil', pk=profil.id)
     else:
-        return HttpResponse("Nu esti autorizat sa elimini masina.")
+        return HttpResponse(_("Nu esti autorizat sa elimini masina."))
     context = {'masina': masina, 'profil': profil}
     response = render(request, template, context)
     return response

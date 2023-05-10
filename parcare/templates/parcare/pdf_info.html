@@ -1,7 +1,8 @@
+{% load i18n %}
 {% load static %}
 <html>
 <head>
-    <title>Contract PDF</title>
+    <title>{% translate "Contract PDF" %}</title>
     <style>
         @page {
             size: a4;
@@ -70,22 +71,22 @@
     {% comment %} <img id='img' src="{{ profil.imagine.path }}"> {% endcomment %}
     <div id='header'>
         <img id='logo' src='http://127.0.0.1:8000/static/parkproject/images/parcare_icon.png' alt="Logo image">
-        <h1 id='titlu'> ABONAMENT PARCARE ZIMBRU <br> </h1>
-        <h3 id='subtitlu' align='center'> ABONAMENT NR: ______________ | COD CLIENT: ______________ </h3>
+        <h1 id='titlu'> {% translate "ABONAMENT PARCARE ZIMBRU" %} <br> </h1>
+        <h3 id='subtitlu' align='center'> {% translate "ABONAMENT NR" %}: ______________ | {% translate "COD CLIENT" %}: ______________ </h3>
     </div>
     <div id="footer_content">(c) - page <pdf:pagenumber>
         of <pdf:pagecount>
     </div>
     
-    <h3> DATE MASINA </h3>
+    <h3> {% translate "DATE MASINA" %} </h3>
         <table id='table' align='center'>
             <thead>
                 <tr>
-                    <th>MARCA</th>
-                    <th>MODEL</th>
-                    <th>NUMAR</th>
-                    <th>CULOARE</th>
-                    <th>COMBUSTIBIL</th>
+                    <th>{% translate "MARCA" %}</th>
+                    <th>{% translate "MODEL" %}</th>
+                    <th>{% translate "NUMAR" %}</th>
+                    <th>{% translate "CULOARE" %}</th>
+                    <th>{% translate "COMBUSTIBIL" %}</th>
                 </tr>
             </thead>
             <tbody>
@@ -98,23 +99,24 @@
                 </tr>
             </tbody>
         </table> 
-    <h3 id='abonat'> DATE ABONAT </h3>
+    <h3 id='abonat'> {% translate "DATE ABONAT" %} </h3>
     <h3>
-        NUME :     ___________________, 
-        PRENUME :    ___________________, 
-        CNP :   ___________________, <br>
-        JUDET :   ___________________, 
-        ORAS :   ___________________, 
-        ADRESA :   ___________________, <br>
+        {% translate "NUME" %} :     ___________________, 
+        {% translate "PRENUME" %} :    ___________________, 
+        {% translate "CNP" %} :   ___________________, <br>
+        {% translate "JUDET" %} :   ___________________, 
+        {% translate "ORAS" %} :   ___________________, 
+        {% translate "ADRESA" %} :   ___________________, <br>
         EMAIL :   ___________________, 
-        TELEFON :   ___________________.
+        {% translate "TELEFON" %} :   ___________________.
     </h3>
-    <h3 id='abonat'> DATE PERMIS AUTO </h3>
+    <h3 id='abonat'> {% translate "DATE PERMIS AUTO" %} </h3>
     <h3>
-        NUMAR PERMIS :  ___________________
-        CATEGORIE PERMIS : ___________________
+        {% translate "NUMAR PERMIS" %} :  ___________________
+        {% translate "CATEGORIE PERMIS" %} : ___________________
     </h3>
     <br><br>
+    {% blocktranslate %}
     <p>
             Aceasta intelegere (denumita in continuare "Contract") stabileste conditiile pentru abonamentul lunar de parcare oferit de catre Parcare Zimbru S.R.L. (denumit in continuare "Furnizor") catre abonat (denumit in continuare "Client").
 
@@ -185,6 +187,6 @@
         Niciuna dintre parti nu va fi raspunzatoare pentru orice neindeplinire a obligatiilor sale conform prezentului Contract, daca aceasta neindeplinire rezulta din cauze care sunt dincolo de controlul sau, incluzand, dar fara a se limita la: cutremure, incendii, inundatii, razboi, acte de terorism, greve sau alte conflicte de munca, blocaje comerciale sau orice alte evenimente similare care sunt dincolo de controlul sau.
 
     </p>
-
+    {% endblocktranslate %}
 </body>
 </html>

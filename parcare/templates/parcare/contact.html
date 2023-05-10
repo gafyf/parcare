@@ -1,6 +1,7 @@
 {% extends 'parkproject/main.html' %}
+{% load i18n %}
 {% load static %}
-{% block title %} Contact {% endblock %} 
+{% block title %} {% translate "Contact" %} {% endblock %} 
 
 {% block mainbody %}
 
@@ -8,27 +9,27 @@
     <br>
     <h2 style='color:darkslategray;'>
         <img class="account" src="{% static 'parcare/images/contact_icon.png' %}" alt="Account image">
-        Contact
+        {% translate "Contact" %}
     </h2>
     <br><br>
     <div class="row">
       <div class="col">
-        <h5 style='color:darkslategray;'>Contact birou parcare</h5>
+        <h5 style='color:darkslategray;'>{% translate "Contact birou parcare" %}</h5>
         <hr>
         <p style='color:darkslategray; text-align:left; margin-left:32%;'>
-           Adresa: Strada Tabacului 1A
-           <br>Orar: luni-duminica 06:00 - 00:00
+          {% translate "Adresa: Strada Tabacului 1A" %}
+           <br>{% translate "Orar: luni-duminica 06:00 - 00:00" %}
            <br>Tel: +39 332 158 02 38
            <br>Cell: +39 327 226 41 55
            <br>Email: parcare@yahoo.com
         </p>
       </div>
       <div class="col">
-        <h5 style='color:darkslategray;'>Contact birou societate</h5>
+        <h5 style='color:darkslategray;'>{% translate "Contact birou societate" %}</h5>
         <hr>
         <p style='color:darkslategray; text-align:left; margin-left:32%;'>
-           Adresa: Soseaua Nationala 25
-           <br>Orar: luni-vineri 09:00 - 17:00
+          {% translate "Adresa: Soseaua Nationala 25" %}
+           <br>{% translate "Orar: luni-vineri 09:00 - 17:00" %}
            <br>Manager: Gafita Florin
            <br>Tel: + 39 327 268 55 10
            <br>Email: gafyf@gmail.com

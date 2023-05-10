@@ -1,25 +1,32 @@
 {% extends 'parkproject/main.html' %}
+{% load i18n %}
 {% load static %}
-{% block title %} User edit {% endblock %}
+{% block title %}  {% translate "User edit" %}  {% endblock %}
 {% block mainbody %}
 <link rel="stylesheet" type="text/css" href="{% static 'useri/css/useri_edit.css' %}">
 
 
 <div class='user_head'>
     <p> 
-        <span class='user_p'>Modifica datele contului: {{ user.get_full_name }}</span>
-        <a class="btn btn-outline-warning btn-sm" href="{% url 'useri:password_change' %}">Schimba Parola</a>
-        <a class="btn btn-outline-danger btn-sm" href="{% url 'useri:delete_profil' user.profil.id %}">Sterge User</a>
-        <a href='/static/images/{{ user.profil.imagine }}'><img class="user_img" src="/static/images/{{ user.profil.imagine }}" style="cursor: pointer;"/></a>
+        <span class='user_p'>
+            {% translate "Modifica datele contului" %}: {{ user.get_full_name }}
+        </span>
+        <a class="btn btn-outline-warning btn-sm" href="{% url 'useri:password_change' %}">
+            {% translate "Schimba Parola" %}
+        </a>
+        <a class="btn btn-outline-danger btn-sm" href="{% url 'useri:delete_profil' user.profil.id %}">
+            {% translate "Sterge User" %}
+        </a>
+        <a href='/static/images/{{ user.profil.imagine }}'>
+            <img class="user_img" src="/static/images/{{ user.profil.imagine }}" style="cursor: pointer;"/>
+        </a>
     </p>
 </div>
-
 
 <form method='POST' class='form-control' enctype='multipart/form-data'>
     {% csrf_token %}
         {{form.as_p}}
     <input type="submit" class="btn btn-secondary" value='Modifica User'></input>
 </form>
-
 {% endblock mainbody %} 
 

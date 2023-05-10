@@ -1,17 +1,18 @@
 {% extends 'parkproject/main.html' %}
+{% load i18n %}
 {% load static %}
-{% block title %} Sterge Masina {% endblock %}
+{% block title %} {% translate "Sterge Masina" %} {% endblock %}
 
 {% block mainbody %}
 <center>
 <div class="alert alert-secondary" role="alert">
-  Confirmare eliminare masina.
+  {% translate "Confirmare eliminare masina." %}
 </div>
  <form method='POST'>
     {% csrf_token %}
     {{ form.as_p }}
-    <button type="submit" class="btn btn-secondary">Elimina Masina</button>
-    <a class="btn btn-secondary" href="{% url 'clienti:masina' profil.id masina.id %}">Renunta</a>
+    <button type="submit" class="btn btn-secondary">{% translate "Elimina Masina" %}</button>
+    <a class="btn btn-secondary" href="{% url 'clienti:masina' profil.id masina.id %}">{% translate "Renunta" %}</a>
     <hr>
   </form>
 </center>

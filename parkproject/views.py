@@ -4,6 +4,7 @@ from clienti.models import Client, Masina
 from staff.models import Staff
 from django.db.models import Q
 
+
 def main(request):
     template = 'parkproject/main.html'
     title = 'Parcarea Zimbru'

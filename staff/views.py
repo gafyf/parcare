@@ -1,6 +1,5 @@
 from django.shortcuts import render, redirect
 from django.contrib import messages
-from django.utils.safestring import mark_safe
 from django.db.models import Q
 from useri.models import Profil
 from clienti.models import Masina
@@ -16,7 +15,7 @@ from django.core.mail import EmailMessage
 from django.shortcuts import get_object_or_404
 from django.core.files.base import ContentFile
 from django.utils import timezone
-
+from django.utils.translation import gettext_lazy as _
 
 
 def staff_contract(request, pk):
@@ -28,7 +27,7 @@ def staff_contract(request, pk):
         response['Content-Disposition'] = 'filename="{contract.numar} - {contract.profil}.pdf"'
         return response
     else:
-        return HttpResponse("Nu esti autorizat pt contract Staff PDF")
+        return HttpResponse(_("Nu esti autorizat pt contract Staff PDF"))
 
 def contract(staff_contract_dict):
     pdf = render_to_pdf('staff/contract.html', staff_contract_dict)
@@ -47,7 +46,7 @@ def staff_nou(request, pk):
             if staff_form.is_valid():
                 staff_exista = Staff.objects.filter(Q(profil__user__username=staff_form.cleaned_data['nume'] + staff_form.cleaned_data['prenume']) | Q(profil__cnp=staff_form.cleaned_data['cnp']) | Q(profil__email=staff_form.cleaned_data['email']))
                 if staff_exista.exists():
-                    messages.warning(request, "Username, cnp sau email existente in baza de date. Introdu alte date.")
+                    messages.warning(request, _("Username, cnp sau email existente in baza de date. Introdu alte date."))
                     print('test username, cnp si email', staff_exista, 'EXISTENT!!!')
                 else:
                     print(staff_form.cleaned_data)
@@ -112,8 +111,8 @@ def staff_nou(request, pk):
                     masina.profil.add(user_staff.profil)
                     masina.save()
 
-                    subject = 'Cont Staff creat cu succes!'
-                    body = '\n''\n' 'User dumneavoastra este: ' + user_staff.username + '\n''\n' 'Parola dumneavoastra este: ' + parola_staff + '\n''\n' 'Acum va puteti loga si le puteti schimba din setari user'
+                    subject = _('Cont Staff creat cu succes!')
+                    body = _('\n''\n' 'User dumneavoastra este: ' + user_staff.username + '\n''\n' 'Parola dumneavoastra este: ' + parola_staff + '\n''\n' 'Acum va puteti loga si le puteti schimba din setari user')
                     email = EmailMessage(
                         subject,
                         body,
@@ -122,21 +121,21 @@ def staff_nou(request, pk):
                     )
                     email.attach('contract.pdf', staff_contract, 'application/pdf')
                     if email.send():
-                        messages.success(request, mark_safe(f'<h5> Angajat nou introdus cu succes!!! </h5>'))
+                        messages.success(request, _('Angajat nou introdus cu succes!!!'))
                     else:
-                        messages.error(request, f'Nu s-a putut trimite email la adresa {user_staff.email}, verifica daca e scrisa corect.')
+                        messages.error(request, _(f'Nu s-a putut trimite email la adresa {user_staff.email}, verifica daca e scrisa corect.'))
                     return redirect ('parcare:parcare')
             else:
-                messages.warning(request, "Nu ai completat toate campurile obligatorii.")
-                msg = 'Formularul nu e valid. Campuri necompletate.'
+                messages.warning(request, _("Nu ai completat toate campurile obligatorii."))
+                msg = _('Formularul nu e valid. Campuri necompletate.')
                 print(msg)
         else:
             staff_form = StaffNouForm()
         context = {'staff_form': staff_form}
         return render(request, template, context)
     else:
-        return HttpResponse("Nu esti autorizat sa introduci un angajat nou.")
-    
+        return HttpResponse(_("Nu esti autorizat sa introduci un angajat nou."))
+
 def masina_noua(request, pk):
     template = 'staff/masina_noua.html'
     user = request.user
@@ -148,7 +147,7 @@ def masina_noua(request, pk):
             if masina_form.is_valid():
                 masina_exista = Masina.objects.filter(numar=masina_form.cleaned_data['numar'])
                 if masina_exista.exists():
-                    messages.warning(request, 'Masina exista in baza de date')
+                    messages.warning(request, _('Masina exista in baza de date'))
                     print('Masina cu numarul',  masina_exista, 'exista in baza de date')
                 else:
                     masina = Masina(
@@ -164,8 +163,8 @@ def masina_noua(request, pk):
                     print('masina', masina, 'inregistrata cu succes')
                     return redirect ('useri:detalii_profil', pk=profil.id)
             else:
-                messages.warning(request, "Nu ai completat toate campurile obligatorii.")
-                msg = 'Formularul nu e valid. Campuri necompletate.'
+                messages.warning(request, _("Nu ai completat toate campurile obligatorii."))
+                msg = _('Formularul nu e valid. Campuri necompletate.')
                 print(msg)
         context = {
             'masina_form': masina_form
@@ -173,5 +172,5 @@ def masina_noua(request, pk):
         response = render(request, template, context)
         return response
     else:
-        return HttpResponse("Nu esti autorizat sa introduci masina noua.")
+        return HttpResponse(_("Nu esti autorizat sa introduci masina noua."))
 

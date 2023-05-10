@@ -1,13 +1,14 @@
 {% extends 'parkproject/main.html' %}
+{% load i18n %}
 {% load static %}
 
-{% block title %}Login{% endblock %}
+{% block title %} {% translate "Login" %} {% endblock %}
 
 {% block mainbody %}
 <link rel="stylesheet" type="text/css" href="{% static 'useri/css/login.css' %}">
 
   
-<h2 class='titlu'>Introdu userul si parola pentru autentificare.</h2>
+<h2 class='titlu'>{% translate "Introdu userul si parola pentru autentificare." %}</h2>
 <center>
   {% if messages %}
       {% for message in messages %}
@@ -21,9 +22,9 @@
 <form method="POST" class='form-control'>
   {% csrf_token %}
   {{ form.as_p }}
-  <button class="btn btn-secondary" type="submit">Log In</button>
-  <p class='user_nou'><a class="btn btn-secondary btn-sm" href="{% url 'useri:password_reset_form' %}">Am uitat parola</a>
-  <a class="btn btn-secondary btn-sm" href="{% url 'useri:signup' %}">Creeaza user nou</a></p>
+  <button class="btn btn-secondary" type="submit">{% translate "Log In" %}</button>
+  <p class='user_nou'><a class="btn btn-secondary btn-sm" href="{% url 'useri:password_reset_form' %}">{% translate "Am uitat parola" %}</a>
+  <a class="btn btn-secondary btn-sm" href="{% url 'useri:signup' %}">{% translate "Creeaza user nou" %}</a></p>
 </form>
 
 {% endblock %}

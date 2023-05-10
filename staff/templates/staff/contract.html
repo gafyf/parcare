@@ -1,7 +1,8 @@
+{% load i18n %}
 {% load static %}
 <html>
 <head>
-    <title>Contract Munca PDF</title>
+    <title> {% translate "Contract Munca PDF" %} </title>
     <style>
         @page {
             size: a4;
@@ -52,24 +53,27 @@
     {% comment %} <img id='img' src="{{ profil.imagine.path }}"> {% endcomment %}
     <div id='header'>
         <img id='logo' src='http://127.0.0.1:8000/static/parkproject/images/parcare_icon.png' alt="Logo image">
-        <h1 id='titlu'> PARCARE ZIMBRU <br> </h1>
-        <h3 id='subtitlu' align='center'> Contract de munca nr: {{staff_contract_dict.numar}}</h3>
+        <h1 id='titlu'> {% translate "PARCARE ZIMBRU" %} <br> </h1>
+        <h3 id='subtitlu' align='center'> {% translate "Contract de munca nr" %}: {{staff_contract_dict.numar}}</h3>
     </div>
     <div id="footer_content">(c) - page <pdf:pagenumber>
         of <pdf:pagecount>
     </div>
     <br><br>
     <div align='center'>
-        <h3> Functie : {{ staff_contract_dict.functie|upper }}</h3>
-        <h3> Data Angajarii : {{ staff_contract_dict.data_angajarii|upper }}</h3>
+        <h3> {% translate "Functie" %} : {{ staff_contract_dict.functie|upper }}</h3>
+        <h3> {% translate "Data Angajarii" %} : {{ staff_contract_dict.data_angajarii|upper }}</h3>
     </div>
     <hr>
+{% blocktranslate %}
 <h2 class='h2'>Intre:</h2>
 Parcare Zimbru S.R.L., cu sediul social in  Iasi, Soseaua Nationala 25 (denumit in continuare "Angajator")
 <h2 class='h2'>Si:</h2>
-{{ staff_contract_dict.nume|upper }} {{ staff_contract_dict.prenume|upper }}, CNP: {{ staff_contract_dict.cnp|upper }}, cu domiciliul in {{ staff_contract_dict.oras|upper }}({{ staff_contract_dict.judet|upper }}), {{ staff_contract_dict.adresa|upper }} (denumit in continuare "Angajat")
+{% endblocktranslate%}
+{{ staff_contract_dict.nume|upper }} {{ staff_contract_dict.prenume|upper }}, {% translate "CNP" %}: {{ staff_contract_dict.cnp|upper }}, {% translate "cu domiciliul in" %} {{ staff_contract_dict.oras|upper }}({{ staff_contract_dict.judet|upper }}), {{ staff_contract_dict.adresa|upper }} {% translate '(denumit in continuare "Angajat")' %}
 <br><br><br>
 <ul>
+    {% blocktranslate %}
     <li>
         S-a incheiat prezentul Contract de Munca cu respectarea prevederilor legale in vigoare, pentru prestarea unor servicii profesionale, astfel:
     </li>
@@ -105,5 +109,7 @@ Confidentialitate<br>
 Forta majora<br>
     Niciuna dintre parti nu va fi raspunzatoare pentru orice neindeplinire a obligatiilor sale conform prezentului Contract, daca aceasta neindeplinire rezulta din cauze care sunt dincolo de controlul sau, incluzand, dar fara a se limita la: cutremure, incendii, inundatii, razboi, acte de terorism, greve sau alte conflicte de munca, blocaje comerciale sau orice alte evenimente similare care sunt dincolo de controlul sau.
     </li>
+    {% endblocktranslate %}
+</ul>
 </body>
 </html>

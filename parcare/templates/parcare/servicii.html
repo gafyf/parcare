@@ -1,34 +1,41 @@
 {% extends 'parkproject/main.html' %}
+{% load i18n %}
 {% load static %}
-{% block title %} Servicii {% endblock %}
+{% block title %} {% translate "Servicii" %} {% endblock %}
 
 {% block mainbody %}
 
 <div class="container text-center">
     <br>
-    <h2 style='color:darkslategray;'>Servicii</h2>
+    <h2 style='color:darkslategray;'>{% translate "Servicii" %}</h2>
     <br><br>
     <div class="row">
       <div class="col">
         <img class="account" src="{% static 'parcare/images/electric_icon.png' %}" alt="Account image">
         <hr>
+        {% blocktranslate %}
         <p style='color:darkslategray;'>Incepand cu luna Aprilie 2023, vor fi disponibile 3 locuri cu statii de incarcare masini electrice.
            <br>Acestea vor fi amplasate la etajul 1, intrarea principala.
         </p>
+        {% endblocktranslate %}
       </div>
       <div class="col">
         <img class="account" src="{% static 'parcare/images/disabil_icon.png' %}" alt="Account image">
         <hr>
+        {% blocktranslate %}
         <p style='color:darkslategray;'>La fiecare etaj gasiti cate doua locuri de parcare pentru persoanele cu dizabilitati.
            <br>Acestea sunt pozitionate in apropierea lifturilor si toaletelor.
         </p>
+        {% endblocktranslate %}
       </div>
       <div class="col">
         <img class="account" src="{% static 'parcare/images/toaleta_icon.png' %}" alt="Account image">
         <hr>
+        {% blocktranslate %}
         <p style='color:darkslategray;'>Toaletele sunt amplasate la etajul 1, in apropierea intrarii principale.
            <br>Accesul se face prin scanarea biletului sau cardului de abonat.
         </p>
+        {% endblocktranslate %}
       </div>
     </div>
   </div>

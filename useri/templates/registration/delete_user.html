@@ -1,16 +1,17 @@
 {% extends 'parkproject/main.html' %}
+{% load i18n %}
 {% load static %}
-{% block title %} Sterge User {% endblock %}
+{% block title %} {% translate "Sterge User" %} {% endblock %}
 {% block mainbody %}
 <center>
 <div class="alert alert-secondary" role="alert">
-  Confirmare stergere cont.
+  {% translate "Confirmare stergere cont." %}
 </div>
  <form method='POST'>
     {% csrf_token %}
     {{ form.as_p }}
-    <button type="submit" class="btn btn-secondary">Sterge Cont</button>
-    <a class="btn btn-secondary" href="{% url 'useri:password_reset' %}">Am uitat parola</a>
+    <button type="submit" class="btn btn-secondary">{% translate "Sterge Cont" %}</button>
+    <a class="btn btn-secondary" href="{% url 'useri:password_reset' %}">{% translate "Am uitat parola" %}</a>
     <hr>
   
   </form>

@@ -1,0 +1,3652 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-05-10 10:41+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n==1?0:(((n%100>19)||((n%100==0)&&(n!=0)))?"
+"2:1));\n"
+
+#: .\clienti\forms.py:7
+msgid "Alege contract"
+msgstr ""
+
+#: .\clienti\forms.py:8
+msgid "public (500Lei)"
+msgstr ""
+
+#: .\clienti\forms.py:9
+msgid "privat (800Lei)"
+msgstr ""
+
+#: .\clienti\forms.py:14 .\parcare\templates\parcare\parcare.html:43
+#: .\staff\forms.py:15 .\staff\templates\staff\staff_nou.html:32
+#: .\useri\forms.py:12 .\useri\forms.py:45 .\useri\models.py:13
+#: .\useri\templates\useri\detalii_profil.html:36
+msgid "Nume"
+msgstr ""
+
+#: .\clienti\forms.py:15 .\parcare\templates\parcare\parcare.html:44
+#: .\staff\forms.py:14 .\staff\templates\staff\staff_nou.html:33
+#: .\useri\forms.py:11 .\useri\forms.py:46 .\useri\models.py:14
+#: .\useri\templates\useri\detalii_profil.html:37
+msgid "Prenume"
+msgstr ""
+
+#: .\clienti\forms.py:16 .\useri\forms.py:47
+msgid "Email"
+msgstr ""
+
+#: .\clienti\forms.py:17 .\parcare\templates\parcare\pdf.html:107
+#: .\parcare\templates\parcare\pdf_info.html:107 .\staff\forms.py:18
+#: .\staff\templates\staff\contract.html:74
+#: .\staff\templates\staff\staff_nou.html:37 .\useri\forms.py:48
+#: .\useri\models.py:15 .\useri\templates\useri\detalii_profil.html:38
+msgid "CNP"
+msgstr ""
+
+#: .\clienti\forms.py:18 .\staff\forms.py:19
+#: .\staff\templates\staff\staff_nou.html:40 .\useri\forms.py:49
+#: .\useri\models.py:16
+msgid "Judet"
+msgstr ""
+
+#: .\clienti\forms.py:19 .\staff\forms.py:20
+#: .\staff\templates\staff\staff_nou.html:41 .\useri\forms.py:50
+#: .\useri\models.py:17 .\useri\templates\useri\detalii_profil.html:40
+msgid "Oras"
+msgstr ""
+
+#: .\clienti\forms.py:20 .\staff\forms.py:21
+#: .\staff\templates\staff\staff_nou.html:44
+#: .\templates\parkproject\main.html:64 .\templates\parkproject\main.html:74
+#: .\useri\forms.py:51 .\useri\models.py:18
+#: .\useri\templates\useri\detalii_profil.html:41
+msgid "Adresa"
+msgstr ""
+
+#: .\clienti\forms.py:21 .\staff\forms.py:22
+#: .\staff\templates\staff\staff_nou.html:45 .\useri\forms.py:52
+#: .\useri\models.py:20 .\useri\templates\useri\detalii_profil.html:42
+msgid "Telefon"
+msgstr ""
+
+#: .\clienti\forms.py:22
+msgid "Numar Permis Auto"
+msgstr ""
+
+#: .\clienti\forms.py:23
+msgid "Categorie Permis Auto"
+msgstr ""
+
+#: .\clienti\forms.py:24 .\clienti\forms.py:33 .\clienti\models.py:61
+#: .\clienti\templates\clienti\masina.html:16 .\staff\forms.py:23
+#: .\staff\templates\staff\staff_nou.html:55
+msgid "Marca"
+msgstr ""
+
+#: .\clienti\forms.py:25 .\clienti\forms.py:34 .\clienti\models.py:62
+#: .\clienti\templates\clienti\masina.html:17 .\staff\forms.py:24
+#: .\staff\templates\staff\staff_nou.html:56
+msgid "Model"
+msgstr ""
+
+#: .\clienti\forms.py:26 .\clienti\forms.py:35 .\clienti\models.py:36
+#: .\clienti\models.py:63 .\clienti\templates\clienti\masina.html:18
+#: .\plati\models.py:22 .\staff\forms.py:25
+#: .\staff\templates\staff\staff_nou.html:59
+msgid "Numar"
+msgstr ""
+
+#: .\clienti\forms.py:27 .\clienti\forms.py:36 .\clienti\models.py:64
+#: .\clienti\templates\clienti\masina.html:19 .\staff\forms.py:26
+#: .\staff\templates\staff\staff_nou.html:60
+msgid "Culoare"
+msgstr ""
+
+#: .\clienti\forms.py:28 .\clienti\forms.py:37 .\clienti\models.py:65
+#: .\staff\forms.py:27 .\staff\templates\staff\staff_nou.html:63
+msgid "Combustibil"
+msgstr ""
+
+#: .\clienti\forms.py:29 .\clienti\models.py:35
+#: .\parcare\templates\parcare\pdf.html:5
+msgid "Contract"
+msgstr ""
+
+#: .\clienti\models.py:11
+msgid "Nr permis"
+msgstr ""
+
+#: .\clienti\models.py:12
+msgid "Ctg permis"
+msgstr ""
+
+#: .\clienti\models.py:13 .\clienti\models.py:32 .\clienti\models.py:66
+#: .\parcare\models.py:8 .\plati\models.py:21 .\useri\models.py:22
+msgid "Data creare"
+msgstr ""
+
+#: .\clienti\models.py:19
+msgid "Clienti"
+msgstr ""
+
+#: .\clienti\models.py:24
+msgid "Selecteaza contract"
+msgstr ""
+
+#: .\clienti\models.py:25
+msgid "Public (500 Lei)"
+msgstr ""
+
+#: .\clienti\models.py:26
+msgid "Privat (800 Lei)"
+msgstr ""
+
+#: .\clienti\models.py:31
+msgid "contracts"
+msgstr ""
+
+#: .\clienti\models.py:33
+msgid "Data expirare"
+msgstr ""
+
+#: .\clienti\models.py:34
+msgid "Platit"
+msgstr ""
+
+#: .\clienti\models.py:53
+msgid "Contracte"
+msgstr ""
+
+#: .\clienti\models.py:59 .\clienti\models.py:75
+msgid "Masini"
+msgstr ""
+
+#: .\clienti\templates\clienti\client_nou.html:5
+msgid "Client Nou"
+msgstr ""
+
+#: .\clienti\templates\clienti\client_nou.html:27
+msgid "Client"
+msgstr ""
+
+#: .\clienti\templates\clienti\client_nou.html:31
+msgid "Nume: "
+msgstr ""
+
+#: .\clienti\templates\clienti\client_nou.html:32
+msgid "Prenume: "
+msgstr ""
+
+#: .\clienti\templates\clienti\client_nou.html:35
+msgid "Email: "
+msgstr ""
+
+#: .\clienti\templates\clienti\client_nou.html:36
+msgid "Cnp: "
+msgstr ""
+
+#: .\clienti\templates\clienti\client_nou.html:38
+msgid "Judet: "
+msgstr ""
+
+#: .\clienti\templates\clienti\client_nou.html:39
+msgid "Oras: "
+msgstr ""
+
+#: .\clienti\templates\clienti\client_nou.html:41
+msgid "Adresa: "
+msgstr ""
+
+#: .\clienti\templates\clienti\client_nou.html:42
+msgid "Telefon: "
+msgstr ""
+
+#: .\clienti\templates\clienti\client_nou.html:48
+#: .\clienti\templates\clienti\masina.html:4
+#: .\staff\templates\staff\staff_nou.html:51
+#: .\useri\templates\useri\detalii_profil.html:79
+#: .\useri\templates\useri\detalii_profil.html:176
+msgid "Masina"
+msgstr ""
+
+#: .\clienti\templates\clienti\client_nou.html:52
+msgid "Marca: "
+msgstr ""
+
+#: .\clienti\templates\clienti\client_nou.html:53
+msgid "Model: "
+msgstr ""
+
+#: .\clienti\templates\clienti\client_nou.html:56 .\plati\pdf.py:32
+#: .\plati\pdf.py:115
+msgid "Numar: "
+msgstr ""
+
+#: .\clienti\templates\clienti\client_nou.html:57
+msgid "Culoare: "
+msgstr ""
+
+#: .\clienti\templates\clienti\client_nou.html:60
+msgid "Combustibil: "
+msgstr ""
+
+#: .\clienti\templates\clienti\client_nou.html:67
+msgid "Permis"
+msgstr ""
+
+#: .\clienti\templates\clienti\client_nou.html:71
+msgid "Nr. Permis: "
+msgstr ""
+
+#: .\clienti\templates\clienti\client_nou.html:72
+msgid "Ctg. Permis: "
+msgstr ""
+
+#: .\clienti\templates\clienti\client_nou.html:76
+msgid "Adauga Abonament"
+msgstr ""
+
+#: .\clienti\templates\clienti\del_masina.html:4
+msgid "Sterge Masina"
+msgstr ""
+
+#: .\clienti\templates\clienti\del_masina.html:9
+msgid "Confirmare eliminare masina."
+msgstr ""
+
+#: .\clienti\templates\clienti\del_masina.html:14
+#: .\clienti\templates\clienti\masina.html:34
+msgid "Elimina Masina"
+msgstr ""
+
+#: .\clienti\templates\clienti\del_masina.html:15
+msgid "Renunta"
+msgstr ""
+
+#: .\clienti\templates\clienti\masina.html:15
+msgid "Profil"
+msgstr ""
+
+#: .\clienti\templates\clienti\masina.html:20
+msgid "Elimina"
+msgstr ""
+
+#: .\clienti\views.py:42
+msgid "Nu esti autorizat pt contract PDF"
+msgstr ""
+
+#: .\clienti\views.py:59
+msgid "Adresa email, user si cnp existente in baza de date. Introdu alte date."
+msgstr ""
+
+#: .\clienti\views.py:161
+msgid "Cont Client creat cu succes!"
+msgstr ""
+
+#: .\clienti\views.py:162 .\staff\views.py:115
+msgid ""
+"\n"
+"\n"
+"User dumneavoastra este: "
+msgstr ""
+
+#: .\clienti\views.py:172
+#, python-brace-format
+msgid ""
+"{client.profil.nume} {client.profil.prenume}, mergi la adresa de email "
+"{user_client.email} pentru a descarca factura si contractul"
+msgstr ""
+
+#: .\clienti\views.py:174
+#, python-brace-format
+msgid ""
+"Nu s-a putut trimite email la adresa {user_client.email}, verifica daca e "
+"scrisa corect."
+msgstr ""
+
+#: .\clienti\views.py:175
+msgid "Client nou introdus cu succes!!!"
+msgstr ""
+
+#: .\clienti\views.py:178 .\clienti\views.py:273 .\staff\views.py:129
+#: .\staff\views.py:166
+msgid "Nu ai completat toate campurile obligatorii."
+msgstr ""
+
+#: .\clienti\views.py:179 .\clienti\views.py:274 .\staff\views.py:130
+#: .\staff\views.py:167
+msgid "Formularul nu e valid. Campuri necompletate."
+msgstr ""
+
+#: .\clienti\views.py:184
+msgid "ATENTIE! PLATA LA GHISEU INAINTEA VALIDARII!"
+msgstr ""
+
+#: .\clienti\views.py:186
+msgid "NU ESTI CONECTAT LA SERVERUL LOCAL."
+msgstr ""
+
+#: .\clienti\views.py:198
+msgid "Adresa email si cnp existente in baza de date. Introdu alte date."
+msgstr ""
+
+#: .\clienti\views.py:270
+msgid "Contract creat cu succes!"
+msgstr ""
+
+#: .\clienti\views.py:298
+msgid "Nu esti autorizat sa elimini masina."
+msgstr ""
+
+#: .\env\Lib\site-packages\click\_termui_impl.py:496
+#, python-brace-format
+msgid "{editor}: Editing failed"
+msgstr ""
+
+#: .\env\Lib\site-packages\click\_termui_impl.py:500
+#, python-brace-format
+msgid "{editor}: Editing failed: {e}"
+msgstr ""
+
+#: .\env\Lib\site-packages\click\core.py:1097
+msgid "Aborted!"
+msgstr ""
+
+#: .\env\Lib\site-packages\click\core.py:1282
+#: .\env\Lib\site-packages\click\decorators.py:495
+msgid "Show this message and exit."
+msgstr ""
+
+#: .\env\Lib\site-packages\click\core.py:1313
+#: .\env\Lib\site-packages\click\core.py:1339
+#, python-brace-format
+msgid "(Deprecated) {text}"
+msgstr ""
+
+#: .\env\Lib\site-packages\click\core.py:1357
+msgid "Options"
+msgstr ""
+
+#: .\env\Lib\site-packages\click\core.py:1383
+#, python-brace-format
+msgid "Got unexpected extra argument ({args})"
+msgid_plural "Got unexpected extra arguments ({args})"
+msgstr[0] ""
+msgstr[1] ""
+
+#: .\env\Lib\site-packages\click\core.py:1399
+msgid "DeprecationWarning: The command {name!r} is deprecated."
+msgstr ""
+
+#: .\env\Lib\site-packages\click\core.py:1605
+msgid "Commands"
+msgstr ""
+
+#: .\env\Lib\site-packages\click\core.py:1637
+msgid "Missing command."
+msgstr ""
+
+#: .\env\Lib\site-packages\click\core.py:1715
+msgid "No such command {name!r}."
+msgstr ""
+
+#: .\env\Lib\site-packages\click\core.py:2271
+msgid "Value must be an iterable."
+msgstr ""
+
+#: .\env\Lib\site-packages\click\core.py:2291
+#, python-brace-format
+msgid "Takes {nargs} values but 1 was given."
+msgid_plural "Takes {nargs} values but {len} were given."
+msgstr[0] ""
+msgstr[1] ""
+
+#: .\env\Lib\site-packages\click\core.py:2734
+#, python-brace-format
+msgid "env var: {var}"
+msgstr ""
+
+#: .\env\Lib\site-packages\click\core.py:2764
+msgid "(dynamic)"
+msgstr ""
+
+#: .\env\Lib\site-packages\click\core.py:2777
+#, python-brace-format
+msgid "default: {default}"
+msgstr ""
+
+#: .\env\Lib\site-packages\click\core.py:2790
+msgid "required"
+msgstr ""
+
+#: .\env\Lib\site-packages\click\decorators.py:400
+#, python-format
+msgid "%(prog)s, version %(version)s"
+msgstr ""
+
+#: .\env\Lib\site-packages\click\decorators.py:464
+msgid "Show the version and exit."
+msgstr ""
+
+#: .\env\Lib\site-packages\click\exceptions.py:43
+#: .\env\Lib\site-packages\click\exceptions.py:79
+#, python-brace-format
+msgid "Error: {message}"
+msgstr ""
+
+#: .\env\Lib\site-packages\click\exceptions.py:71
+#, python-brace-format
+msgid "Try '{command} {option}' for help."
+msgstr ""
+
+#: .\env\Lib\site-packages\click\exceptions.py:120
+#, python-brace-format
+msgid "Invalid value: {message}"
+msgstr ""
+
+#: .\env\Lib\site-packages\click\exceptions.py:122
+#, python-brace-format
+msgid "Invalid value for {param_hint}: {message}"
+msgstr ""
+
+#: .\env\Lib\site-packages\click\exceptions.py:178
+msgid "Missing argument"
+msgstr ""
+
+#: .\env\Lib\site-packages\click\exceptions.py:180
+msgid "Missing option"
+msgstr ""
+
+#: .\env\Lib\site-packages\click\exceptions.py:182
+msgid "Missing parameter"
+msgstr ""
+
+#: .\env\Lib\site-packages\click\exceptions.py:184
+#, python-brace-format
+msgid "Missing {param_type}"
+msgstr ""
+
+#: .\env\Lib\site-packages\click\exceptions.py:191
+#, python-brace-format
+msgid "Missing parameter: {param_name}"
+msgstr ""
+
+#: .\env\Lib\site-packages\click\exceptions.py:211
+#, python-brace-format
+msgid "No such option: {name}"
+msgstr ""
+
+#: .\env\Lib\site-packages\click\exceptions.py:223
+#, python-brace-format
+msgid "Did you mean {possibility}?"
+msgid_plural "(Possible options: {possibilities})"
+msgstr[0] ""
+msgstr[1] ""
+
+#: .\env\Lib\site-packages\click\exceptions.py:261
+msgid "unknown error"
+msgstr ""
+
+#: .\env\Lib\site-packages\click\exceptions.py:268
+msgid "Could not open file {filename!r}: {message}"
+msgstr ""
+
+#: .\env\Lib\site-packages\click\parser.py:231
+msgid "Argument {name!r} takes {nargs} values."
+msgstr ""
+
+#: .\env\Lib\site-packages\click\parser.py:413
+msgid "Option {name!r} does not take a value."
+msgstr ""
+
+#: .\env\Lib\site-packages\click\parser.py:474
+msgid "Option {name!r} requires an argument."
+msgid_plural "Option {name!r} requires {nargs} arguments."
+msgstr[0] ""
+msgstr[1] ""
+
+#: .\env\Lib\site-packages\click\shell_completion.py:316
+msgid "Shell completion is not supported for Bash versions older than 4.4."
+msgstr ""
+
+#: .\env\Lib\site-packages\click\shell_completion.py:322
+msgid "Couldn't detect Bash version, shell completion is not supported."
+msgstr ""
+
+#: .\env\Lib\site-packages\click\termui.py:160
+msgid "Repeat for confirmation"
+msgstr ""
+
+#: .\env\Lib\site-packages\click\termui.py:176
+msgid "Error: The value you entered was invalid."
+msgstr ""
+
+#: .\env\Lib\site-packages\click\termui.py:178
+#, python-brace-format
+msgid "Error: {e.message}"
+msgstr ""
+
+#: .\env\Lib\site-packages\click\termui.py:189
+msgid "Error: The two entered values do not match."
+msgstr ""
+
+#: .\env\Lib\site-packages\click\termui.py:245
+msgid "Error: invalid input"
+msgstr ""
+
+#: .\env\Lib\site-packages\click\termui.py:776
+msgid "Press any key to continue..."
+msgstr ""
+
+#: .\env\Lib\site-packages\click\types.py:265
+#, python-brace-format
+msgid ""
+"Choose from:\n"
+"\t{choices}"
+msgstr ""
+
+#: .\env\Lib\site-packages\click\types.py:297
+msgid "{value!r} is not {choice}."
+msgid_plural "{value!r} is not one of {choices}."
+msgstr[0] ""
+msgstr[1] ""
+
+#: .\env\Lib\site-packages\click\types.py:387
+msgid "{value!r} does not match the format {format}."
+msgid_plural "{value!r} does not match the formats {formats}."
+msgstr[0] ""
+msgstr[1] ""
+
+#: .\env\Lib\site-packages\click\types.py:409
+msgid "{value!r} is not a valid {number_type}."
+msgstr ""
+
+#: .\env\Lib\site-packages\click\types.py:465
+#, python-brace-format
+msgid "{value} is not in the range {range}."
+msgstr ""
+
+#: .\env\Lib\site-packages\click\types.py:606
+msgid "{value!r} is not a valid boolean."
+msgstr ""
+
+#: .\env\Lib\site-packages\click\types.py:630
+msgid "{value!r} is not a valid UUID."
+msgstr ""
+
+#: .\env\Lib\site-packages\click\types.py:811
+msgid "file"
+msgstr ""
+
+#: .\env\Lib\site-packages\click\types.py:813
+msgid "directory"
+msgstr ""
+
+#: .\env\Lib\site-packages\click\types.py:815
+msgid "path"
+msgstr ""
+
+#: .\env\Lib\site-packages\click\types.py:861
+msgid "{name} {filename!r} does not exist."
+msgstr ""
+
+#: .\env\Lib\site-packages\click\types.py:870
+msgid "{name} {filename!r} is a file."
+msgstr ""
+
+#: .\env\Lib\site-packages\click\types.py:878
+#, python-brace-format
+msgid "{name} '{filename}' is a directory."
+msgstr ""
+
+#: .\env\Lib\site-packages\click\types.py:887
+msgid "{name} {filename!r} is not readable."
+msgstr ""
+
+#: .\env\Lib\site-packages\click\types.py:896
+msgid "{name} {filename!r} is not writable."
+msgstr ""
+
+#: .\env\Lib\site-packages\click\types.py:905
+msgid "{name} {filename!r} is not executable."
+msgstr ""
+
+#: .\env\Lib\site-packages\click\types.py:972
+#, python-brace-format
+msgid "{len_type} values are required, but {len_value} was given."
+msgid_plural "{len_type} values are required, but {len_value} were given."
+msgstr[0] ""
+msgstr[1] ""
+
+#: .\env\Lib\site-packages\django\contrib\messages\apps.py:7
+msgid "Messages"
+msgstr ""
+
+#: .\env\Lib\site-packages\django\contrib\sitemaps\apps.py:8
+msgid "Site Maps"
+msgstr ""
+
+#: .\env\Lib\site-packages\django\contrib\staticfiles\apps.py:9
+msgid "Static Files"
+msgstr ""
+
+#: .\env\Lib\site-packages\django\contrib\syndication\apps.py:7
+msgid "Syndication"
+msgstr ""
+
+#. Translators: String used to replace omitted page numbers in elided page
+#. range generated by paginators, e.g. [1, 2, '…', 5, 6, 7, '…', 9, 10].
+#: .\env\Lib\site-packages\django\core\paginator.py:30
+msgid "…"
+msgstr ""
+
+#: .\env\Lib\site-packages\django\core\paginator.py:50
+msgid "That page number is not an integer"
+msgstr ""
+
+#: .\env\Lib\site-packages\django\core\paginator.py:52
+msgid "That page number is less than 1"
+msgstr ""
+
+#: .\env\Lib\site-packages\django\core\paginator.py:57
+msgid "That page contains no results"
+msgstr ""
+
+#: .\env\Lib\site-packages\django\core\validators.py:23
+msgid "Enter a valid value."
+msgstr ""
+
+#: .\env\Lib\site-packages\django\core\validators.py:105
+#: .\env\Lib\site-packages\django\forms\fields.py:743
+msgid "Enter a valid URL."
+msgstr ""
+
+#: .\env\Lib\site-packages\django\core\validators.py:166
+msgid "Enter a valid integer."
+msgstr ""
+
+#: .\env\Lib\site-packages\django\core\validators.py:177
+msgid "Enter a valid email address."
+msgstr ""
+
+#. Translators: "letters" means latin letters: a-z and A-Z.
+#: .\env\Lib\site-packages\django\core\validators.py:285
+msgid ""
+"Enter a valid “slug” consisting of letters, numbers, underscores or hyphens."
+msgstr ""
+
+#: .\env\Lib\site-packages\django\core\validators.py:293
+msgid ""
+"Enter a valid “slug” consisting of Unicode letters, numbers, underscores, or "
+"hyphens."
+msgstr ""
+
+#: .\env\Lib\site-packages\django\core\validators.py:305
+#: .\env\Lib\site-packages\django\core\validators.py:313
+#: .\env\Lib\site-packages\django\core\validators.py:342
+msgid "Enter a valid IPv4 address."
+msgstr ""
+
+#: .\env\Lib\site-packages\django\core\validators.py:322
+#: .\env\Lib\site-packages\django\core\validators.py:343
+msgid "Enter a valid IPv6 address."
+msgstr ""
+
+#: .\env\Lib\site-packages\django\core\validators.py:334
+#: .\env\Lib\site-packages\django\core\validators.py:341
+msgid "Enter a valid IPv4 or IPv6 address."
+msgstr ""
+
+#: .\env\Lib\site-packages\django\core\validators.py:377
+msgid "Enter only digits separated by commas."
+msgstr ""
+
+#: .\env\Lib\site-packages\django\core\validators.py:383
+#, python-format
+msgid "Ensure this value is %(limit_value)s (it is %(show_value)s)."
+msgstr ""
+
+#: .\env\Lib\site-packages\django\core\validators.py:418
+#, python-format
+msgid "Ensure this value is less than or equal to %(limit_value)s."
+msgstr ""
+
+#: .\env\Lib\site-packages\django\core\validators.py:427
+#, python-format
+msgid "Ensure this value is greater than or equal to %(limit_value)s."
+msgstr ""
+
+#: .\env\Lib\site-packages\django\core\validators.py:437
+#, python-format
+msgid ""
+"Ensure this value has at least %(limit_value)d character (it has "
+"%(show_value)d)."
+msgid_plural ""
+"Ensure this value has at least %(limit_value)d characters (it has "
+"%(show_value)d)."
+msgstr[0] ""
+msgstr[1] ""
+
+#: .\env\Lib\site-packages\django\core\validators.py:455
+#, python-format
+msgid ""
+"Ensure this value has at most %(limit_value)d character (it has "
+"%(show_value)d)."
+msgid_plural ""
+"Ensure this value has at most %(limit_value)d characters (it has "
+"%(show_value)d)."
+msgstr[0] ""
+msgstr[1] ""
+
+#: .\env\Lib\site-packages\django\core\validators.py:478
+#: .\env\Lib\site-packages\django\forms\fields.py:343
+#: .\env\Lib\site-packages\django\forms\fields.py:378
+msgid "Enter a number."
+msgstr ""
+
+#: .\env\Lib\site-packages\django\core\validators.py:480
+#, python-format
+msgid "Ensure that there are no more than %(max)s digit in total."
+msgid_plural "Ensure that there are no more than %(max)s digits in total."
+msgstr[0] ""
+msgstr[1] ""
+
+#: .\env\Lib\site-packages\django\core\validators.py:485
+#, python-format
+msgid "Ensure that there are no more than %(max)s decimal place."
+msgid_plural "Ensure that there are no more than %(max)s decimal places."
+msgstr[0] ""
+msgstr[1] ""
+
+#: .\env\Lib\site-packages\django\core\validators.py:490
+#, python-format
+msgid ""
+"Ensure that there are no more than %(max)s digit before the decimal point."
+msgid_plural ""
+"Ensure that there are no more than %(max)s digits before the decimal point."
+msgstr[0] ""
+msgstr[1] ""
+
+#: .\env\Lib\site-packages\django\core\validators.py:559
+#, python-format
+msgid ""
+"File extension “%(extension)s” is not allowed. Allowed extensions are: "
+"%(allowed_extensions)s."
+msgstr ""
+
+#: .\env\Lib\site-packages\django\core\validators.py:620
+msgid "Null characters are not allowed."
+msgstr ""
+
+#: .\env\Lib\site-packages\django\db\models\base.py:1364
+#: .\env\Lib\site-packages\django\forms\models.py:894
+msgid "and"
+msgstr ""
+
+#: .\env\Lib\site-packages\django\db\models\base.py:1366
+#, python-format
+msgid "%(model_name)s with this %(field_labels)s already exists."
+msgstr ""
+
+#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:129
+#, python-format
+msgid "Value %(value)r is not a valid choice."
+msgstr ""
+
+#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:130
+msgid "This field cannot be null."
+msgstr ""
+
+#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:131
+msgid "This field cannot be blank."
+msgstr ""
+
+#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:132
+#, python-format
+msgid "%(model_name)s with this %(field_label)s already exists."
+msgstr ""
+
+#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:136
+#, python-format
+msgid ""
+"%(field_label)s must be unique for %(date_field_label)s %(lookup_type)s."
+msgstr ""
+
+#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:156
+#, python-format
+msgid "Field of type: %(field_type)s"
+msgstr ""
+
+#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:1050
+#, python-format
+msgid "“%(value)s” value must be either True or False."
+msgstr ""
+
+#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:1051
+#, python-format
+msgid "“%(value)s” value must be either True, False, or None."
+msgstr ""
+
+#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:1053
+msgid "Boolean (Either True or False)"
+msgstr ""
+
+#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:1094
+#, python-format
+msgid "String (up to %(max_length)s)"
+msgstr ""
+
+#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:1192
+msgid "Comma-separated integers"
+msgstr ""
+
+#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:1293
+#, python-format
+msgid ""
+"“%(value)s” value has an invalid date format. It must be in YYYY-MM-DD "
+"format."
+msgstr ""
+
+#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:1297
+#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:1432
+#, python-format
+msgid ""
+"“%(value)s” value has the correct format (YYYY-MM-DD) but it is an invalid "
+"date."
+msgstr ""
+
+#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:1301
+msgid "Date (without time)"
+msgstr ""
+
+#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:1428
+#, python-format
+msgid ""
+"“%(value)s” value has an invalid format. It must be in YYYY-MM-DD HH:MM[:ss[."
+"uuuuuu]][TZ] format."
+msgstr ""
+
+#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:1436
+#, python-format
+msgid ""
+"“%(value)s” value has the correct format (YYYY-MM-DD HH:MM[:ss[.uuuuuu]]"
+"[TZ]) but it is an invalid date/time."
+msgstr ""
+
+#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:1441
+msgid "Date (with time)"
+msgstr ""
+
+#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:1565
+#, python-format
+msgid "“%(value)s” value must be a decimal number."
+msgstr ""
+
+#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:1567
+msgid "Decimal number"
+msgstr ""
+
+#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:1724
+#, python-format
+msgid ""
+"“%(value)s” value has an invalid format. It must be in [DD] [[HH:]MM:]ss[."
+"uuuuuu] format."
+msgstr ""
+
+#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:1728
+msgid "Duration"
+msgstr ""
+
+#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:1780
+msgid "Email address"
+msgstr ""
+
+#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:1805
+msgid "File path"
+msgstr ""
+
+#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:1883
+#, python-format
+msgid "“%(value)s” value must be a float."
+msgstr ""
+
+#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:1885
+msgid "Floating point number"
+msgstr ""
+
+#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:1925
+#, python-format
+msgid "“%(value)s” value must be an integer."
+msgstr ""
+
+#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:1927
+msgid "Integer"
+msgstr ""
+
+#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:2019
+msgid "Big (8 byte) integer"
+msgstr ""
+
+#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:2036
+msgid "Small integer"
+msgstr ""
+
+#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:2044
+msgid "IPv4 address"
+msgstr ""
+
+#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:2075
+msgid "IP address"
+msgstr ""
+
+#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:2168
+#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:2169
+#, python-format
+msgid "“%(value)s” value must be either None, True or False."
+msgstr ""
+
+#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:2171
+msgid "Boolean (Either True, False or None)"
+msgstr ""
+
+#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:2222
+msgid "Positive big integer"
+msgstr ""
+
+#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:2237
+msgid "Positive integer"
+msgstr ""
+
+#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:2252
+msgid "Positive small integer"
+msgstr ""
+
+#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:2268
+#, python-format
+msgid "Slug (up to %(max_length)s)"
+msgstr ""
+
+#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:2304
+msgid "Text"
+msgstr ""
+
+#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:2374
+#, python-format
+msgid ""
+"“%(value)s” value has an invalid format. It must be in HH:MM[:ss[.uuuuuu]] "
+"format."
+msgstr ""
+
+#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:2378
+#, python-format
+msgid ""
+"“%(value)s” value has the correct format (HH:MM[:ss[.uuuuuu]]) but it is an "
+"invalid time."
+msgstr ""
+
+#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:2382
+msgid "Time"
+msgstr ""
+
+#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:2490
+msgid "URL"
+msgstr ""
+
+#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:2514
+msgid "Raw binary data"
+msgstr ""
+
+#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:2579
+#, python-format
+msgid "“%(value)s” is not a valid UUID."
+msgstr ""
+
+#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:2581
+msgid "Universally unique identifier"
+msgstr ""
+
+#: .\env\Lib\site-packages\django\db\models\fields\files.py:232
+msgid "File"
+msgstr ""
+
+#: .\env\Lib\site-packages\django\db\models\fields\files.py:392
+msgid "Image"
+msgstr ""
+
+#: .\env\Lib\site-packages\django\db\models\fields\json.py:18
+msgid "A JSON object"
+msgstr ""
+
+#: .\env\Lib\site-packages\django\db\models\fields\json.py:20
+msgid "Value must be valid JSON."
+msgstr ""
+
+#: .\env\Lib\site-packages\django\db\models\fields\related.py:903
+#, python-format
+msgid "%(model)s instance with %(field)s %(value)r does not exist."
+msgstr ""
+
+#: .\env\Lib\site-packages\django\db\models\fields\related.py:905
+msgid "Foreign Key (type determined by related field)"
+msgstr ""
+
+#: .\env\Lib\site-packages\django\db\models\fields\related.py:1204
+msgid "One-to-one relationship"
+msgstr ""
+
+#: .\env\Lib\site-packages\django\db\models\fields\related.py:1261
+#, python-format
+msgid "%(from)s-%(to)s relationship"
+msgstr ""
+
+#: .\env\Lib\site-packages\django\db\models\fields\related.py:1263
+#, python-format
+msgid "%(from)s-%(to)s relationships"
+msgstr ""
+
+#: .\env\Lib\site-packages\django\db\models\fields\related.py:1311
+msgid "Many-to-many relationship"
+msgstr ""
+
+#. Translators: If found as last label character, these punctuation
+#. characters will prevent the default label_suffix to be appended to the label
+#: .\env\Lib\site-packages\django\forms\boundfield.py:176
+msgid ":?.!"
+msgstr ""
+
+#: .\env\Lib\site-packages\django\forms\fields.py:91
+msgid "This field is required."
+msgstr ""
+
+#: .\env\Lib\site-packages\django\forms\fields.py:298
+msgid "Enter a whole number."
+msgstr ""
+
+#: .\env\Lib\site-packages\django\forms\fields.py:459
+#: .\env\Lib\site-packages\django\forms\fields.py:1232
+msgid "Enter a valid date."
+msgstr ""
+
+#: .\env\Lib\site-packages\django\forms\fields.py:482
+#: .\env\Lib\site-packages\django\forms\fields.py:1233
+msgid "Enter a valid time."
+msgstr ""
+
+#: .\env\Lib\site-packages\django\forms\fields.py:509
+msgid "Enter a valid date/time."
+msgstr ""
+
+#: .\env\Lib\site-packages\django\forms\fields.py:543
+msgid "Enter a valid duration."
+msgstr ""
+
+#: .\env\Lib\site-packages\django\forms\fields.py:544
+#, python-brace-format
+msgid "The number of days must be between {min_days} and {max_days}."
+msgstr ""
+
+#: .\env\Lib\site-packages\django\forms\fields.py:610
+msgid "No file was submitted. Check the encoding type on the form."
+msgstr ""
+
+#: .\env\Lib\site-packages\django\forms\fields.py:611
+msgid "No file was submitted."
+msgstr ""
+
+#: .\env\Lib\site-packages\django\forms\fields.py:612
+msgid "The submitted file is empty."
+msgstr ""
+
+#: .\env\Lib\site-packages\django\forms\fields.py:614
+#, python-format
+msgid "Ensure this filename has at most %(max)d character (it has %(length)d)."
+msgid_plural ""
+"Ensure this filename has at most %(max)d characters (it has %(length)d)."
+msgstr[0] ""
+msgstr[1] ""
+
+#: .\env\Lib\site-packages\django\forms\fields.py:619
+msgid "Please either submit a file or check the clear checkbox, not both."
+msgstr ""
+
+#: .\env\Lib\site-packages\django\forms\fields.py:685
+msgid ""
+"Upload a valid image. The file you uploaded was either not an image or a "
+"corrupted image."
+msgstr ""
+
+#: .\env\Lib\site-packages\django\forms\fields.py:848
+#: .\env\Lib\site-packages\django\forms\fields.py:940
+#: .\env\Lib\site-packages\django\forms\models.py:1563
+#, python-format
+msgid "Select a valid choice. %(value)s is not one of the available choices."
+msgstr ""
+
+#: .\env\Lib\site-packages\django\forms\fields.py:942
+#: .\env\Lib\site-packages\django\forms\fields.py:1061
+#: .\env\Lib\site-packages\django\forms\models.py:1561
+msgid "Enter a list of values."
+msgstr ""
+
+#: .\env\Lib\site-packages\django\forms\fields.py:1062
+msgid "Enter a complete value."
+msgstr ""
+
+#: .\env\Lib\site-packages\django\forms\fields.py:1301
+msgid "Enter a valid UUID."
+msgstr ""
+
+#: .\env\Lib\site-packages\django\forms\fields.py:1331
+msgid "Enter a valid JSON."
+msgstr ""
+
+#. Translators: This is the default suffix added to form field labels
+#: .\env\Lib\site-packages\django\forms\forms.py:98
+msgid ":"
+msgstr ""
+
+#: .\env\Lib\site-packages\django\forms\forms.py:248
+#: .\env\Lib\site-packages\django\forms\forms.py:328
+#, python-format
+msgid "(Hidden field %(name)s) %(error)s"
+msgstr ""
+
+#: .\env\Lib\site-packages\django\forms\formsets.py:67
+#, python-format
+msgid ""
+"ManagementForm data is missing or has been tampered with. Missing fields: "
+"%(field_names)s. You may need to file a bug report if the issue persists."
+msgstr ""
+
+#: .\env\Lib\site-packages\django\forms\formsets.py:418
+#, python-format
+msgid "Please submit at most %d form."
+msgid_plural "Please submit at most %d forms."
+msgstr[0] ""
+msgstr[1] ""
+
+#: .\env\Lib\site-packages\django\forms\formsets.py:434
+#, python-format
+msgid "Please submit at least %d form."
+msgid_plural "Please submit at least %d forms."
+msgstr[0] ""
+msgstr[1] ""
+
+#: .\env\Lib\site-packages\django\forms\formsets.py:470
+#: .\env\Lib\site-packages\django\forms\formsets.py:477
+msgid "Order"
+msgstr ""
+
+#: .\env\Lib\site-packages\django\forms\formsets.py:483
+msgid "Delete"
+msgstr ""
+
+#: .\env\Lib\site-packages\django\forms\models.py:887
+#, python-format
+msgid "Please correct the duplicate data for %(field)s."
+msgstr ""
+
+#: .\env\Lib\site-packages\django\forms\models.py:892
+#, python-format
+msgid "Please correct the duplicate data for %(field)s, which must be unique."
+msgstr ""
+
+#: .\env\Lib\site-packages\django\forms\models.py:899
+#, python-format
+msgid ""
+"Please correct the duplicate data for %(field_name)s which must be unique "
+"for the %(lookup)s in %(date_field)s."
+msgstr ""
+
+#: .\env\Lib\site-packages\django\forms\models.py:908
+msgid "Please correct the duplicate values below."
+msgstr ""
+
+#: .\env\Lib\site-packages\django\forms\models.py:1335
+msgid "The inline value did not match the parent instance."
+msgstr ""
+
+#: .\env\Lib\site-packages\django\forms\models.py:1426
+msgid "Select a valid choice. That choice is not one of the available choices."
+msgstr ""
+
+#: .\env\Lib\site-packages\django\forms\models.py:1565
+#, python-format
+msgid "“%(pk)s” is not a valid value."
+msgstr ""
+
+#: .\env\Lib\site-packages\django\forms\utils.py:204
+#, python-format
+msgid ""
+"%(datetime)s couldn’t be interpreted in time zone %(current_timezone)s; it "
+"may be ambiguous or it may not exist."
+msgstr ""
+
+#: .\env\Lib\site-packages\django\forms\widgets.py:434
+msgid "Clear"
+msgstr ""
+
+#: .\env\Lib\site-packages\django\forms\widgets.py:435
+msgid "Currently"
+msgstr ""
+
+#: .\env\Lib\site-packages\django\forms\widgets.py:436
+msgid "Change"
+msgstr ""
+
+#: .\env\Lib\site-packages\django\forms\widgets.py:765
+msgid "Unknown"
+msgstr ""
+
+#: .\env\Lib\site-packages\django\forms\widgets.py:766
+msgid "Yes"
+msgstr ""
+
+#: .\env\Lib\site-packages\django\forms\widgets.py:767
+msgid "No"
+msgstr ""
+
+#. Translators: Please do not add spaces around commas.
+#: .\env\Lib\site-packages\django\template\defaultfilters.py:858
+msgid "yes,no,maybe"
+msgstr ""
+
+#: .\env\Lib\site-packages\django\template\defaultfilters.py:888
+#: .\env\Lib\site-packages\django\template\defaultfilters.py:905
+#, python-format
+msgid "%(size)d byte"
+msgid_plural "%(size)d bytes"
+msgstr[0] ""
+msgstr[1] ""
+
+#: .\env\Lib\site-packages\django\template\defaultfilters.py:907
+#, python-format
+msgid "%s KB"
+msgstr ""
+
+#: .\env\Lib\site-packages\django\template\defaultfilters.py:909
+#, python-format
+msgid "%s MB"
+msgstr ""
+
+#: .\env\Lib\site-packages\django\template\defaultfilters.py:911
+#, python-format
+msgid "%s GB"
+msgstr ""
+
+#: .\env\Lib\site-packages\django\template\defaultfilters.py:913
+#, python-format
+msgid "%s TB"
+msgstr ""
+
+#: .\env\Lib\site-packages\django\template\defaultfilters.py:915
+#, python-format
+msgid "%s PB"
+msgstr ""
+
+#: .\env\Lib\site-packages\django\utils\dateformat.py:77
+msgid "p.m."
+msgstr ""
+
+#: .\env\Lib\site-packages\django\utils\dateformat.py:78
+msgid "a.m."
+msgstr ""
+
+#: .\env\Lib\site-packages\django\utils\dateformat.py:83
+msgid "PM"
+msgstr ""
+
+#: .\env\Lib\site-packages\django\utils\dateformat.py:84
+msgid "AM"
+msgstr ""
+
+#: .\env\Lib\site-packages\django\utils\dateformat.py:155
+msgid "midnight"
+msgstr ""
+
+#: .\env\Lib\site-packages\django\utils\dateformat.py:157
+msgid "noon"
+msgstr ""
+
+#: .\env\Lib\site-packages\django\utils\dates.py:7
+msgid "Monday"
+msgstr ""
+
+#: .\env\Lib\site-packages\django\utils\dates.py:8
+msgid "Tuesday"
+msgstr ""
+
+#: .\env\Lib\site-packages\django\utils\dates.py:9
+msgid "Wednesday"
+msgstr ""
+
+#: .\env\Lib\site-packages\django\utils\dates.py:10
+msgid "Thursday"
+msgstr ""
+
+#: .\env\Lib\site-packages\django\utils\dates.py:11
+msgid "Friday"
+msgstr ""
+
+#: .\env\Lib\site-packages\django\utils\dates.py:12
+msgid "Saturday"
+msgstr ""
+
+#: .\env\Lib\site-packages\django\utils\dates.py:13
+msgid "Sunday"
+msgstr ""
+
+#: .\env\Lib\site-packages\django\utils\dates.py:16
+msgid "Mon"
+msgstr ""
+
+#: .\env\Lib\site-packages\django\utils\dates.py:17
+msgid "Tue"
+msgstr ""
+
+#: .\env\Lib\site-packages\django\utils\dates.py:18
+msgid "Wed"
+msgstr ""
+
+#: .\env\Lib\site-packages\django\utils\dates.py:19
+msgid "Thu"
+msgstr ""
+
+#: .\env\Lib\site-packages\django\utils\dates.py:20
+msgid "Fri"
+msgstr ""
+
+#: .\env\Lib\site-packages\django\utils\dates.py:21
+msgid "Sat"
+msgstr ""
+
+#: .\env\Lib\site-packages\django\utils\dates.py:22
+msgid "Sun"
+msgstr ""
+
+#: .\env\Lib\site-packages\django\utils\dates.py:25
+msgid "January"
+msgstr ""
+
+#: .\env\Lib\site-packages\django\utils\dates.py:26
+msgid "February"
+msgstr ""
+
+#: .\env\Lib\site-packages\django\utils\dates.py:27
+msgid "March"
+msgstr ""
+
+#: .\env\Lib\site-packages\django\utils\dates.py:28
+msgid "April"
+msgstr ""
+
+#: .\env\Lib\site-packages\django\utils\dates.py:29
+msgid "May"
+msgstr ""
+
+#: .\env\Lib\site-packages\django\utils\dates.py:30
+msgid "June"
+msgstr ""
+
+#: .\env\Lib\site-packages\django\utils\dates.py:31
+msgid "July"
+msgstr ""
+
+#: .\env\Lib\site-packages\django\utils\dates.py:32
+msgid "August"
+msgstr ""
+
+#: .\env\Lib\site-packages\django\utils\dates.py:33
+msgid "September"
+msgstr ""
+
+#: .\env\Lib\site-packages\django\utils\dates.py:34
+msgid "October"
+msgstr ""
+
+#: .\env\Lib\site-packages\django\utils\dates.py:35
+msgid "November"
+msgstr ""
+
+#: .\env\Lib\site-packages\django\utils\dates.py:36
+msgid "December"
+msgstr ""
+
+#: .\env\Lib\site-packages\django\utils\dates.py:39
+msgid "jan"
+msgstr ""
+
+#: .\env\Lib\site-packages\django\utils\dates.py:40
+msgid "feb"
+msgstr ""
+
+#: .\env\Lib\site-packages\django\utils\dates.py:41
+msgid "mar"
+msgstr ""
+
+#: .\env\Lib\site-packages\django\utils\dates.py:42
+msgid "apr"
+msgstr ""
+
+#: .\env\Lib\site-packages\django\utils\dates.py:43
+msgid "may"
+msgstr ""
+
+#: .\env\Lib\site-packages\django\utils\dates.py:44
+msgid "jun"
+msgstr ""
+
+#: .\env\Lib\site-packages\django\utils\dates.py:45
+msgid "jul"
+msgstr ""
+
+#: .\env\Lib\site-packages\django\utils\dates.py:46
+msgid "aug"
+msgstr ""
+
+#: .\env\Lib\site-packages\django\utils\dates.py:47
+msgid "sep"
+msgstr ""
+
+#: .\env\Lib\site-packages\django\utils\dates.py:48
+msgid "oct"
+msgstr ""
+
+#: .\env\Lib\site-packages\django\utils\dates.py:49
+msgid "nov"
+msgstr ""
+
+#: .\env\Lib\site-packages\django\utils\dates.py:50
+msgid "dec"
+msgstr ""
+
+#: .\env\Lib\site-packages\django\utils\dates.py:53
+msgctxt "abbrev. month"
+msgid "Jan."
+msgstr ""
+
+#: .\env\Lib\site-packages\django\utils\dates.py:54
+msgctxt "abbrev. month"
+msgid "Feb."
+msgstr ""
+
+#: .\env\Lib\site-packages\django\utils\dates.py:55
+msgctxt "abbrev. month"
+msgid "March"
+msgstr ""
+
+#: .\env\Lib\site-packages\django\utils\dates.py:56
+msgctxt "abbrev. month"
+msgid "April"
+msgstr ""
+
+#: .\env\Lib\site-packages\django\utils\dates.py:57
+msgctxt "abbrev. month"
+msgid "May"
+msgstr ""
+
+#: .\env\Lib\site-packages\django\utils\dates.py:58
+msgctxt "abbrev. month"
+msgid "June"
+msgstr ""
+
+#: .\env\Lib\site-packages\django\utils\dates.py:59
+msgctxt "abbrev. month"
+msgid "July"
+msgstr ""
+
+#: .\env\Lib\site-packages\django\utils\dates.py:60
+msgctxt "abbrev. month"
+msgid "Aug."
+msgstr ""
+
+#: .\env\Lib\site-packages\django\utils\dates.py:61
+msgctxt "abbrev. month"
+msgid "Sept."
+msgstr ""
+
+#: .\env\Lib\site-packages\django\utils\dates.py:62
+msgctxt "abbrev. month"
+msgid "Oct."
+msgstr ""
+
+#: .\env\Lib\site-packages\django\utils\dates.py:63
+msgctxt "abbrev. month"
+msgid "Nov."
+msgstr ""
+
+#: .\env\Lib\site-packages\django\utils\dates.py:64
+msgctxt "abbrev. month"
+msgid "Dec."
+msgstr ""
+
+#: .\env\Lib\site-packages\django\utils\dates.py:67
+msgctxt "alt. month"
+msgid "January"
+msgstr ""
+
+#: .\env\Lib\site-packages\django\utils\dates.py:68
+msgctxt "alt. month"
+msgid "February"
+msgstr ""
+
+#: .\env\Lib\site-packages\django\utils\dates.py:69
+msgctxt "alt. month"
+msgid "March"
+msgstr ""
+
+#: .\env\Lib\site-packages\django\utils\dates.py:70
+msgctxt "alt. month"
+msgid "April"
+msgstr ""
+
+#: .\env\Lib\site-packages\django\utils\dates.py:71
+msgctxt "alt. month"
+msgid "May"
+msgstr ""
+
+#: .\env\Lib\site-packages\django\utils\dates.py:72
+msgctxt "alt. month"
+msgid "June"
+msgstr ""
+
+#: .\env\Lib\site-packages\django\utils\dates.py:73
+msgctxt "alt. month"
+msgid "July"
+msgstr ""
+
+#: .\env\Lib\site-packages\django\utils\dates.py:74
+msgctxt "alt. month"
+msgid "August"
+msgstr ""
+
+#: .\env\Lib\site-packages\django\utils\dates.py:75
+msgctxt "alt. month"
+msgid "September"
+msgstr ""
+
+#: .\env\Lib\site-packages\django\utils\dates.py:76
+msgctxt "alt. month"
+msgid "October"
+msgstr ""
+
+#: .\env\Lib\site-packages\django\utils\dates.py:77
+msgctxt "alt. month"
+msgid "November"
+msgstr ""
+
+#: .\env\Lib\site-packages\django\utils\dates.py:78
+msgctxt "alt. month"
+msgid "December"
+msgstr ""
+
+#: .\env\Lib\site-packages\django\utils\ipv6.py:8
+msgid "This is not a valid IPv6 address."
+msgstr ""
+
+#: .\env\Lib\site-packages\django\utils\text.py:77
+#, python-format
+msgctxt "String to return when truncating text"
+msgid "%(truncated_text)s…"
+msgstr ""
+
+#: .\env\Lib\site-packages\django\utils\text.py:253
+msgid "or"
+msgstr ""
+
+#. Translators: This string is used as a separator between list elements
+#: .\env\Lib\site-packages\django\utils\text.py:272
+#: .\env\Lib\site-packages\django\utils\timesince.py:94
+msgid ", "
+msgstr ""
+
+#: .\env\Lib\site-packages\django\utils\timesince.py:9
+#, python-format
+msgid "%(num)d year"
+msgid_plural "%(num)d years"
+msgstr[0] ""
+msgstr[1] ""
+
+#: .\env\Lib\site-packages\django\utils\timesince.py:10
+#, python-format
+msgid "%(num)d month"
+msgid_plural "%(num)d months"
+msgstr[0] ""
+msgstr[1] ""
+
+#: .\env\Lib\site-packages\django\utils\timesince.py:11
+#, python-format
+msgid "%(num)d week"
+msgid_plural "%(num)d weeks"
+msgstr[0] ""
+msgstr[1] ""
+
+#: .\env\Lib\site-packages\django\utils\timesince.py:12
+#, python-format
+msgid "%(num)d day"
+msgid_plural "%(num)d days"
+msgstr[0] ""
+msgstr[1] ""
+
+#: .\env\Lib\site-packages\django\utils\timesince.py:13
+#, python-format
+msgid "%(num)d hour"
+msgid_plural "%(num)d hours"
+msgstr[0] ""
+msgstr[1] ""
+
+#: .\env\Lib\site-packages\django\utils\timesince.py:14
+#, python-format
+msgid "%(num)d minute"
+msgid_plural "%(num)d minutes"
+msgstr[0] ""
+msgstr[1] ""
+
+#: .\env\Lib\site-packages\django\views\csrf.py:111
+msgid "Forbidden"
+msgstr ""
+
+#: .\env\Lib\site-packages\django\views\csrf.py:112
+msgid "CSRF verification failed. Request aborted."
+msgstr ""
+
+#: .\env\Lib\site-packages\django\views\csrf.py:116
+msgid ""
+"You are seeing this message because this HTTPS site requires a “Referer "
+"header” to be sent by your web browser, but none was sent. This header is "
+"required for security reasons, to ensure that your browser is not being "
+"hijacked by third parties."
+msgstr ""
+
+#: .\env\Lib\site-packages\django\views\csrf.py:122
+msgid ""
+"If you have configured your browser to disable “Referer” headers, please re-"
+"enable them, at least for this site, or for HTTPS connections, or for “same-"
+"origin” requests."
+msgstr ""
+
+#: .\env\Lib\site-packages\django\views\csrf.py:127
+msgid ""
+"If you are using the <meta name=\"referrer\" content=\"no-referrer\"> tag or "
+"including the “Referrer-Policy: no-referrer” header, please remove them. The "
+"CSRF protection requires the “Referer” header to do strict referer checking. "
+"If you’re concerned about privacy, use alternatives like <a rel=\"noreferrer"
+"\" …> for links to third-party sites."
+msgstr ""
+
+#: .\env\Lib\site-packages\django\views\csrf.py:136
+msgid ""
+"You are seeing this message because this site requires a CSRF cookie when "
+"submitting forms. This cookie is required for security reasons, to ensure "
+"that your browser is not being hijacked by third parties."
+msgstr ""
+
+#: .\env\Lib\site-packages\django\views\csrf.py:142
+msgid ""
+"If you have configured your browser to disable cookies, please re-enable "
+"them, at least for this site, or for “same-origin” requests."
+msgstr ""
+
+#: .\env\Lib\site-packages\django\views\csrf.py:148
+msgid "More information is available with DEBUG=True."
+msgstr ""
+
+#: .\env\Lib\site-packages\django\views\generic\dates.py:44
+msgid "No year specified"
+msgstr ""
+
+#: .\env\Lib\site-packages\django\views\generic\dates.py:64
+#: .\env\Lib\site-packages\django\views\generic\dates.py:115
+#: .\env\Lib\site-packages\django\views\generic\dates.py:214
+msgid "Date out of range"
+msgstr ""
+
+#: .\env\Lib\site-packages\django\views\generic\dates.py:94
+msgid "No month specified"
+msgstr ""
+
+#: .\env\Lib\site-packages\django\views\generic\dates.py:147
+msgid "No day specified"
+msgstr ""
+
+#: .\env\Lib\site-packages\django\views\generic\dates.py:194
+msgid "No week specified"
+msgstr ""
+
+#: .\env\Lib\site-packages\django\views\generic\dates.py:349
+#: .\env\Lib\site-packages\django\views\generic\dates.py:380
+#, python-format
+msgid "No %(verbose_name_plural)s available"
+msgstr ""
+
+#: .\env\Lib\site-packages\django\views\generic\dates.py:652
+#, python-format
+msgid ""
+"Future %(verbose_name_plural)s not available because %(class_name)s."
+"allow_future is False."
+msgstr ""
+
+#: .\env\Lib\site-packages\django\views\generic\dates.py:692
+#, python-format
+msgid "Invalid date string “%(datestr)s” given format “%(format)s”"
+msgstr ""
+
+#: .\env\Lib\site-packages\django\views\generic\detail.py:56
+#, python-format
+msgid "No %(verbose_name)s found matching the query"
+msgstr ""
+
+#: .\env\Lib\site-packages\django\views\generic\list.py:70
+msgid "Page is not “last”, nor can it be converted to an int."
+msgstr ""
+
+#: .\env\Lib\site-packages\django\views\generic\list.py:77
+#, python-format
+msgid "Invalid page (%(page_number)s): %(message)s"
+msgstr ""
+
+#: .\env\Lib\site-packages\django\views\generic\list.py:169
+#, python-format
+msgid "Empty list and “%(class_name)s.allow_empty” is False."
+msgstr ""
+
+#: .\env\Lib\site-packages\django\views\static.py:39
+msgid "Directory indexes are not allowed here."
+msgstr ""
+
+#: .\env\Lib\site-packages\django\views\static.py:41
+#, python-format
+msgid "“%(path)s” does not exist"
+msgstr ""
+
+#: .\env\Lib\site-packages\django\views\static.py:80
+#, python-format
+msgid "Index of %(directory)s"
+msgstr ""
+
+#: .\env\Lib\site-packages\django\views\templates\default_urlconf.html:7
+#: .\env\Lib\site-packages\django\views\templates\default_urlconf.html:221
+msgid "The install worked successfully! Congratulations!"
+msgstr ""
+
+#: .\env\Lib\site-packages\django\views\templates\default_urlconf.html:207
+#, python-format
+msgid ""
+"View <a href=\"https://docs.djangoproject.com/en/%(version)s/releases/\" "
+"target=\"_blank\" rel=\"noopener\">release notes</a> for Django %(version)s"
+msgstr ""
+
+#: .\env\Lib\site-packages\django\views\templates\default_urlconf.html:222
+#, python-format
+msgid ""
+"You are seeing this page because <a href=\"https://docs.djangoproject.com/en/"
+"%(version)s/ref/settings/#debug\" target=\"_blank\" rel=\"noopener"
+"\">DEBUG=True</a> is in your settings file and you have not configured any "
+"URLs."
+msgstr ""
+
+#: .\env\Lib\site-packages\django\views\templates\default_urlconf.html:230
+msgid "Django Documentation"
+msgstr ""
+
+#: .\env\Lib\site-packages\django\views\templates\default_urlconf.html:231
+msgid "Topics, references, &amp; how-to’s"
+msgstr ""
+
+#: .\env\Lib\site-packages\django\views\templates\default_urlconf.html:239
+msgid "Tutorial: A Polling App"
+msgstr ""
+
+#: .\env\Lib\site-packages\django\views\templates\default_urlconf.html:240
+msgid "Get started with Django"
+msgstr ""
+
+#: .\env\Lib\site-packages\django\views\templates\default_urlconf.html:248
+msgid "Django Community"
+msgstr ""
+
+#: .\env\Lib\site-packages\django\views\templates\default_urlconf.html:249
+msgid "Connect, get help, or contribute"
+msgstr ""
+
+#: .\lang\templates\lang.html:5
+msgid "Traduceri"
+msgstr ""
+
+#: .\lang\templates\lang.html:16 .\lang\views.py:19
+msgid "Traducere text"
+msgstr ""
+
+#: .\lang\templates\lang.html:17
+msgid "Traducere text proba"
+msgstr ""
+
+#: .\lang\templates\lang.html:18
+msgid "Traducere text proba versiune django"
+msgstr ""
+
+#: .\lang\templates\lang.html:27
+#, python-format
+msgid ""
+"\n"
+"<p>%(user.username)s</p>\n"
+"<p>%(staff.functie)s</p>\n"
+"<p>%(masina.culoare)s</p>\n"
+"<p>%(masina.combustibil)s</p>\n"
+"\n"
+"<br>\n"
+"    <h5 style='color:darkslategray;'>Preturi Abonamente, TVA inclusa.</h5>\n"
+"    <br>\n"
+"    <div class=\"row\">\n"
+"      <div class=\"col-sm-4\">"
+msgstr ""
+
+#: .\lang\templates\lang.html:39
+msgid ""
+"\n"
+"        <h6>Abonament Zona Publica</h6>\n"
+"        <h5>500 lei</h5><hr>"
+msgstr ""
+
+#: .\lang\templates\lang.html:42 .\lang\templates\lang.html:49
+#: .\parcare\templates\parcare\abonamente.html:19
+#: .\parcare\templates\parcare\abonamente.html:26
+msgid "Descarca PDF"
+msgstr ""
+
+#: .\lang\templates\lang.html:46
+msgid ""
+"\n"
+"        <h6>Abonament Zona Privata</h6>\n"
+"        <h5>800 lei</h5><hr>"
+msgstr ""
+
+#: .\parcare\forms.py:7 .\parcare\models.py:6
+msgid "Nume Imagine"
+msgstr ""
+
+#: .\parcare\forms.py:7
+msgid "Descriere Imagine"
+msgstr ""
+
+#: .\parcare\forms.py:8 .\parcare\templates\parcare\parcare.html:42
+#: .\useri\forms.py:53 .\useri\models.py:21
+msgid "Imagine"
+msgstr ""
+
+#: .\parcare\forms.py:8
+msgid "Adauga Imagine"
+msgstr ""
+
+#: .\parcare\models.py:15
+msgid "Imagini"
+msgstr ""
+
+#: .\parcare\templates\parcare\abonamente.html:4
+msgid "Abonamente"
+msgstr ""
+
+#: .\parcare\templates\parcare\abonamente.html:11
+msgid "Preturi Abonamente, TVA inclusa."
+msgstr ""
+
+#: .\parcare\templates\parcare\abonamente.html:17
+msgid "Abonament Zona Publica"
+msgstr ""
+
+#: .\parcare\templates\parcare\abonamente.html:18
+msgid "500 lei"
+msgstr ""
+
+#: .\parcare\templates\parcare\abonamente.html:24
+msgid "Abonament Zona Privata"
+msgstr ""
+
+#: .\parcare\templates\parcare\abonamente.html:25
+msgid "800 lei"
+msgstr ""
+
+#: .\parcare\templates\parcare\carduri.html:4
+msgid "Carduri reincarcabile"
+msgstr ""
+
+#: .\parcare\templates\parcare\carduri.html:13
+msgid "Preturi in Lei, TVA inclusa."
+msgstr ""
+
+#: .\parcare\templates\parcare\carduri.html:15
+msgid ""
+"Profitati de cardurile noastre reincarcabile pentru a parca fara a pierde "
+"timp trecand mereu pe la casele automatice de plata biletelor."
+msgstr ""
+
+#: .\parcare\templates\parcare\carduri.html:16
+msgid "Cu cat parcati mai des, cu atat economisiti."
+msgstr ""
+
+#: .\parcare\templates\parcare\carduri.html:19
+msgid "VALOARE REALA"
+msgstr ""
+
+#: .\parcare\templates\parcare\carduri.html:20
+msgid "COST CARD"
+msgstr ""
+
+#: .\parcare\templates\parcare\carduri.html:25
+msgid "50.00 Lei"
+msgstr ""
+
+#: .\parcare\templates\parcare\carduri.html:26
+msgid "45.00 Lei"
+msgstr ""
+
+#: .\parcare\templates\parcare\carduri.html:29
+msgid "100.00 Lei"
+msgstr ""
+
+#: .\parcare\templates\parcare\carduri.html:30
+msgid "90.00 Lei"
+msgstr ""
+
+#: .\parcare\templates\parcare\carduri.html:33
+msgid "150.00 Lei"
+msgstr ""
+
+#: .\parcare\templates\parcare\carduri.html:34
+msgid "130.00 Lei"
+msgstr ""
+
+#: .\parcare\templates\parcare\carduri.html:37
+msgid "200.00 Lei"
+msgstr ""
+
+#: .\parcare\templates\parcare\carduri.html:38
+msgid "170.00 Lei"
+msgstr ""
+
+#: .\parcare\templates\parcare\carduri.html:43
+msgid "Pierderea sau distrugerea cardului duce la anularea acestuia."
+msgstr ""
+
+#: .\parcare\templates\parcare\carduri.html:45
+msgid ""
+"Cardurile au o valabilitate de 6 luni si pot fi obtinute de la Biroul de "
+"Informatii, la Etajul 1."
+msgstr ""
+
+#: .\parcare\templates\parcare\carduri.html:46
+msgid "Pentru mai multe informatii:"
+msgstr ""
+
+#: .\parcare\templates\parcare\contact.html:4
+#: .\parcare\templates\parcare\contact.html:12
+#: .\templates\parkproject\navbar.html:22
+msgid "Contact"
+msgstr ""
+
+#: .\parcare\templates\parcare\contact.html:17
+msgid "Contact birou parcare"
+msgstr ""
+
+#: .\parcare\templates\parcare\contact.html:20
+msgid "Adresa: Strada Tabacului 1A"
+msgstr ""
+
+#: .\parcare\templates\parcare\contact.html:21
+msgid "Orar: luni-duminica 06:00 - 00:00"
+msgstr ""
+
+#: .\parcare\templates\parcare\contact.html:28
+msgid "Contact birou societate"
+msgstr ""
+
+#: .\parcare\templates\parcare\contact.html:31
+msgid "Adresa: Soseaua Nationala 25"
+msgstr ""
+
+#: .\parcare\templates\parcare\contact.html:32
+msgid "Orar: luni-vineri 09:00 - 17:00"
+msgstr ""
+
+#: .\parcare\templates\parcare\galerie.html:4
+#: .\templates\parkproject\navbar.html:25
+msgid "Galerie"
+msgstr ""
+
+#: .\parcare\templates\parcare\galerie.html:14
+msgid "Fotografii din parcare"
+msgstr ""
+
+#: .\parcare\templates\parcare\galerie.html:31
+msgid "Previous"
+msgstr ""
+
+#: .\parcare\templates\parcare\galerie.html:35
+msgid "Next"
+msgstr ""
+
+#: .\parcare\templates\parcare\galerie.html:42
+msgid "Incarca imagine"
+msgstr ""
+
+#: .\parcare\templates\parcare\parcare.html:4
+#: .\templates\parkproject\navbar.html:29
+msgid "Parcare"
+msgstr ""
+
+#: .\parcare\templates\parcare\parcare.html:24
+#: .\useri\templates\useri\detalii_profil.html:27
+msgid "Bine ai venit "
+msgstr ""
+
+#: .\parcare\templates\parcare\parcare.html:26
+msgid "Cauta profile"
+msgstr ""
+
+#: .\parcare\templates\parcare\parcare.html:26
+msgid "Search"
+msgstr ""
+
+#: .\parcare\templates\parcare\parcare.html:27
+msgid "Cauta"
+msgstr ""
+
+#: .\parcare\templates\parcare\parcare.html:31
+#: .\staff\templates\staff\staff_nou.html:69
+msgid "Adauga Angajat"
+msgstr ""
+
+#: .\parcare\templates\parcare\parcare.html:33
+msgid "Adauga Abonat"
+msgstr ""
+
+#: .\parcare\templates\parcare\parcare.html:46
+msgid "Statut"
+msgstr ""
+
+#: .\parcare\templates\parcare\parcare.html:54
+msgid "Sterge"
+msgstr ""
+
+#: .\parcare\templates\parcare\parcare.html:57
+msgid "Detalii"
+msgstr ""
+
+#: .\parcare\templates\parcare\parcare.html:72
+#: .\parcare\templates\parcare\parcare.html:80
+msgid "Abonat"
+msgstr ""
+
+#: .\parcare\templates\parcare\parcare.html:103
+msgid "Nu esti inregistrat."
+msgstr ""
+
+#: .\parcare\templates\parcare\parcare.html:104
+#: .\useri\templates\registration\login.html:25
+msgid "Log In"
+msgstr ""
+
+#: .\parcare\templates\parcare\parcare.html:105
+#: .\useri\templates\registration\delete_user.html:14
+#: .\useri\templates\registration\login.html:26
+msgid "Am uitat parola"
+msgstr ""
+
+#: .\parcare\templates\parcare\pdf.html:5
+msgid "PDF"
+msgstr ""
+
+#: .\parcare\templates\parcare\pdf.html:75
+#: .\parcare\templates\parcare\pdf_info.html:75
+msgid "ABONAMENT PARCARE ZIMBRU"
+msgstr ""
+
+#: .\parcare\templates\parcare\pdf.html:76
+msgid "CONTRACT NR"
+msgstr ""
+
+#: .\parcare\templates\parcare\pdf.html:82
+#: .\parcare\templates\parcare\pdf_info.html:82
+msgid "DATE MASINA"
+msgstr ""
+
+#: .\parcare\templates\parcare\pdf.html:86
+#: .\parcare\templates\parcare\pdf_info.html:86
+msgid "MARCA"
+msgstr ""
+
+#: .\parcare\templates\parcare\pdf.html:87
+#: .\parcare\templates\parcare\pdf_info.html:87
+msgid "MODEL"
+msgstr ""
+
+#: .\parcare\templates\parcare\pdf.html:88
+#: .\parcare\templates\parcare\pdf_info.html:88
+msgid "NUMAR"
+msgstr ""
+
+#: .\parcare\templates\parcare\pdf.html:89
+#: .\parcare\templates\parcare\pdf_info.html:89
+msgid "CULOARE"
+msgstr ""
+
+#: .\parcare\templates\parcare\pdf.html:90
+#: .\parcare\templates\parcare\pdf_info.html:90
+msgid "COMBUSTIBIL"
+msgstr ""
+
+#: .\parcare\templates\parcare\pdf.html:103
+#: .\parcare\templates\parcare\pdf_info.html:103
+msgid "DATE ABONAT"
+msgstr ""
+
+#: .\parcare\templates\parcare\pdf.html:105
+#: .\parcare\templates\parcare\pdf_info.html:105
+msgid "NUME"
+msgstr ""
+
+#: .\parcare\templates\parcare\pdf.html:106
+#: .\parcare\templates\parcare\pdf_info.html:106
+msgid "PRENUME"
+msgstr ""
+
+#: .\parcare\templates\parcare\pdf.html:108
+#: .\parcare\templates\parcare\pdf_info.html:108
+msgid "JUDET"
+msgstr ""
+
+#: .\parcare\templates\parcare\pdf.html:109
+#: .\parcare\templates\parcare\pdf_info.html:109
+msgid "ORAS"
+msgstr ""
+
+#: .\parcare\templates\parcare\pdf.html:111
+#: .\parcare\templates\parcare\pdf_info.html:110
+msgid "ADRESA"
+msgstr ""
+
+#: .\parcare\templates\parcare\pdf.html:112
+#: .\parcare\templates\parcare\pdf_info.html:112
+msgid "TELEFON"
+msgstr ""
+
+#: .\parcare\templates\parcare\pdf.html:114
+#: .\parcare\templates\parcare\pdf_info.html:114
+msgid "DATE PERMIS AUTO"
+msgstr ""
+
+#: .\parcare\templates\parcare\pdf.html:116
+#: .\parcare\templates\parcare\pdf_info.html:116
+msgid "NUMAR PERMIS"
+msgstr ""
+
+#: .\parcare\templates\parcare\pdf.html:117
+#: .\parcare\templates\parcare\pdf_info.html:117
+msgid "CATEGORIE PERMIS"
+msgstr ""
+
+#: .\parcare\templates\parcare\pdf.html:120
+msgid "Data"
+msgstr ""
+
+#: .\parcare\templates\parcare\pdf.html:121
+msgid ""
+"\n"
+"    <p>     \n"
+"            Aceasta intelegere (denumita in continuare \"Contract\") "
+"stabileste conditiile pentru abonamentul lunar de parcare oferit de catre "
+"Parcare Zimbru S.R.L. (denumit in continuare \"Furnizor\") catre abonat "
+"(denumit in continuare \"Client\").\n"
+"\n"
+"            Articolul 1 - Obligatii Furnizor\n"
+"\n"
+"        Furnizorul va pune la dispozitia Clientului un loc de parcare pentru "
+"perioada abonamentului, in conditiile specificate in prezentul Contract.\n"
+"        Furnizorul va asigura mentenanta locului de parcare in conditii de "
+"siguranta si va lua toate masurile necesare pentru a asigura accesul "
+"Clientului la locul de parcare in mod constant.\n"
+"        Furnizorul va notifica Clientul cu privire la orice schimbare care "
+"ar putea afecta accesul Clientului la locul de parcare sau utilizarea "
+"acestuia.\n"
+"\n"
+"            Articolul 2 - Obligatii Client\n"
+"\n"
+"        Clientul va plati Furnizorului o taxa lunara pentru abonamentul de "
+"parcare, la data specificata in prezentul Contract.\n"
+"        Clientul va respecta regulile de utilizare a locului de parcare, "
+"conform specificatiilor Furnizorului.\n"
+"        Clientul va permite accesul Furnizorului la locul de parcare in "
+"scopuri de mentenanta sau verificare, atunci cand acest lucru este necesar.\n"
+"        Clientul va fi raspunzator pentru orice daune cauzate locului de "
+"parcare de catre vehiculul sau sau de catre persoanele care il utilizeaza.\n"
+"\n"
+"            Articolul 3 - Durata contractului\n"
+"\n"
+"        Prezentul Contract intra in vigoare la data semnarii de catre ambele "
+"parti si ramane valabil pentru o perioada de 12 luni, dupa care se poate "
+"prelungi prin acordul ambelor parti.\n"
+"        Orice parte poate denunta prezentul Contract cu o notificare in "
+"scris, cu o preaviz de 30 de zile.\n"
+"\n"
+"            Articolul 4 - Forta majora\n"
+"\n"
+"        Niciuna dintre parti nu va fi raspunzatoare pentru orice "
+"neindeplinire a obligatiilor sale conform prezentului Contract, daca aceasta "
+"neindeplinire rezulta din cauze care sunt dincolo de controlul sau, "
+"incluzand, dar fara a se limita la: cutremure, incendii, inundatii, razboi, "
+"acte de terorism, greve sau alte conflicte de munca, blocaje comerciale sau "
+"orice alte evenimente similare care sunt dincolo de controlul sau.\n"
+"        \n"
+"            Articolul 1 - Obligatii Furnizor\n"
+"\n"
+"        Furnizorul va pune la dispozitia Clientului un loc de parcare pentru "
+"perioada abonamentului, in conditiile specificate in prezentul Contract.\n"
+"        Furnizorul va asigura mentenanta locului de parcare in conditii de "
+"siguranta si va lua toate masurile necesare pentru a asigura accesul "
+"Clientului la locul de parcare in mod constant.\n"
+"        Furnizorul va notifica Clientul cu privire la orice schimbare care "
+"ar putea afecta accesul Clientului la locul de parcare sau utilizarea "
+"acestuia.\n"
+"\n"
+"            Articolul 2 - Obligatii Client\n"
+"\n"
+"        Clientul va plati Furnizorului o taxa lunara pentru abonamentul de "
+"parcare, la data specificata in prezentul Contract.\n"
+"        Clientul va respecta regulile de utilizare a locului de parcare, "
+"conform specificatiilor Furnizorului.\n"
+"        Clientul va permite accesul Furnizorului la locul de parcare in "
+"scopuri de mentenanta sau verificare, atunci cand acest lucru este necesar.\n"
+"        Clientul va fi raspunzator pentru orice daune cauzate locului de "
+"parcare de catre vehiculul sau sau de catre persoanele care il utilizeaza.\n"
+"\n"
+"            Articolul 3 - Durata contractului\n"
+"\n"
+"        Prezentul Contract intra in vigoare la data semnarii de catre ambele "
+"parti si ramane valabil pentru o perioada de 12 luni, dupa care se poate "
+"prelungi prin acordul ambelor parti.\n"
+"        Orice parte poate denunta prezentul Contract cu o notificare in "
+"scris, cu o preaviz de 30 de zile.\n"
+"\n"
+"            Articolul 4 - Forta majora\n"
+"\n"
+"        Niciuna dintre parti nu va fi raspunzatoare pentru orice "
+"neindeplinire a obligatiilor sale conform prezentului Contract, daca aceasta "
+"neindeplinire rezulta din cauze care sunt dincolo de controlul sau, "
+"incluzand, dar fara a se limita la: cutremure, incendii, inundatii, razboi, "
+"acte de terorism, greve sau alte conflicte de munca, blocaje comerciale sau "
+"orice alte evenimente similare care sunt dincolo de controlul sau.\n"
+"\n"
+"            Articolul 1 - Obligatii Furnizor\n"
+"\n"
+"        Furnizorul va pune la dispozitia Clientului un loc de parcare pentru "
+"perioada abonamentului, in conditiile specificate in prezentul Contract.\n"
+"        Furnizorul va asigura mentenanta locului de parcare in conditii de "
+"siguranta si va lua toate masurile necesare pentru a asigura accesul "
+"Clientului la locul de parcare in mod constant.\n"
+"        Furnizorul va notifica Clientul cu privire la orice schimbare care "
+"ar putea afecta accesul Clientului la locul de parcare sau utilizarea "
+"acestuia.\n"
+"\n"
+"            Articolul 2 - Obligatii Client\n"
+"\n"
+"        Clientul va plati Furnizorului o taxa lunara pentru abonamentul de "
+"parcare, la data specificata in prezentul Contract.\n"
+"        Clientul va respecta regulile de utilizare a locului de parcare, "
+"conform specificatiilor Furnizorului.\n"
+"        Clientul va permite accesul Furnizorului la locul de parcare in "
+"scopuri de mentenanta sau verificare, atunci cand acest lucru este necesar.\n"
+"        Clientul va fi raspunzator pentru orice daune cauzate locului de "
+"parcare de catre vehiculul sau sau de catre persoanele care il utilizeaza.\n"
+"\n"
+"            Articolul 3 - Durata contractului\n"
+"\n"
+"        Prezentul Contract intra in vigoare la data semnarii de catre ambele "
+"parti si ramane valabil pentru o perioada de 12 luni, dupa care se poate "
+"prelungi prin acordul ambelor parti.\n"
+"        Orice parte poate denunta prezentul Contract cu o notificare in "
+"scris, cu o preaviz de 30 de zile.\n"
+"\n"
+"            Articolul 4 - Forta majora\n"
+"\n"
+"        Niciuna dintre parti nu va fi raspunzatoare pentru orice "
+"neindeplinire a obligatiilor sale conform prezentului Contract, daca aceasta "
+"neindeplinire rezulta din cauze care sunt dincolo de controlul sau, "
+"incluzand, dar fara a se limita la: cutremure, incendii, inundatii, razboi, "
+"acte de terorism, greve sau alte conflicte de munca, blocaje comerciale sau "
+"orice alte evenimente similare care sunt dincolo de controlul sau.\n"
+"\n"
+"    </p>\n"
+"    "
+msgstr ""
+
+#: .\parcare\templates\parcare\pdf_info.html:5
+#: .\useri\templates\useri\detalii_profil.html:87
+#: .\useri\templates\useri\detalii_profil.html:182
+msgid "Contract PDF"
+msgstr ""
+
+#: .\parcare\templates\parcare\pdf_info.html:76
+msgid "ABONAMENT NR"
+msgstr ""
+
+#: .\parcare\templates\parcare\pdf_info.html:76
+msgid "COD CLIENT"
+msgstr ""
+
+#: .\parcare\templates\parcare\pdf_info.html:120
+msgid ""
+"\n"
+"    <p>\n"
+"            Aceasta intelegere (denumita in continuare \"Contract\") "
+"stabileste conditiile pentru abonamentul lunar de parcare oferit de catre "
+"Parcare Zimbru S.R.L. (denumit in continuare \"Furnizor\") catre abonat "
+"(denumit in continuare \"Client\").\n"
+"\n"
+"            Articolul 1 - Obligatii Furnizor\n"
+"\n"
+"        Furnizorul va pune la dispozitia Clientului un loc de parcare pentru "
+"perioada abonamentului, in conditiile specificate in prezentul Contract.\n"
+"        Furnizorul va asigura mentenanta locului de parcare in conditii de "
+"siguranta si va lua toate masurile necesare pentru a asigura accesul "
+"Clientului la locul de parcare in mod constant.\n"
+"        Furnizorul va notifica Clientul cu privire la orice schimbare care "
+"ar putea afecta accesul Clientului la locul de parcare sau utilizarea "
+"acestuia.\n"
+"\n"
+"            Articolul 2 - Obligatii Client\n"
+"\n"
+"        Clientul va plati Furnizorului o taxa lunara pentru abonamentul de "
+"parcare, la data specificata in prezentul Contract.\n"
+"        Clientul va respecta regulile de utilizare a locului de parcare, "
+"conform specificatiilor Furnizorului.\n"
+"        Clientul va permite accesul Furnizorului la locul de parcare in "
+"scopuri de mentenanta sau verificare, atunci cand acest lucru este necesar.\n"
+"        Clientul va fi raspunzator pentru orice daune cauzate locului de "
+"parcare de catre vehiculul sau sau de catre persoanele care il utilizeaza.\n"
+"\n"
+"            Articolul 3 - Durata contractului\n"
+"\n"
+"        Prezentul Contract intra in vigoare la data semnarii de catre ambele "
+"parti si ramane valabil pentru o perioada de 12 luni, dupa care se poate "
+"prelungi prin acordul ambelor parti.\n"
+"        Orice parte poate denunta prezentul Contract cu o notificare in "
+"scris, cu o preaviz de 30 de zile.\n"
+"\n"
+"            Articolul 4 - Forta majora\n"
+"\n"
+"        Niciuna dintre parti nu va fi raspunzatoare pentru orice "
+"neindeplinire a obligatiilor sale conform prezentului Contract, daca aceasta "
+"neindeplinire rezulta din cauze care sunt dincolo de controlul sau, "
+"incluzand, dar fara a se limita la: cutremure, incendii, inundatii, razboi, "
+"acte de terorism, greve sau alte conflicte de munca, blocaje comerciale sau "
+"orice alte evenimente similare care sunt dincolo de controlul sau.\n"
+"        \n"
+"            Articolul 1 - Obligatii Furnizor\n"
+"\n"
+"        Furnizorul va pune la dispozitia Clientului un loc de parcare pentru "
+"perioada abonamentului, in conditiile specificate in prezentul Contract.\n"
+"        Furnizorul va asigura mentenanta locului de parcare in conditii de "
+"siguranta si va lua toate masurile necesare pentru a asigura accesul "
+"Clientului la locul de parcare in mod constant.\n"
+"        Furnizorul va notifica Clientul cu privire la orice schimbare care "
+"ar putea afecta accesul Clientului la locul de parcare sau utilizarea "
+"acestuia.\n"
+"\n"
+"            Articolul 2 - Obligatii Client\n"
+"\n"
+"        Clientul va plati Furnizorului o taxa lunara pentru abonamentul de "
+"parcare, la data specificata in prezentul Contract.\n"
+"        Clientul va respecta regulile de utilizare a locului de parcare, "
+"conform specificatiilor Furnizorului.\n"
+"        Clientul va permite accesul Furnizorului la locul de parcare in "
+"scopuri de mentenanta sau verificare, atunci cand acest lucru este necesar.\n"
+"        Clientul va fi raspunzator pentru orice daune cauzate locului de "
+"parcare de catre vehiculul sau sau de catre persoanele care il utilizeaza.\n"
+"\n"
+"            Articolul 3 - Durata contractului\n"
+"\n"
+"        Prezentul Contract intra in vigoare la data semnarii de catre ambele "
+"parti si ramane valabil pentru o perioada de 12 luni, dupa care se poate "
+"prelungi prin acordul ambelor parti.\n"
+"        Orice parte poate denunta prezentul Contract cu o notificare in "
+"scris, cu o preaviz de 30 de zile.\n"
+"\n"
+"            Articolul 4 - Forta majora\n"
+"\n"
+"        Niciuna dintre parti nu va fi raspunzatoare pentru orice "
+"neindeplinire a obligatiilor sale conform prezentului Contract, daca aceasta "
+"neindeplinire rezulta din cauze care sunt dincolo de controlul sau, "
+"incluzand, dar fara a se limita la: cutremure, incendii, inundatii, razboi, "
+"acte de terorism, greve sau alte conflicte de munca, blocaje comerciale sau "
+"orice alte evenimente similare care sunt dincolo de controlul sau.\n"
+"\n"
+"            Articolul 1 - Obligatii Furnizor\n"
+"\n"
+"        Furnizorul va pune la dispozitia Clientului un loc de parcare pentru "
+"perioada abonamentului, in conditiile specificate in prezentul Contract.\n"
+"        Furnizorul va asigura mentenanta locului de parcare in conditii de "
+"siguranta si va lua toate masurile necesare pentru a asigura accesul "
+"Clientului la locul de parcare in mod constant.\n"
+"        Furnizorul va notifica Clientul cu privire la orice schimbare care "
+"ar putea afecta accesul Clientului la locul de parcare sau utilizarea "
+"acestuia.\n"
+"\n"
+"            Articolul 2 - Obligatii Client\n"
+"\n"
+"        Clientul va plati Furnizorului o taxa lunara pentru abonamentul de "
+"parcare, la data specificata in prezentul Contract.\n"
+"        Clientul va respecta regulile de utilizare a locului de parcare, "
+"conform specificatiilor Furnizorului.\n"
+"        Clientul va permite accesul Furnizorului la locul de parcare in "
+"scopuri de mentenanta sau verificare, atunci cand acest lucru este necesar.\n"
+"        Clientul va fi raspunzator pentru orice daune cauzate locului de "
+"parcare de catre vehiculul sau sau de catre persoanele care il utilizeaza.\n"
+"\n"
+"            Articolul 3 - Durata contractului\n"
+"\n"
+"        Prezentul Contract intra in vigoare la data semnarii de catre ambele "
+"parti si ramane valabil pentru o perioada de 12 luni, dupa care se poate "
+"prelungi prin acordul ambelor parti.\n"
+"        Orice parte poate denunta prezentul Contract cu o notificare in "
+"scris, cu o preaviz de 30 de zile.\n"
+"\n"
+"            Articolul 4 - Forta majora\n"
+"\n"
+"        Niciuna dintre parti nu va fi raspunzatoare pentru orice "
+"neindeplinire a obligatiilor sale conform prezentului Contract, daca aceasta "
+"neindeplinire rezulta din cauze care sunt dincolo de controlul sau, "
+"incluzand, dar fara a se limita la: cutremure, incendii, inundatii, razboi, "
+"acte de terorism, greve sau alte conflicte de munca, blocaje comerciale sau "
+"orice alte evenimente similare care sunt dincolo de controlul sau.\n"
+"\n"
+"    </p>\n"
+"    "
+msgstr ""
+
+#: .\parcare\templates\parcare\servicii.html:4
+#: .\parcare\templates\parcare\servicii.html:10
+#: .\templates\parkproject\main.html:96 .\templates\parkproject\navbar.html:19
+msgid "Servicii"
+msgstr ""
+
+#: .\parcare\templates\parcare\servicii.html:16
+msgid ""
+"\n"
+"        <p style='color:darkslategray;'>Incepand cu luna Aprilie 2023, vor "
+"fi disponibile 3 locuri cu statii de incarcare masini electrice.\n"
+"           <br>Acestea vor fi amplasate la etajul 1, intrarea principala.\n"
+"        </p>\n"
+"        "
+msgstr ""
+
+#: .\parcare\templates\parcare\servicii.html:25
+msgid ""
+"\n"
+"        <p style='color:darkslategray;'>La fiecare etaj gasiti cate doua "
+"locuri de parcare pentru persoanele cu dizabilitati.\n"
+"           <br>Acestea sunt pozitionate in apropierea lifturilor si "
+"toaletelor.\n"
+"        </p>\n"
+"        "
+msgstr ""
+
+#: .\parcare\templates\parcare\servicii.html:34
+msgid ""
+"\n"
+"        <p style='color:darkslategray;'>Toaletele sunt amplasate la etajul "
+"1, in apropierea intrarii principale.\n"
+"           <br>Accesul se face prin scanarea biletului sau cardului de "
+"abonat.\n"
+"        </p>\n"
+"        "
+msgstr ""
+
+#: .\parcare\templates\parcare\tarife.html:4
+#: .\templates\parkproject\main.html:94 .\templates\parkproject\navbar.html:16
+msgid "Tarife"
+msgstr ""
+
+#: .\parcare\templates\parcare\tarife.html:11
+msgid "Tarife Parcare"
+msgstr ""
+
+#: .\parcare\templates\parcare\tarife.html:16
+msgid "Tarif pe ora/24h"
+msgstr ""
+
+#: .\parcare\templates\parcare\tarife.html:17
+#: .\parcare\templates\parcare\tarife.html:22
+#: .\parcare\templates\parcare\tarife.html:27
+msgid "Informatii"
+msgstr ""
+
+#: .\parcare\templates\parcare\tarife.html:21
+msgid "Preturi abonamente"
+msgstr ""
+
+#: .\parcare\templates\parcare\tarife.html:26
+msgid "Preturi carduri reincarcabile"
+msgstr ""
+
+#: .\parcare\templates\parcare\tarife.html:33
+msgid "Evenimente"
+msgstr ""
+
+#: .\parcare\templates\parcare\tarife.html:34
+msgid ""
+"Oferim posibilitatea rezervarii mai multor locuri de parcare pentru "
+"evenimente (conferinte, spectacole, nunti...) la tarife speciale."
+msgstr ""
+
+#: .\parcare\templates\parcare\tarife.html:35
+msgid "Contacteaza-ne pentru oferte"
+msgstr ""
+
+#: .\parcare\templates\parcare\tarife.html:40
+msgid "Conventii Hoteluri"
+msgstr ""
+
+#: .\parcare\templates\parcare\tarife.html:41
+msgid "Locuri de parcare in zona publica, supravegheate video 24h/24h."
+msgstr ""
+
+#: .\parcare\templates\parcare\tarife.html:42
+msgid "70lei/24h"
+msgstr ""
+
+#: .\parcare\templates\parcare\tarife.html:47
+msgid "Conventii Societati"
+msgstr ""
+
+#: .\parcare\templates\parcare\tarife.html:48
+msgid "Carduri valabile Luni - Vineri. "
+msgstr ""
+
+#: .\parcare\templates\parcare\tarife.html:49
+msgid "50lei/24h"
+msgstr ""
+
+#: .\parcare\templates\parcare\tarife_ora.html:4
+msgid "Tarife ora"
+msgstr ""
+
+#: .\parcare\templates\parcare\tarife_ora.html:11
+msgid ""
+"\n"
+"    <table class='table' align='center'>\n"
+"        <thead><h5 class='h5'>Preturi in Lei, TVA inclusa.\n"
+"                    <span class='h5' style='margin-left: 500px;'>Taxa "
+"pierdere bilet: 90lei</span>\n"
+"                </h5><hr>\n"
+"            <tr>\n"
+"                <th></th>\n"
+"                <th>Ore</th>\n"
+"                <th>07:00 - 19:00</th>\n"
+"                <th>19:00 - 07:00</th>\n"
+"            </tr>\n"
+"        </thead>\n"
+"        <tbody>\n"
+"            <tr>\n"
+"                <td></td>\n"
+"                <td>0.5</td>\n"
+"                <td>5.00</td>\n"
+"                <td>5.00</td>\n"
+"            </tr>\n"
+"            <tr>\n"
+"                <td></td>\n"
+"                <td>1</td>\n"
+"                <td>5.00</td>\n"
+"                <td>5.00</td>\n"
+"            </tr>\n"
+"            <tr>\n"
+"                <td></td>\n"
+"                <td>1.5</td>\n"
+"                <td>7.50</td>\n"
+"                <td>5.00</td>\n"
+"            </tr>\n"
+"            <tr>\n"
+"                <td></td>\n"
+"                <td>2</td>\n"
+"                <td>10.00</td>\n"
+"                <td>7.50</td>\n"
+"            </tr>\n"
+"            <tr>\n"
+"                <td></td>\n"
+"                <td>2.5</td>\n"
+"                <td>12.50</td>\n"
+"                <td>7.50</td>\n"
+"            </tr>\n"
+"            <tr>\n"
+"                <td></td>\n"
+"                <td>3</td>\n"
+"                <td>15.00</td>\n"
+"                <td>10.00</td>\n"
+"            </tr>\n"
+"            <tr>\n"
+"                <td></td>\n"
+"                <td>3.5</td>\n"
+"                <td>17.50</td>\n"
+"                <td>10.00</td>\n"
+"            </tr>\n"
+"            <tr>\n"
+"                <td></td>\n"
+"                <td>4</td>\n"
+"                <td>20.00</td>\n"
+"                <td>12.50</td>\n"
+"            </tr>\n"
+"            <tr>\n"
+"                <td></td>\n"
+"                <td>5</td>\n"
+"                <td>25.00</td>\n"
+"                <td>15.00</td>\n"
+"            </tr>\n"
+"            <tr>\n"
+"                <td></td>\n"
+"                <td>6</td>\n"
+"                <td>30.00</td>\n"
+"                <td>17.50</td>\n"
+"            </tr>\n"
+"            <tr>\n"
+"                <td></td>\n"
+"                <td>7</td>\n"
+"                <td>35.00</td>\n"
+"                <td>20.00</td>\n"
+"            </tr>\n"
+"            <tr>\n"
+"                <td></td>\n"
+"                <td>8</td>\n"
+"                <td>40.00</td>\n"
+"                <td>22.50</td>\n"
+"            </tr>\n"
+"            <tr>\n"
+"                <td></td>\n"
+"                <td>9</td>\n"
+"                <td>45.00</td>\n"
+"                <td>25.00</td>\n"
+"            </tr>\n"
+"            <tr>\n"
+"                <td></td>\n"
+"                <td>10</td>\n"
+"                <td>50.00</td>\n"
+"                <td>27.50</td>\n"
+"            </tr>\n"
+"            <tr>\n"
+"                <td></td>\n"
+"                <td>11</td>\n"
+"                <td>55.00</td>\n"
+"                <td>30.00</td>\n"
+"            </tr>\n"
+"            <tr>\n"
+"                <td></td>\n"
+"                <td>12</td>\n"
+"                <td>60.00</td>\n"
+"                <td>32.50</td>\n"
+"            </tr>\n"
+"        </tbody>\n"
+"    </table>\n"
+"    "
+msgstr ""
+
+#: .\parcare\templates\parcare\termeni_si_conditii.html:4
+msgid "Termeni si Conditii PDF"
+msgstr ""
+
+#: .\parcare\templates\parcare\termeni_si_conditii.html:54
+#: .\staff\templates\staff\contract.html:57
+msgid "PARCARE ZIMBRU"
+msgstr ""
+
+#: .\parcare\templates\parcare\termeni_si_conditii.html:55
+msgid "Termeni si Conditii"
+msgstr ""
+
+#: .\parcare\templates\parcare\termeni_si_conditii.html:64
+msgid ""
+"\n"
+"        <li>Utilizarea acestei parcari subterane este supusa acceptarii "
+"acestor Termeni si Conditii.</li>\n"
+"        <li>Parcarea este disponibila doar pentru autovehicule si se "
+"interzice stocarea oricarui alt tip de echipament sau material.</li>\n"
+"        <li>Utilizatorii sunt responsabili pentru securitatea si "
+"integritatea autovehiculelor lor, si proprietarul parcarii nu este "
+"responsabil pentru orice pierdere sau dauna suferita.</li>\n"
+"        <li>Parcarea este monitorizata continuu si proprietarul isi rezerva "
+"dreptul de a refuza accesul sau de a evacua orice autovehicul sau utilizator "
+"care incalca aceste Termeni si Conditii.</li>\n"
+"        <li>Accesul in parcare se face doar pe baza de permis valabil, iar "
+"utilizatorii sunt responsabili pentru a pastra acest permis in siguranta si "
+"de a-l prezenta la solicitare.</li>\n"
+"        <li>Tarifele de parcare sunt stabilite de proprietar si pot fi "
+"modificate in orice moment, fara notificare prealabila.</li>\n"
+"        <li>Proprietarul nu este responsabil pentru orice daune sau "
+"intreruperi ale sistemelor de iluminat, ventilatie sau acces care pot afecta "
+"utilizarea parcarii.</li>\n"
+"        <li>Utilizatorii sunt responsabili pentru a respecta toate regulile "
+"si regulamentele specifice acestei parcari subterane.</li>\n"
+"        <li>Orice litigiu rezultat din utilizarea acestei parcari subterane "
+"va fi rezolvat in conformitate cu legislatia in vigoare.</li>\n"
+"        <li>Prin utilizarea acestei parcari subterane, utilizatorii accepta "
+"aceste Termeni si Conditii.</li>\n"
+"        "
+msgstr ""
+
+#: .\parcare\views.py:60
+msgid "EROARE REDARE DOCUMENT PDF"
+msgstr ""
+
+#: .\parkproject\settings.py:132
+msgid "Romana"
+msgstr ""
+
+#: .\parkproject\settings.py:133
+msgid "Italiano"
+msgstr ""
+
+#: .\parkproject\settings.py:134
+msgid "English"
+msgstr "Engleza"
+
+#: .\plati\forms.py:7 .\plati\models.py:10
+msgid "Numar Card"
+msgstr ""
+
+#: .\plati\forms.py:8
+msgid "Luna"
+msgstr ""
+
+#: .\plati\forms.py:9
+msgid "An"
+msgstr ""
+
+#: .\plati\forms.py:10 .\plati\models.py:13
+msgid "CVC"
+msgstr ""
+
+#: .\plati\forms.py:11 .\plati\models.py:9
+msgid "Posesor Card"
+msgstr ""
+
+#: .\plati\models.py:11
+msgid "Luna Expirare"
+msgstr ""
+
+#: .\plati\models.py:12
+msgid "An Expirare"
+msgstr ""
+
+#: .\plati\models.py:34 .\useri\templates\useri\detalii_profil.html:72
+#: .\useri\templates\useri\detalii_profil.html:123
+msgid "Facturi"
+msgstr ""
+
+#: .\plati\pdf.py:20 .\plati\pdf.py:103
+msgid "Factura Fiscala"
+msgstr ""
+
+#: .\plati\pdf.py:28 .\plati\pdf.py:111
+msgid "FACTURA FISCALA"
+msgstr ""
+
+#: .\plati\pdf.py:40 .\plati\pdf.py:123
+msgid " Date Societate "
+msgstr ""
+
+#: .\plati\pdf.py:41 .\plati\pdf.py:124
+msgid " Date Abonat"
+msgstr ""
+
+#: .\plati\pdf.py:48 .\plati\pdf.py:131
+msgid " Parcare Zimbru"
+msgstr ""
+
+#: .\plati\pdf.py:49 .\plati\pdf.py:132
+msgid " CIF: RO 948329843"
+msgstr ""
+
+#: .\plati\pdf.py:50 .\plati\pdf.py:133
+msgid " Sediu: Iasi"
+msgstr ""
+
+#: .\plati\pdf.py:51 .\plati\pdf.py:134
+msgid " Nr Reg Com: j46/87463/2020"
+msgstr ""
+
+#: .\plati\pdf.py:52 .\plati\pdf.py:135
+msgid " Cont: RO984BG7843786333"
+msgstr ""
+
+#: .\plati\pdf.py:53 .\plati\pdf.py:136
+msgid " Banca: Transilvania"
+msgstr ""
+
+#: .\plati\pdf.py:54 .\plati\pdf.py:137
+msgid " Capital Social: 8000"
+msgstr ""
+
+#: .\plati\pdf.py:55 .\plati\pdf.py:138
+msgid " Punct de lucru: Jud. Iasi, Iasi"
+msgstr ""
+
+#: .\plati\pdf.py:56 .\plati\pdf.py:139
+msgid " Telefon: +40 232 735 983"
+msgstr ""
+
+#: .\plati\pdf.py:57 .\plati\pdf.py:140
+msgid " Email: clienti@parcare.ro"
+msgstr ""
+
+#: .\plati\pdf.py:65 .\plati\pdf.py:148
+msgid " Nume: "
+msgstr ""
+
+#: .\plati\pdf.py:66 .\plati\pdf.py:149
+msgid " Prenume: "
+msgstr ""
+
+#: .\plati\pdf.py:67 .\plati\pdf.py:150
+msgid " Cnp: "
+msgstr ""
+
+#: .\plati\pdf.py:68 .\plati\pdf.py:151
+msgid " Judet: "
+msgstr ""
+
+#: .\plati\pdf.py:69 .\plati\pdf.py:152
+msgid " Oras: "
+msgstr ""
+
+#: .\plati\pdf.py:70 .\plati\pdf.py:153
+msgid " Adresa: "
+msgstr ""
+
+#: .\plati\pdf.py:71 .\plati\pdf.py:154
+msgid " Email: "
+msgstr ""
+
+#: .\plati\pdf.py:72 .\plati\pdf.py:155
+msgid " Tel: "
+msgstr ""
+
+#: .\plati\pdf.py:73 .\plati\pdf.py:156
+msgid " Contract Nr: "
+msgstr ""
+
+#: .\plati\pdf.py:81 .\plati\pdf.py:164
+msgid "CONTRACT ABONAMENT PARCARE"
+msgstr ""
+
+#: .\plati\pdf.py:82 .\plati\pdf.py:165
+msgid "public"
+msgstr ""
+
+#: .\plati\pdf.py:83 .\plati\pdf.py:166
+msgid "500.00 Lei"
+msgstr ""
+
+#: .\plati\pdf.py:85 .\plati\pdf.py:168
+msgid "800.00 Lei"
+msgstr ""
+
+#: .\plati\pdf.py:88 .\plati\pdf.py:171
+msgid "PLATIT"
+msgstr ""
+
+#: .\plati\templates\plati\email_plata.html:14
+msgid ""
+"\n"
+"                <th></th>\n"
+"                <th>Client ID</th>\n"
+"                <th>Client</th>\n"
+"                <th>Client CNP</th>\n"
+"                <th>Motiv Plata</th>\n"
+"                <th>Suma</th>\n"
+"                <th>PDF</th>\n"
+"                "
+msgstr ""
+
+#: .\plati\templates\plati\facturi.html:13
+msgid ""
+"\n"
+"                <th></th>\n"
+"                <th>Numar</th>\n"
+"                <th>Data Creare</th>\n"
+"                <th>Client</th>\n"
+"                "
+msgstr ""
+
+#: .\plati\templates\plati\facturi.html:26
+msgid "Factura PDF"
+msgstr ""
+
+#: .\plati\templates\plati\plati.html:5
+msgid "Plati"
+msgstr ""
+
+#: .\plati\templates\plati\plati.html:16
+msgid "Detalii plata Abonament"
+msgstr ""
+
+#: .\plati\templates\plati\plati.html:20
+msgid "Pret fara TVA"
+msgstr ""
+
+#: .\plati\templates\plati\plati.html:24
+msgid "TVA"
+msgstr ""
+
+#: .\plati\templates\plati\plati.html:28
+msgid "Total"
+msgstr ""
+
+#: .\plati\templates\plati\plati.html:35
+msgid "Contract NR"
+msgstr ""
+
+#: .\plati\templates\plati\plati.html:41
+msgid "Data scadenta"
+msgstr ""
+
+#: .\plati\templates\plati\plati.html:54
+msgid "Plata Abonamentului"
+msgstr ""
+
+#: .\plati\views.py:102
+msgid "Documente Abonament Parcare"
+msgstr ""
+
+#: .\plati\views.py:103
+msgid ""
+"Bună ziua! \n"
+"\n"
+"Vă mulțumim pentru achitarea abonamentului dvs. la parcare. Acesta este "
+"valabil pentru 30 de zile. \n"
+"\n"
+"Vă informăm că în acest email veți găsi atașate contractul și factura "
+"aferente acestui abonament. \n"
+"\n"
+"Vă dorim o zi frumoasă! \n"
+"\n"
+"Echipa de la Parcare."
+msgstr ""
+
+#: .\plati\views.py:117
+#, python-brace-format
+msgid ""
+"{client.profil.nume} {customer_user.name}, mergi la adresa de email {client."
+"profil.email} pentru a descarca factura si contractul"
+msgstr ""
+
+#: .\plati\views.py:119
+#, python-brace-format
+msgid ""
+"Nu s-a putut trimite email la adresa {client.profil.email}, verifica daca e "
+"scrisa corect."
+msgstr ""
+
+#: .\plati\views.py:123
+msgid "Eroare de comunicare serviciu plati."
+msgstr ""
+
+#: .\plati\views.py:128
+msgid "Formular incomplet sau incorect."
+msgstr ""
+
+#: .\plati\views.py:174
+msgid "Nu esti autorizat pt factura PDF"
+msgstr ""
+
+#: .\staff\forms.py:5
+msgid "Selecteaza functia"
+msgstr ""
+
+#: .\staff\forms.py:6 .\staff\models.py:10
+msgid "paznic"
+msgstr ""
+
+#: .\staff\forms.py:7 .\staff\models.py:11
+msgid "electrician"
+msgstr ""
+
+#: .\staff\forms.py:8 .\staff\models.py:12
+msgid "casier"
+msgstr ""
+
+#: .\staff\forms.py:9 .\staff\models.py:13
+msgid "secretara"
+msgstr ""
+
+#: .\staff\forms.py:10 .\staff\models.py:14
+msgid "director"
+msgstr ""
+
+#: .\staff\forms.py:16 .\useri\forms.py:10 .\useri\forms.py:26
+msgid "email@exemplu.ro"
+msgstr ""
+
+#: .\staff\forms.py:29 .\staff\models.py:20
+#: .\staff\templates\staff\contract.html:65
+#: .\useri\templates\useri\detalii_profil.html:174
+msgid "Functie"
+msgstr ""
+
+#: .\staff\models.py:9
+msgid "Selecteaza functie"
+msgstr ""
+
+#: .\staff\models.py:21
+msgid "Data angajarii"
+msgstr ""
+
+#: .\staff\models.py:23
+msgid "Nr Angajat"
+msgstr ""
+
+#: .\staff\models.py:36
+msgid "Angajati"
+msgstr ""
+
+#: .\staff\templates\staff\contract.html:5
+msgid "Contract Munca PDF"
+msgstr ""
+
+#: .\staff\templates\staff\contract.html:58
+msgid "Contract de munca nr"
+msgstr ""
+
+#: .\staff\templates\staff\contract.html:66
+msgid "Data Angajarii"
+msgstr ""
+
+#: .\staff\templates\staff\contract.html:69
+msgid ""
+"\n"
+"<h2 class='h2'>Intre:</h2>\n"
+"Parcare Zimbru S.R.L., cu sediul social in  Iasi, Soseaua Nationala 25 "
+"(denumit in continuare \"Angajator\")\n"
+"<h2 class='h2'>Si:</h2>\n"
+msgstr ""
+
+#: .\staff\templates\staff\contract.html:74
+msgid "cu domiciliul in"
+msgstr ""
+
+#: .\staff\templates\staff\contract.html:74
+msgid "(denumit in continuare \"Angajat\")"
+msgstr ""
+
+#: .\staff\templates\staff\contract.html:77
+msgid ""
+"\n"
+"    <li>\n"
+"        S-a incheiat prezentul Contract de Munca cu respectarea prevederilor "
+"legale in vigoare, pentru prestarea unor servicii profesionale, astfel:\n"
+"    </li>\n"
+"    <li>\n"
+"Obiectul Contractului<br>\n"
+"    Angajatorul angajeaza Angajatul pentru a presta servicii de supraveghere "
+"si management al parcarii, conform instructiunilor si regulamentelor "
+"stabilite de Angajator.\n"
+"    </li>\n"
+"    <li>\n"
+"Durata Contractului<br>\n"
+"    Prezentul Contract de Munca este incheiat pentru o perioada "
+"nedeterminata, cu posibilitatea de a fi reziliat de catre ambele parti, prin "
+"notificare in scris cu 30 de zile inainte.\n"
+"    </li>\n"
+"    <li>\n"
+"Program de lucru<br>\n"
+"    Angajatul va presta serviciile pentru Angajator in conformitate cu "
+"programul stabilit, in functie de necesitatile parcarii. Angajatul va fi "
+"disponibil sa lucreze in ture, inclusiv in weekend si sarbatori, daca este "
+"necesar.\n"
+"    </li>\n"
+"    <li>\n"
+"Salariu si Beneficii<br>\n"
+"    Angajatul va primi un salariu lunar de [suma], platit in fiecare luna "
+"pana la data de [data]. De asemenea, Angajatul va fi eligibil pentru alte "
+"beneficii, cum ar fi bonuri de masa sau alte beneficii similare, in "
+"conformitate cu politica Angajatorului.\n"
+"    </li>\n"
+"    <li>\n"
+"Obligatiile Angajatului<br>\n"
+"    Angajatul va presta serviciile cu diligenta si buna credinta si va "
+"respecta toate regulile si procedurile Angajatorului. De asemenea, Angajatul "
+"va pastra confidentialitatea informatiilor privind activitatea parcarii.\n"
+"    </li>\n"
+"    <li>\n"
+"Obligatiile Angajatorului<br>\n"
+"    Angajatorul va furniza Angajatului echipamentul necesar pentru prestarea "
+"serviciilor si va respecta obligatiile financiare prevazute in prezentul "
+"Contract de Munca.\n"
+"    </li>\n"
+"    <li>\n"
+"Confidentialitate<br>\n"
+"    Partile sunt de acord sa nu dezvaluie niciunei terte parti informatii "
+"confidentiale legate de activitatea parcarii si sa nu utilizeze aceste "
+"informatii in interesul propriu sau al oricarei alte persoane, in afara "
+"activitatii legate de prestarea serviciilor.\n"
+"    </li>\n"
+"    <li>\n"
+"Forta majora<br>\n"
+"    Niciuna dintre parti nu va fi raspunzatoare pentru orice neindeplinire a "
+"obligatiilor sale conform prezentului Contract, daca aceasta neindeplinire "
+"rezulta din cauze care sunt dincolo de controlul sau, incluzand, dar fara a "
+"se limita la: cutremure, incendii, inundatii, razboi, acte de terorism, "
+"greve sau alte conflicte de munca, blocaje comerciale sau orice alte "
+"evenimente similare care sunt dincolo de controlul sau.\n"
+"    </li>\n"
+"    "
+msgstr ""
+
+#: .\staff\templates\staff\masina_noua.html:4
+msgid "Masina noua"
+msgstr ""
+
+#: .\staff\templates\staff\masina_noua.html:10
+msgid "Introdu o noua masina."
+msgstr ""
+
+#: .\staff\templates\staff\masina_noua.html:24
+msgid "Inregistreaza!"
+msgstr ""
+
+#: .\staff\templates\staff\staff_nou.html:4
+msgid "Angajat Nou"
+msgstr ""
+
+#: .\staff\templates\staff\staff_nou.html:9
+msgid "Introdu un nou angajat."
+msgstr ""
+
+#: .\staff\templates\staff\staff_nou.html:28
+msgid "Date Angajat"
+msgstr ""
+
+#: .\staff\views.py:30
+msgid "Nu esti autorizat pt contract Staff PDF"
+msgstr ""
+
+#: .\staff\views.py:49
+msgid "Username, cnp sau email existente in baza de date. Introdu alte date."
+msgstr ""
+
+#: .\staff\views.py:114
+msgid "Cont Staff creat cu succes!"
+msgstr ""
+
+#: .\staff\views.py:124
+msgid "Angajat nou introdus cu succes!!!"
+msgstr ""
+
+#: .\staff\views.py:126
+#, python-brace-format
+msgid ""
+"Nu s-a putut trimite email la adresa {user_staff.email}, verifica daca e "
+"scrisa corect."
+msgstr ""
+
+#: .\staff\views.py:137
+msgid "Nu esti autorizat sa introduci un angajat nou."
+msgstr ""
+
+#: .\staff\views.py:150
+msgid "Masina exista in baza de date"
+msgstr ""
+
+#: .\staff\views.py:175
+msgid "Nu esti autorizat sa introduci masina noua."
+msgstr ""
+
+#: .\templates\parkproject\main.html:28
+msgid ""
+"\n"
+"            <h5>\n"
+"                <b>Parcarea Zimbru - Un inceput usor pentru o zi ocupata.</"
+"b>\n"
+"            </h5>\n"
+"        </div>\n"
+"        <hr>\n"
+"        <p> - Bine ati venit la Parcarea Zimbru Iasi, un loc de parcare "
+"modern si sigur, situat in inima orasului. Deschis in 19 Aprilie 2019, ne-am "
+"propus sa oferim soferilor o alternativa convenabila pentru a-si parca "
+"masina in conditii de siguranta si comfort. Cu un sistem avansat de plata si "
+"monitorizare, precum si personal atent si amabil, va garantam ca aici veti "
+"gasi mereu un loc disponibil pentru masina dvs.</p>\n"
+"\n"
+"\n"
+"        <p><b><u> Comod si sigur. </b></u></p>\n"
+"        <p> - Situata la cativa metri de primarie, birouri si centre "
+"comerciale.</p>\n"
+"        <p> - Dispunem de 1000 de locuri, distribuite pe 5 etaje subterane "
+"de culori diferite, cu stalpi numerotati pentru o mai buna orientare in "
+"gasirea propriului autoturism.</p>\n"
+"            \n"
+"        <p><b><u> Avantajos si flexibil. </b></u></p>\n"
+"        <p> - Organizarea flexibila a parcarii noastre va ofera diverse "
+"oferte pentru majoritatea nevoilor, incercand sa mentina cel mai bun raport "
+"calitate / pret. </p>\n"
+"        <hr>\n"
+"        <p><b>Pentru viitor, ne propunem sa oferim utilizatorilor acestui "
+"site un serviciu mereu actualizat, comod si sigur.</b></p>\n"
+"        "
+msgstr ""
+
+#: .\templates\parkproject\main.html:62
+msgid "Birou informatii si abonamente"
+msgstr ""
+
+#: .\templates\parkproject\main.html:65
+msgid "Orar: luni-duminica"
+msgstr ""
+
+#: .\templates\parkproject\main.html:72
+msgid "Birou societate"
+msgstr ""
+
+#: .\templates\parkproject\main.html:75
+msgid "Orar: luni-vineri"
+msgstr ""
+
+#: .\templates\parkproject\main.html:82
+msgid "Parteneri"
+msgstr ""
+
+#: .\templates\parkproject\main.html:85
+msgid "Primaria Iasi"
+msgstr ""
+
+#: .\templates\parkproject\main.html:86
+msgid "Teatrul National"
+msgstr ""
+
+#: .\templates\parkproject\main.html:92
+msgid "Mergi la:"
+msgstr ""
+
+#: .\templates\parkproject\main.html:95
+msgid "Galerie foto"
+msgstr ""
+
+#: .\templates\parkproject\main.html:97
+msgid "Harta"
+msgstr ""
+
+#: .\templates\parkproject\main.html:98
+msgid "Termeni si conditii"
+msgstr ""
+
+#: .\templates\parkproject\navbar.html:36
+msgid "Schimba limba"
+msgstr ""
+
+#: .\templates\parkproject\search.html:4
+msgid "Cautare"
+msgstr ""
+
+#: .\templates\parkproject\search.html:10
+msgid "Lista profilelor cautate"
+msgstr ""
+
+#: .\useri\forms.py:9 .\useri\forms.py:22 .\useri\forms.py:38
+msgid "User:"
+msgstr ""
+
+#: .\useri\forms.py:9 .\useri\forms.py:22 .\useri\forms.py:38
+#: .\useri\models.py:11
+msgid "User"
+msgstr ""
+
+#: .\useri\forms.py:11
+msgid "Prenume:"
+msgstr ""
+
+#: .\useri\forms.py:12
+msgid "Nume:"
+msgstr ""
+
+#: .\useri\forms.py:13 .\useri\forms.py:23 .\useri\forms.py:33
+msgid "Parola:"
+msgstr ""
+
+#: .\useri\forms.py:13 .\useri\forms.py:23
+msgid "Parola"
+msgstr ""
+
+#: .\useri\forms.py:14
+msgid "Confirmare Parola:"
+msgstr ""
+
+#: .\useri\forms.py:14 .\useri\forms.py:30 .\useri\forms.py:35
+msgid "Confirmare parola"
+msgstr ""
+
+#: .\useri\forms.py:29 .\useri\forms.py:34
+msgid "Noua parola:"
+msgstr ""
+
+#: .\useri\forms.py:29 .\useri\forms.py:34
+msgid "Noua parola"
+msgstr ""
+
+#: .\useri\forms.py:30 .\useri\forms.py:35
+msgid "Confirmare parola noua:"
+msgstr ""
+
+#: .\useri\forms.py:33
+msgid "Parola actuala"
+msgstr ""
+
+#: .\useri\models.py:31
+msgid "Profile"
+msgstr ""
+
+#: .\useri\templates\registration\activate_account.html:3
+#, python-format
+msgid "Email de la: %(domain)s."
+msgstr ""
+
+#: .\useri\templates\registration\activate_account.html:5
+msgid "Apasa pe linkul de mai jos pentru a activa noul cont:"
+msgstr ""
+
+#: .\useri\templates\registration\activate_account.html:9
+#: .\useri\templates\registration\password_reset_email.html:8
+msgid "In caz ca ai uitat, userul este:"
+msgstr ""
+
+#: .\useri\templates\registration\activate_account.html:11
+#: .\useri\templates\registration\password_reset_email.html:10
+msgid "Multumim!"
+msgstr ""
+
+#: .\useri\templates\registration\activate_account.html:13
+#, python-format
+msgid "Echipa site-ului %(domain)s "
+msgstr ""
+
+#: .\useri\templates\registration\delete_profil.html:4
+msgid "Sterge profil"
+msgstr ""
+
+#: .\useri\templates\registration\delete_profil.html:8
+msgid "Confirmare eliminare profil"
+msgstr ""
+
+#: .\useri\templates\registration\delete_profil.html:13
+msgid "Elimina Profilul"
+msgstr ""
+
+#: .\useri\templates\registration\delete_profil.html:14
+#: .\useri\templates\registration\password_reset_form.html:15
+msgid "Renunta!"
+msgstr ""
+
+#: .\useri\templates\registration\delete_user.html:4
+#: .\useri\templates\registration\user_edit.html:18
+msgid "Sterge User"
+msgstr ""
+
+#: .\useri\templates\registration\delete_user.html:8
+msgid "Confirmare stergere cont."
+msgstr ""
+
+#: .\useri\templates\registration\delete_user.html:13
+msgid "Sterge Cont"
+msgstr ""
+
+#: .\useri\templates\registration\login.html:5
+#: .\useri\templates\registration\logout.html:10
+#: .\useri\templates\registration\password_change_done.html:13
+#: .\useri\templates\registration\password_reset_complete.html:13
+msgid "Login"
+msgstr ""
+
+#: .\useri\templates\registration\login.html:11
+msgid "Introdu userul si parola pentru autentificare."
+msgstr ""
+
+#: .\useri\templates\registration\login.html:27
+msgid "Creeaza user nou"
+msgstr ""
+
+#: .\useri\templates\registration\logout.html:4
+msgid "Logout"
+msgstr ""
+
+#: .\useri\templates\registration\logout.html:8
+msgid "Perfect"
+msgstr ""
+
+#: .\useri\templates\registration\logout.html:9
+msgid "Te-ai delogat cu succes! Poti merge la pagina de logare"
+msgstr ""
+
+#: .\useri\templates\registration\password_change_done.html:4
+msgid "Parola Modificata!"
+msgstr ""
+
+#: .\useri\templates\registration\password_change_done.html:8
+msgid ""
+"\n"
+"    <h2>Perfect!</h2>\n"
+"    <br>\n"
+"    <p>Parola a fost modificata cu succes! Poti merge la pagina de logare.</"
+"p>\n"
+"    "
+msgstr ""
+
+#: .\useri\templates\registration\password_change_form.html:4
+msgid "Modifici parola?"
+msgstr ""
+
+#: .\useri\templates\registration\password_change_form.html:9
+msgid "Vrei sa modifici parola?"
+msgstr ""
+
+#: .\useri\templates\registration\password_change_form.html:14
+msgid "Modifica!"
+msgstr ""
+
+#: .\useri\templates\registration\password_reset_complete.html:4
+msgid "Parola resetata!"
+msgstr ""
+
+#: .\useri\templates\registration\password_reset_complete.html:8
+msgid ""
+"\n"
+"    <h2>Parola a fost resetata cu succes!</h1>\n"
+"    <br>\n"
+"    <p>Mergi la pagina de logare</p>\n"
+"    "
+msgstr ""
+
+#: .\useri\templates\registration\password_reset_confirm.html:4
+msgid "Parola noua"
+msgstr ""
+
+#: .\useri\templates\registration\password_reset_confirm.html:11
+msgid "Introdu noua parola!"
+msgstr ""
+
+#: .\useri\templates\registration\password_reset_confirm.html:15
+msgid "Schimba parola"
+msgstr ""
+
+#: .\useri\templates\registration\password_reset_confirm.html:20
+msgid ""
+"Linkul pentru resetarea parolei nu e valabil sau a mai fost folosit. Trimite "
+"o noua cerere pentru resetarea parolei."
+msgstr ""
+
+#: .\useri\templates\registration\password_reset_confirm.html:21
+msgid "Retrimite cererea."
+msgstr ""
+
+#: .\useri\templates\registration\password_reset_done.html:4
+msgid "Email Trimis"
+msgstr ""
+
+#: .\useri\templates\registration\password_reset_done.html:8
+msgid ""
+"\n"
+"  <h2>Verifica emailul.</h2>\n"
+"  <p>In curand vei gasi un link pentru resetarea parolei.</p>\n"
+"  <br>\n"
+"  "
+msgstr ""
+
+#: .\useri\templates\registration\password_reset_done.html:13
+msgid "Login!"
+msgstr ""
+
+#: .\useri\templates\registration\password_reset_email.html:2
+#, python-format
+msgid "Email de resetare parola de la userul site-ului: %(site_name)s."
+msgstr ""
+
+#: .\useri\templates\registration\password_reset_email.html:4
+msgid "Apasa aici pentru a alege o noua parola:"
+msgstr ""
+
+#: .\useri\templates\registration\password_reset_email.html:12
+#, python-format
+msgid "Echipa site-ului %(site_name)s "
+msgstr ""
+
+#: .\useri\templates\registration\password_reset_form.html:4
+msgid "Resetare Parola"
+msgstr ""
+
+#: .\useri\templates\registration\password_reset_form.html:9
+msgid "Ai uitat parola?"
+msgstr ""
+
+#: .\useri\templates\registration\password_reset_form.html:10
+msgid ""
+"După trimiterea cererii vei primi un email cu instrucțiunile pentru "
+"recuperarea parolei."
+msgstr ""
+
+#: .\useri\templates\registration\password_reset_form.html:14
+msgid "Trimite!"
+msgstr ""
+
+#: .\useri\templates\registration\profil_edit.html:4
+msgid "Profil edit"
+msgstr ""
+
+#: .\useri\templates\registration\profil_edit.html:9
+msgid "Modifica datele profilului."
+msgstr ""
+
+#: .\useri\templates\registration\signup.html:5
+msgid "Inregistrare"
+msgstr ""
+
+#: .\useri\templates\registration\signup.html:10
+msgid "Introdu datele pentru inregistrare."
+msgstr ""
+
+#: .\useri\templates\registration\user_edit.html:4
+msgid "User edit"
+msgstr ""
+
+#: .\useri\templates\registration\user_edit.html:12
+msgid "Modifica datele contului"
+msgstr ""
+
+#: .\useri\templates\registration\user_edit.html:15
+msgid "Schimba Parola"
+msgstr ""
+
+#: .\useri\templates\useri\detalii_profil.html:4
+msgid "Detalii Profil"
+msgstr ""
+
+#: .\useri\templates\useri\detalii_profil.html:70
+msgid "Abonament"
+msgstr ""
+
+#: .\useri\templates\useri\detalii_profil.html:71
+msgid "Data Expirare"
+msgstr ""
+
+#: .\useri\templates\useri\detalii_profil.html:75
+#: .\useri\templates\useri\detalii_profil.html:129
+msgid "Plateste"
+msgstr ""
+
+#: .\useri\templates\useri\detalii_profil.html:78
+msgid "Numar Permis"
+msgstr ""
+
+#: .\useri\templates\useri\detalii_profil.html:97
+msgid "Valabil"
+msgstr ""
+
+#: .\useri\templates\useri\detalii_profil.html:104
+msgid "Expirat"
+msgstr ""
+
+#: .\useri\templates\useri\detalii_profil.html:154
+#: .\useri\templates\useri\detalii_profil.html:202
+msgid " Adauga "
+msgstr ""
+
+#: .\useri\templates\useri\detalii_profil.html:175
+msgid "Data Angajare"
+msgstr ""
+
+#: .\useri\templates\useri\detalii_profil.html:218
+msgid "Formular Abonament"
+msgstr ""
+
+#: .\useri\views.py:36
+#, python-brace-format
+msgid "{user}, mergi la adresa de email {to_email} si activeaza contul"
+msgstr ""
+
+#: .\useri\views.py:38
+#, python-brace-format
+msgid ""
+"Nu s-a putut trimite email la adresa {to_email}, verifica daca e scrisa "
+"corect."
+msgstr ""
+
+#: .\useri\views.py:66
+msgid "Multumim pentru confirmarea emailului. Acum te poti loga."
+msgstr ""
+
+#: .\useri\views.py:69
+msgid "Linkul pentru activare nu e valabil sau a mai fost folosit."
+msgstr ""
+
+#: .\useri\views.py:109
+msgid "Profil edit OK!"
+msgstr ""
+
+#: .\useri\views.py:123
+msgid "User edit OK!"
+msgstr ""
+
+#: .\useri\views.py:135
+msgid "Userul a fost sters."
+msgstr ""
+
+#: .\useri\views.py:143
+msgid "Profilul a fost eliminat cu succes!"
+msgstr ""

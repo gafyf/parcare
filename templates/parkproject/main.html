@@ -1,3 +1,4 @@
+{% load i18n %}
 <!DOCTYPE html>
 {% load static %}
 <html>
@@ -24,6 +25,7 @@
         <div class='container'>
         {% block container %}
         <div class='container-title'>
+            {% blocktranslate %}
             <h5>
                 <b>Parcarea Zimbru - Un inceput usor pentru o zi ocupata.</b>
             </h5>
@@ -40,6 +42,7 @@
         <p> - Organizarea flexibila a parcarii noastre va ofera diverse oferte pentru majoritatea nevoilor, incercand sa mentina cel mai bun raport calitate / pret. </p>
         <hr>
         <p><b>Pentru viitor, ne propunem sa oferim utilizatorilor acestui site un serviciu mereu actualizat, comod si sigur.</b></p>
+        {% endblocktranslate %}
         <br>
         {% endblock container %}
         </div>
@@ -56,43 +59,43 @@
                 <img class="logo-footer" src="{% static 'parkproject/images/parcare_icon.png' %}" alt="Logo image">
             </div>
             <div class="col-6 col-md fs15">
-                <h5>Birou informatii si abonamente</h5>
+                <h5>{% translate "Birou informatii si abonamente" %}</h5>
                 <ul class="list-unstyled">
-                    <li>Adresa: Strada Tabacului 1A</li>
-                    <li>Orar: luni-duminica 06:00 - 00:00</li>
+                    <li>{% translate "Adresa" %}: Strada Tabacului 1A</li>
+                    <li>{% translate "Orar: luni-duminica" %} 06:00 - 00:00</li>
                     <li>Tel: +40 751 158 023</li>
                     <li>Cell: +40 755 226 415</li>
                     <li>Email: parcare@yahoo.com</li>
                 </ul>
             </div>
             <div class="col-6 col-md fs15">
-                <h5>Birou societate</h5><br>
+                <h5>{% translate "Birou societate" %}</h5><br>
                 <ul class="list-unstyled">
-                    <li>Adresa: Soseaua Nationala 25</li>
-                    <li>Orar: luni-vineri 09:00 - 17:00</li>
+                    <li>{% translate "Adresa" %}: Soseaua Nationala 25</li>
+                    <li>{% translate "Orar: luni-vineri" %} 09:00 - 17:00</li>
                     <li>Manager: Gafita Florin</li>
                     <li>Tel: + 40 752 268 551</li>
                     <li>Email: parcare@gmail.com</li>
                 </ul>
             </div>
             <div class="col-6 col-md fs15">
-                <h5>Parteneri</h5><br>
+                <h5>{% translate "Parteneri" %}</h5><br>
                 <ul class="list-unstyled">
                     <li><a class="link-secondary text-decoration-none" href="https://auto-zet.ro">Auto ZET</a></li>
-                    <li><a class="link-secondary text-decoration-none" href="https://www.primaria-iasi.ro">Primaria Iasi</a></li>
-                    <li><a class="link-secondary text-decoration-none" href="https://www.teatrulnationaliasi.ro">Teatrul National</a></li>
+                    <li><a class="link-secondary text-decoration-none" href="https://www.primaria-iasi.ro">{% translate "Primaria Iasi" %}</a></li>
+                    <li><a class="link-secondary text-decoration-none" href="https://www.teatrulnationaliasi.ro">{% translate "Teatrul National" %}</a></li>
                     <li><a class="link-secondary text-decoration-none" href="https://www.grandhoteltraian.ro">Hotel Traian</a></li>
                     <li><a class="link-secondary text-decoration-none" href="https://www.hotelunirea.ro">Hotel Unirea</a></li>
                 </ul>
             </div>
             <div class="col-6 col-md">
-                <h5>Mergi la:</h5><br>
+                <h5>{% translate "Mergi la:" %}</h5><br>
                 <ul class="list-unstyled">
-                    <li><a class="link-secondary text-decoration-none" href="{% url 'parcare:tarife' %}">Tarife</a></li>
-                    <li><a class="link-secondary text-decoration-none" href="{% url 'parcare:galerie' %}">Galerie foto</a></li>
-                    <li><a class="link-secondary text-decoration-none" href="{% url 'parcare:servicii' %}">Servicii</a></li>
-                    <li><a class="link-secondary text-decoration-none" href="{% url 'parcare:contact' %}">Harta</a></li>
-                    <li><a class="link-secondary text-decoration-none" href="{% url 'parcare:termeni_si_conditii' %}">Termeni si conditii</a></li>
+                    <li><a class="link-secondary text-decoration-none" href="{% url 'parcare:tarife' %}">{% translate "Tarife" %}</a></li>
+                    <li><a class="link-secondary text-decoration-none" href="{% url 'parcare:galerie' %}">{% translate "Galerie foto" %}</a></li>
+                    <li><a class="link-secondary text-decoration-none" href="{% url 'parcare:servicii' %}">{% translate "Servicii" %}</a></li>
+                    <li><a class="link-secondary text-decoration-none" href="{% url 'parcare:contact' %}">{% translate "Harta" %}</a></li>
+                    <li><a class="link-secondary text-decoration-none" href="{% url 'parcare:termeni_si_conditii' %}">{% translate "Termeni si conditii" %}</a></li>
                 </ul>
             </div>
         </div>

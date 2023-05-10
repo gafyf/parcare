@@ -1,12 +1,13 @@
 {% extends 'parkproject/main.html' %}
+{% load i18n %}
 {% load static %}
-{% block title %} Masina noua {% endblock %}
+{% block title %} {% translate "Masina noua" %} {% endblock %}
 
 {% block mainbody %}
 <link rel="stylesheet" type="text/css" href="{% static 'clienti/css/client_nou.css' %}">
 <link rel="stylesheet" type="text/css" href="{% static 'staff/css/masina_noua.css' %}">
 
-<h2 class='titlu'>Introdu o noua masina.</h2>
+<h2 class='titlu'>{% translate "Introdu o noua masina." %}</h2>
 <form method="POST" class='form-control'>
     {% csrf_token %}
     {% if messages %}
@@ -20,7 +21,6 @@
         {% endfor %}
     {% endif %} 
     {{ masina_form.as_p }}
-    <button type="submit" class="btn btn-secondary" data-toggle="tooltip" data-placement="top" title="Inregistreaza">Inregistreaza!</button>
+    <button type="submit" class="btn btn-secondary" data-toggle="tooltip" data-placement="top" title="Inregistreaza">{% translate "Inregistreaza!" %}</button>
 </form>
 {% endblock mainbody %}
-

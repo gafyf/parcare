@@ -1,12 +1,14 @@
 {% extends 'parkproject/main.html' %}
+{% load i18n %}
 {% load static %}
-{% block title %} Tarife ora {% endblock %}
+{% block title %} {% translate "Tarife ora" %} {% endblock %}
 
 {% block mainbody %}
 <link rel="stylesheet" type="text/css" href="{% static 'parcare/css/tarife_ora.css' %}">
 
 <div class='container'>
     <br>
+    {% blocktranslate %}
     <table class='table' align='center'>
         <thead><h5 class='h5'>Preturi in Lei, TVA inclusa.
                     <span class='h5' style='margin-left: 500px;'>Taxa pierdere bilet: 90lei</span>
@@ -117,6 +119,7 @@
             </tr>
         </tbody>
     </table>
+    {% endblocktranslate %}
 </div>
 <br><br>
 {% endblock mainbody %}

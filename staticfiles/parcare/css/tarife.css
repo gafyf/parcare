@@ -1,0 +1,15 @@
+div.col {
+    margin: 10px;
+    padding: 10px;
+    padding-top: 20px;
+    background-color: rgb(176, 204, 195);
+    min-height: 200px;
+}
+
+p {
+    color:darkslategray;
+}
+
+h6 {
+    color:rgb(0, 0, 0);
+}

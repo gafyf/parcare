@@ -13,6 +13,8 @@ https://docs.djangoproject.com/en/4.0/ref/settings/
 from pathlib import Path
 import os
 from . import settings_prod
+from django.utils.translation import gettext_lazy as _
+
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -25,7 +27,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = settings_prod.SECRET_KEY
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 # ALLOWED_HOSTS =['localhost']
 ALLOWED_HOSTS = ['127.0.0.1']
@@ -34,10 +36,12 @@ ALLOWED_HOSTS = ['127.0.0.1']
 
 INSTALLED_APPS = [
     'django.contrib.contenttypes',
+    'django.utils.translation',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'rest_framework',
+    'lang',
     'useri.apps.UseriAppConfig',
     'clienti.apps.ClientiAppConfig',
     'staff.apps.StaffAppConfig',
@@ -45,17 +49,19 @@ INSTALLED_APPS = [
     'parcare',
     'django.contrib.admin',
     'django.contrib.auth',
+    'rosetta',
 ]
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
-    'whitenoise.middleware.WhiteNoiseMiddleware',
+    'django.middleware.locale.LocaleMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
 ]
 
 ROOT_URLCONF = 'parkproject.urls'
@@ -112,37 +118,41 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/4.0/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'ro'
 
 TIME_ZONE = 'Europe/Rome'
 
 USE_I18N = True
 
+USE_L10N = True
+
 USE_TZ = True
 
+LANGUAGES = (
+    ('ro', _('Romana')),
+    ('it', _('Italiano')),
+    ('en', _('English')),
 
-# Static files (CSS, JavaScript, Images)
-# https://docs.djangoproject.com/en/4.0/howto/static-files/
+)
+
+LOCALE_PATHS = (
+    os.path.join(BASE_DIR, 'locale/'),
+)
+
+
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 STATIC_URL = '/static/'
+STATICFILES_DIRS = [
+    BASE_DIR / "static",
+]
+STATIC_ROOT = BASE_DIR / "staticfiles"
 
 
-STATICFILES_DIRS = [BASE_DIR / 'static']
+MEDIA_URL = '/staticfiles/images/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'staticfiles/images/')
+MEDIA_ROOT_LOGO = os.path.join(BASE_DIR, 'staticfiles/parkproject/')
 
-# MEDIA_ROOT is for server path to store files in the computer.
-# MEDIA_URL is the reference URL for browser to access the files over Http.
-
-# MEDIA_URL = '/images/'
-
-# MEDIA_ROOT = [BASE_DIR / 'static/images']
-
-MEDIA_ROOT = os.path.join(BASE_DIR, 'static/images/')
-MEDIA_ROOT_LOGO = os.path.join(BASE_DIR, 'static/parkproject/')
-MEDIA_URL = 'images/'
-
-
-# Default primary key field type
-# https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 

@@ -1,6 +1,8 @@
 {% extends 'parkproject/main.html' %}
+{% load i18n %}
+{% load l10n %}
 {% load static %}
-{% block title %} Client Nou {% endblock %}
+{% block title %} {% translate "Client Nou" %}  {% endblock %}
 
 {% block mainbody %}
 <link rel="stylesheet" type="text/css" href="{% static 'clienti/css/client_nou.css' %}">
@@ -18,61 +20,63 @@
                 </div>
                 </center>
             {% endfor %}
-        {% endif %} 
+        {% endif %}
 
         <table class='table' align='center'>
             <thead>
-                <h5 class='h5'><b>Client</b></h5>
+                <h5 class='h5'><b>{% translate "Client" %}</b></h5>
             </thead>
             <tbody>
                 <tr>
-                    <td>Nume: {{client_form.nume}}</td>
-                    <td id="custName">Prenume: {{client_form.prenume}}</td>
+                    <td>{% translate "Nume: " %} {{client_form.nume}}</td>
+                    <td id="custName">{% translate "Prenume: " %} {{client_form.prenume}}</td>
                 </tr>
                 <tr>
-                    <td id="custEmail">Email: {{client_form.email}}</td>
-                    <td>Cnp: {{client_form.cnp}}</td>
+                    <td id="custEmail">{% translate "Email: " %} {{client_form.email}}</td>
+                    <td>{% translate "Cnp: " %} {{client_form.cnp}}</td>
                 </tr>
-                    <td>Judet: {{client_form.judet}}</td>
-                    <td>Oras: {{client_form.oras}}</td>
+                    <td>{% translate "Judet: " %} {{client_form.judet}}</td>
+                    <td>{% translate "Oras: " %} {{client_form.oras}}</td>
                 <tr>
-                    <td id="custAdd">Adresa: {{client_form.adresa}}</td>
-                    <td>Telefon: {{client_form.telefon}}</td>
+                    <td id="custAdd">{% translate "Adresa: " %} {{client_form.adresa}}</td>
+                    <td>{% translate "Telefon: " %} {{client_form.telefon}}</td>
                 </tr>
             </tbody>
         </table>
         <table class='table' align='center'>
             <thead>
-                <h5 class='h5'><b>Masina</b></h5>
+                <h5 class='h5'><b>{% translate "Masina" %}</b></h5>
             </thead>
             <tbody>
                 <tr>
-                    <td>Marca: {{client_form.marca}}</td>
-                    <td>Model: {{client_form.model}}</td>
+                    <td>{% translate "Marca: " %} {{client_form.marca}}</td>
+                    <td>{% translate "Model: " %} {{client_form.model}}</td>
                 </tr>
                 <tr>
-                    <td id="carNr">Numar: {{client_form.numar}}</td>
-                    <td>Culoare: {{client_form.culoare}}</td>
+                    <td id="carNr">{% translate "Numar: " %} {{client_form.numar}}</td>
+                    <td>{% translate "Culoare: " %} {{client_form.culoare}}</td>
                 </tr>
                 <tr>
-                    <td>Combustibil: {{client_form.combustibil}}</td>
+                    <td>{% translate "Combustibil: " %} {{client_form.combustibil}}</td>
                     <td></td>
                 </tr>
             </tbody>
         </table>
         <table class='table' align='center'>
             <thead>
-                <h5 class='h5'><b>Permis</b></h5>
+                <h5 class='h5'><b>{% translate "Permis" %}</b></h5>
             </thead>
             <tbody>
                 <tr>
-                    <td>Nr. Permis: {{client_form.nr_permis}}</td>
-                    <td>Ctg. Permis: {{client_form.categ_permis}}</td>
+                    <td>{% translate "Nr. Permis: " %} {{client_form.nr_permis}} </td>
+                    <td>{% translate "Ctg. Permis: " %} {{client_form.categ_permis}} </td>
+                </tr>
+                <tr>
+                    <td><div id="custAbb" class="btn btn-secondary"> {{client_form.contract}} </div> </td>
+                    <td><button id='submit' class="btn btn-secondary" type="submit">{% translate "Adauga Abonament" %}</button> </td>
                 </tr>
             </tbody>
         </table>
-        <div id="custAbb" class="btn btn-secondary">{{client_form.contract}}</div>
-    <button id='submit' class="btn btn-secondary" type="submit">Adauga Abonament</button>
 </form>
 </body>
 {% endblock mainbody %}

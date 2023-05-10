@@ -1,0 +1,17 @@
+div.col-sm-4 {
+    text-align: center;
+    margin: 10px;
+    margin-left: 100px;
+    padding: 10px;
+    padding-top: 20px;
+    background-color: rgb(176, 204, 195);
+    height: 250px;
+}
+
+p {
+    color:darkslategray;
+}
+
+h6 {
+    color:darkslategray;
+}

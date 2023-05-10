@@ -1,6 +1,7 @@
 {% extends 'parkproject/main.html' %}
+{% load i18n %}
 {% load static %}
-{% block title %}Carduri reincarcabile{% endblock %}
+{% block title %}{% translate "Carduri reincarcabile" %}{% endblock %}
 
 {% block mainbody %}
 <link rel="stylesheet" type="text/css" href="{% static 'parcare/css/tarife_ora.css' %}">
@@ -9,40 +10,40 @@
     <br>
     <table class='table' align='center'>
         <thead>
-            <h5 class='h5'>Preturi in Lei, TVA inclusa.</h5>
+            <h5 class='h5'>{% translate "Preturi in Lei, TVA inclusa." %}</h5>
             <b>
-                <p>Profitati de cardurile noastre reincarcabile pentru a parca fara a pierde timp trecand mereu pe la casele automatice de plata biletelor.</p>
-                <p>Cu cat parcati mai des, cu atat economisiti.</p>
+                <p>{% translate "Profitati de cardurile noastre reincarcabile pentru a parca fara a pierde timp trecand mereu pe la casele automatice de plata biletelor." %}</p>
+                <p>{% translate "Cu cat parcati mai des, cu atat economisiti." %}</p>
             </b>
             <tr>
-                <th>VALOARE REALA</th>
-                <th>COST CARD</th>
+                <th>{% translate "VALOARE REALA" %}</th>
+                <th>{% translate "COST CARD" %}</th>
             </tr>
         </thead>
         <tbody>
             <tr>
-                <td>50.00</td>
-                <td>45.00</td>
+                <td>{% translate "50.00 Lei" %}</td>
+                <td>{% translate "45.00 Lei" %}</td>
             </tr>
             <tr>
-                <td>100.00</td>
-                <td>90.00</td>
+                <td>{% translate "100.00 Lei" %}</td>
+                <td>{% translate "90.00 Lei" %}</td>
             </tr>
             <tr>
-                <td>150.00</td>
-                <td>130.00</td>
+                <td>{% translate "150.00 Lei" %}</td>
+                <td>{% translate "130.00 Lei" %}</td>
             </tr>
             <tr>
-                <td>200.00</td>
-                <td>170.00</td>
+                <td>{% translate "200.00 Lei" %}</td>
+                <td>{% translate "170.00 Lei" %}</td>
             </tr>
         </tbody>
     </table>
     <br>
-    <h5 class='h5'>Pierderea sau distrugerea cardului duce la anularea acestuia.</h5>
+    <h5 class='h5'>{% translate "Pierderea sau distrugerea cardului duce la anularea acestuia." %}</h5>
     <b>
-        <p>Cardurile au o valabilitate de 6 luni si pot fi obtinute de la Biroul de Informatii, la Etajul 1.</p>
-        <p>Pentru mai multe informatii:</p>
+        <p>{% translate "Cardurile au o valabilitate de 6 luni si pot fi obtinute de la Biroul de Informatii, la Etajul 1." %}</p>
+        <p>{% translate "Pentru mai multe informatii:" %}</p>
     </b>
     <p>Gafita Florin</p>
     <p>+ 39 327 268 55 10</p>
